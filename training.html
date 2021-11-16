@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Training | SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+        <!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+					
+                </a>
+				
+            </div>
+<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+			
+			
+			<span class="logo-lg ms-30">
+				<img src="assets/images/airtel.png" alt="" height="60">
+			</span>
+        </div>
+
+        <div class="d-flex">
+
+            <div class="dropdown d-inline-block d-lg-none ms-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                    <form class="p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+             <form class="app-search d-none d-lg-block">
+                <div class="position-relative" id="datepicker4">
+                    <input type="text" class="form-control" data-date-container='#datepicker4' data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1" placeholder="This Month">
+                    <span class="bx bx-calendar caler"></span>
+                </div>
+            </form>
+			
+			<button type="button" class="btn header-item waves-effect ">
+				<i class="bx bx-download rounded-circle border p-2 bg-gray"></i>
+			</button>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+
+            <!--<div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="bx bx-cog"></i>
+                </button>
+            </div>-->
+
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+         <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+					<ul class="nav nav-pills bg-dark rounded " role="tablist" style=" width: 70%;float:left">
+						<li class="nav-item nav-items-side ">
+							<a class="nav-link text-white active" data-bs-toggle="tab" href="#site" role="tab" aria-selected="true">Site</a>
+						</li>
+						<li class="nav-item nav-items-side">
+							<a class="nav-link " data-bs-toggle="tab" href="#sell-tab" role="tab" aria-selected="false">12Sites</a>
+						</li>
+						
+					</ul>
+					<ul class="nav nav-pills nav-fill rounded" role="tablist" style=" width: 29%;">
+						<li class="nav-item nav-items-side ms-2"><a class="nav-link active" data-bs-toggle="tab" href="#sell-tab1" role="tab" aria-selected="false"><i class="bx bx-map text-white text-center pe-3"></i></a></li>
+					</ul>
+					<hr style="color:#000;">
+					<!--<p class="text-white ms-3 list-inline-item">STATES				
+						<span class="avatar-ss rounded-circle bg-light p-1 text-dark" style="">
+							2
+						</span>                 
+					</p>-->
+					<button type="" class="text-white ms-3" style=" background: #465770;border: navajowhite;">
+								STATES <span class="badge badge-soft-light rounded-circle p-1">2</span>
+					</button>
+					<button type="" class="text-white ms-6" style=" background: #465770;border: navajowhite;">
+								SITES <span class="badge badge-soft-light rounded-circle p-1">12</span>
+					</button>
+					<div class="tab-content side-tab-content mt-4">
+						<div class="tab-pane active" id="site" role="tabpanel">
+							<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Harayana&nbsp; &nbsp; 
+							<div class="avatar-ss mt-1 ms-7 dis">
+								<span class="avatar-title rounded-circle bg-dark ">
+									2
+								</span>
+							</div>
+							</span>
+							<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Maharastra 
+							<div class="avatar-ss mt-1 ms-7 dis">
+								<span class="avatar-title rounded-circle bg-dark ">
+									2
+								</span>
+							</div>
+							</span>
+							<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Punjab&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+							<div class="avatar-ss mt-1 ms-7 dis">
+								<span class="avatar-title rounded-circle bg-dark ">
+									2
+								</span>
+							</div>
+							</span>
+						</div>
+						<div class="tab-pane " id="sell-tab" role="tabpanel">
+							<h5 class="font-size-14 mb-4">12 Sites</h5>
+						</div>
+					</div>
+			</ul>
+			<div class="bg-danger text-white-50 side-box-danger">
+				<div class="card-body row">
+				<div class="col-md-7">
+				<small class="font-size-9">For any quires contact</small>
+					<h5 class="mt-0 mb-1 text-white">Priyanka K</h5>
+					<p class="card-text">Service Executive</p>
+				</div>
+				<div class="col-md-5">
+					<img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
+				</div>
+				<div class="col-md-12">
+					<button type="button" class="btn btn-secondary btn-sm waves-effect waves-light pull-left"><i class="fas fa-envelope me-1"></i>Email</button>
+					<span class="font-size-13 text-white">Escalate Issue <i class="fa fa-angle-right"></i></span>
+				</div>
+				</div>
+			</div>
+
+            
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+					<!-- start page title -->
+					<div class="row">
+						<div class="col-12">
+							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Training</h4>
+								<div class="page-title-right">
+								<ol class="breadcrumb m-0">
+									<a href="training-calender.html"><li class="breadcrumb-item "><a href="#" class="text-primary">Training Calender</a></li>
+									<li class="ms-2"><i class="fa fa-chevron-circle-right text-primary"></i></li></a>
+								</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end page title -->
+                        <div class="row">
+                            <div class="col-xl-12">
+                               <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="card mini-stats-wid p-3">
+											<div class="d-flex">
+												<div class="flex-grow-1">
+													<p class="text-muted fw-medium font-size-9">Deployed vs Authorised</p>
+													<h4 class="mb-0"><b>246</b> / 300</h4>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="card mini-stats-wid p-3">
+											<div class="d-flex">
+												<div class="flex-grow-1">
+													<p class="text-muted font-size-9">Vaccinated with 2 Doses</p>
+													<h4 class="mb-0"><b>246</b> / 246</h4>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="card mini-stats-wid p-3">
+											<div class="d-flex">
+												<div class="flex-grow-1">
+													<p class="text-muted font-size-9">Attrition < 10%</p>
+													<h4 class="mb-0">12</h4>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+									<div class="col-md-2">
+                                        <div class="card mini-stats-wid p-3">
+											<div class="d-flex">
+												<div class="flex-grow-1">
+													<p class="text-muted font-size-9">Background Verifiations</p>
+													<h4 class="mb-0"><b>246</b> / 246</h4>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="card mini-stats-wid p-3">
+											<div class="d-flex">
+												<div class="flex-grow-1">
+													<p class="text-muted font-size-9">Police Verifications</p>
+													<h4 class="mb-0"><b>246</b> / 246</h4>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="card mini-stats-wid p-3">
+											<div class="d-flex">
+												<div class="flex-grow-1">
+													<p class="text-muted font-size-9">Background Verifiations</p>
+													<h4 class="mb-0"><b>246</b> / 246</h4>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								
+					<div class="row mb-2">
+						<div class="">
+							<button type="button" class="btn btn-light rounded-pill">
+								Group By Date <span class=""><i class="fa fa-angle-down"></i></span>
+							</button>
+						</div>
+						
+					</div>
+					<div class="clearfix"></div>
+								
+									<div class="">
+										<div class="col-xl-12 card">
+										<div class="table-responsive">
+                                            <table class="table align-middle table-nowrap mb-0">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th class="align-middle">Training Type</th>
+                                                        <th class="align-middle">Sessions</th>
+                                                        <th class="align-middle">Sites</th>
+                                                        <th class="align-middle">Total Durations</th>
+                                                        <th class="align-middle">Topic Covered</th>
+                                                        <th class="align-middle">Employees Trained</th>
+                                                        <th class="align-middle"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="p-4">Classroom</td>
+                                                        <td class="p-4">20</td>
+                                                        <td class="p-4">1</td>
+                                                        <td class="p-4">45 Hours</td>
+                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
+                                                        <td class="p-4">200</td>
+                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="p-4">Virtual</td>
+                                                        <td class="p-4">20</td>
+                                                        <td class="p-4">1</td>
+                                                        <td class="p-4">45 Hours</td>
+                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
+                                                        <td class="p-4">200</td>
+                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="p-4">OTJ</td>
+                                                        <td class="p-4">20</td>
+                                                        <td class="p-4">1</td>
+                                                        <td class="p-4">45 Hours</td>
+                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
+                                                        <td class="p-4">200</td>
+                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                    </tr>
+													<tr>
+                                                        <td class="p-4">Self-Learning</td>
+                                                        <td class="p-4">20</td>
+                                                        <td class="p-4">1</td>
+                                                        <td class="p-4">45 Hours</td>
+                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
+                                                        <td class="p-4">200</td>
+                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+									</div>
+								</div>
+
+								
+								
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<script src="assets/libs/select2/js/select2.min.js"></script>
+<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+<script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/d3.geo.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/d3.min.js"></script>
+<script type="text/javascript" src="assets/js/states.json"></script>-->
+  
+
+
+    </body>
+</html>
