@@ -16,6 +16,9 @@
     <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+	
+	        <!-- Bootstrap Rating css -->
+        <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
 
         <!-- Bootstrap Css -->
 <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -40,7 +43,7 @@
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
-            <div class="navbar-brand-box">
+             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/images/sis-admin.jpg" alt="" height="22">
@@ -62,6 +65,7 @@
 				
             </div>
 <span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+
             <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
@@ -70,6 +74,7 @@
 			<span class="logo-lg ms-30">
 				<img src="assets/images/airtel.png" alt="" height="60">
 			</span>
+			
         </div>
 
         <div class="d-flex">
@@ -233,131 +238,121 @@
 						</div>
 					</div>
 					<!-- end page title -->
-                        <div class="row">
-                            <div class="col-xl-12">
-                               <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted fw-medium font-size-11">Training Session (Actual vs pla..)</p>
-													<h4 class="mb-0"><b>8</b> / 10</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Avg. Training Hours per Site</p>
-													<h4 class="mb-0"><b>12</b> / 15hrs</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11 ">Total Trained Man Hours</p>
-													<h4 class="mb-0">433 Hrs</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-									<div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Trained Vs Total Employees</p>
-													<h4 class="mb-0"><b>4700</b> / 5603</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Topic Covered</p>
-													<h4 class="mb-0"><b>10</b></h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Background Verifiations</p>
-													<h4 class="mb-0"><b>246</b> / 246</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                </div>
-								
-							
+					<div class="row mb-2">
+						<div class="">
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								All Types
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Classroom 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Virtual 
+							</button>
+							<button type="button" class="btn btn-dark rounded-pill font-size-11">
+								OTJ 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Self Learning 
+							</button>
+						</div>
+						
+					</div>
 					<div class="clearfix"></div>
-								
+                        <div class="row">
+                            <div class="col-xl-12">								
 									<div class="">
 										<div class="col-xl-12 card">
 										<div class="table-responsive">
-                                            <table class="table align-middle table-nowrap mb-0">
+                                            <table class="table align-middle table-nowrap mb-0 ">
                                                 <thead class="table-light">
                                                     <tr>
-                                                        <th class="align-middle">Training Type</th>
-                                                        <th class="align-middle">Sessions</th>
-                                                        <th class="align-middle">Sites</th>
-                                                        <th class="align-middle">Total Durations</th>
-                                                        <th class="align-middle">Topic Covered</th>
-                                                        <th class="align-middle">Employees Trained</th>
+														<th class="align-middle"></th>
+														<th class="align-middle"><select class="bg-bo"><option>Trained By</option><option>Trained By 1</option></select></th>
+                                                        <th class="align-middle">Date</th>
+                                                        <th class="align-middle"><select class="bg-bo"><option>Training Mode, Methodology</option><option>Training Mode, Methodology 1</option></select></th>
+                                                        <th class="align-middle">Site ID, Site Name</th>
+                                                        <th class="align-middle">Duration (Hours)</th>
+                                                        <th class="align-middle"><select class="bg-bo"><option>Topics Covered</option><option>Topics Covered 1</option></select></th>
+														<th class="align-middle">Employees Trained</th>
                                                         <th class="align-middle"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="p-4">Classroom</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                        <td><img src="assets/images/security.png"/></td>
+                                                        <td>Ramesh Deo<br>Training Champ</td>
+                                                        <td>01-07-2021</td>
+                                                        <td>On Sites<br>OTJ</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>2 Hours</td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+														<td>200<br><span class="text-success">80%</span></td>
+														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="p-4">Virtual</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                        <td><img src="assets/images/security.png"/></td>
+                                                        <td>Ramesh Deo<br>Training Champ</td>
+                                                        <td>01-07-2021</td>
+                                                        <td>On Sites<br>OTJ</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>2 Hours</td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+														<td>200<br><span class="text-success">80%</span></td>
+														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="p-4">OTJ</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                        <td><img src="assets/images/security.png"/></td>
+                                                        <td>Ramesh Deo<br>Training Champ</td>
+                                                        <td>01-07-2021</td>
+                                                        <td>On Sites<br>OTJ</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>2 Hours</td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+														<td>200<br><span class="text-success">80%</span></td>
+														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
                                                     </tr>
 													<tr>
-                                                        <td class="p-4">Self-Learning</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
+                                                        <td><img src="assets/images/security.png"/></td>
+                                                        <td>Ramesh Deo<br>Training Champ</td>
+                                                        <td>01-07-2021</td>
+                                                        <td>On Sites<br>OTJ</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>2 Hours</td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+														<td>200<br><span class="text-success">80%</span></td>
+														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
                                                     </tr>
+													<tr>
+                                                        <td><img src="assets/images/security.png"/></td>
+                                                        <td>Ramesh Deo<br>Training Champ</td>
+                                                        <td>01-07-2021</td>
+                                                        <td>On Sites<br>OTJ</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>2 Hours</td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+														<td>200<br><span class="text-success">80%</span></td>
+														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+                                                    </tr>
+													<tr>
+                                                        <td><img src="assets/images/security.png"/></td>
+                                                        <td>Ramesh Deo<br>Training Champ</td>
+                                                        <td>01-07-2021</td>
+                                                        <td>On Sites<br>OTJ</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>2 Hours</td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+														<td>200<br><span class="text-success">80%</span></td>
+														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+                                                    </tr>
+													
                                                 </tbody>
                                             </table>
-
+											
+											
                                         </div>
 									</div>
+									
 								</div>
 
 								
@@ -375,7 +370,145 @@
 
         </div>
         <!-- END layout-wrapper -->
+     <!-- Right Sidebar -->
+	 <style>
+		.right-bar {right: -500px;}
+		.flickity-slider { width: 120%;}
+		.carousel { background: #f5f5f5;}
+	 </style>
+<div class="right-bar" style="width:500px;">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <h5 class="m-0 me-2">TRAINING REPORT</h5><br>
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+		<div class="ms-4">
+			<h4>1-07-2021</h4>
+			<small>10:00 AM - 12:10 PM (1.42 Hours)</small>
+			<h6>GGN_UNT_000001, Manesar, Gurugram</h6>
+		</div>
+		
+		<ul class="nav nav-tabs-custom nav-justified" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-bs-toggle="tab" href="#home1" role="tab">
+					<span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+					<span class="d-none d-sm-block">Training Summary</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="tab" href="#profile1" role="tab">
+					<span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+					<span class="d-none d-sm-block">Topic Covered</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="tab" href="#messages1" role="tab">
+					<span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+					<span class="d-none d-sm-block">Emplyees Trained</span>
+				</a>
+			</li>
+		</ul>
+		<div class="tab-content p-3 text-muted" style="background: #f7f5f5;">
+			<div class="tab-pane active" id="home1" role="tabpanel">
+				<div class="p-3">
+				<div class="carousel mb-3" data-flickity='{ "freeScroll": true ,  "wrapAround": true, "pageDots": false}' style="height:185px;">
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation1.png" >
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Rahul Sharma</h5>
+							<p class="text-left">Post: Back Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation2.png">
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Megha Puri</h5>
+							<p class="text-left">Post: East Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation1.png">
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Rahul Sharma</h5>
+							<p class="text-left">Post: Back Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation1.png">
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Megha Puri</h5>
+							<p class="text-left">Post: East Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation2.png" >
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Rahul Sharma</h5>
+							<p class="text-left">Post: Back Gate</p>
+						</div>
+					</div>
+				</div>
+					<div class="clearfix"></div>
+					<h6 class="mb-3 ms-2 mt-3">Task Date, Time <span class=" float-end me-2"><b>01-07-2021, 6:00 - 18:00</b></span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Site ID<span class=" float-end me-2"><b>GGN_UNT_000001</b></span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Site Name <span class=" float-end me-2"><b>Manesar, Gurugram</b></span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Representative <span class=" float-end me-2"><b>Ramesh Deo</b><br>Area officer</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Issued Chcked<span class=" float-end me-2"><b>7</b>/7</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Customer Handshake<span class=" float-end me-2 text-success">Done <i class="fa fa-angle-down"></i></span></h6>
+					
+					<div class="card p-3">
+						<h5 class="text-center">Sohan Mohapatra</h5>
+						<h5 class="text-center">+91 8974563214</h5>
+						<div class="text-center">
+							<div class="rating-star">
+								<input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-warning" data-fractions="2"/>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+			<div class="tab-pane" id="profile1" role="tabpanel">
+				<div class="p-3">
+					<div class="clearfix"></div>
+					<h6 class="mb-3 ms-2"><b>4 Topics Covered</b></h6>
+					<h6 class="mb-3 ms-2">1. Body action in different situation</h6>
+					<h6 class="mb-3 ms-2">2. Access Control </h6>
+					<h6 class="mb-3 ms-2">3. Physical Fitness Training </h6>
+					<h6 class="mb-3 ms-2">4. Fire Drill Training</h6>
+				</div>
+			</div>
+			<div class="tab-pane" id="messages1" role="tabpanel">
+				<div class="p-3">
+					<div class="clearfix"></div>
+					<h6 class="mb-3 ms-2"><b>4 EMployees Trained</b></h6>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+				</div>
+			</div>
+		</div>
+		
+        <!-- Settings -->
+		
+		<div class="clearfix"></div>
 
+    </div> <!-- end slimscroll-menu-->
+</div>
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
@@ -385,6 +518,13 @@
 <script src="assets/libs/metismenu/metisMenu.min.js"></script>
 <script src="assets/libs/simplebar/simplebar.min.js"></script>
 <script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Bootstrap rating js -->
+        <script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
+
+        <script src="assets/js/pages/rating-init.js"></script>
+
+
 <script src="assets/libs/select2/js/select2.min.js"></script>
 <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
