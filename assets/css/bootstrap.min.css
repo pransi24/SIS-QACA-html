@@ -2657,9 +2657,16 @@ textarea.form-control-lg {
 		-webkit-transition: none;
 		transition: none
 	}
+	.form-check-inputs {
+		-webkit-transition: none;
+		transition: none
+	}
 }
 
 .form-check-input[type=checkbox] {
+	border-radius: .25em
+}
+.form-check-inputs[type=checkbox] {
 	border-radius: .25em
 }
 
@@ -2683,9 +2690,17 @@ textarea.form-control-lg {
 	background-color: #556ee6;
 	border-color: #556ee6
 }
+.form-check-inputs:checked {
+	background-color: #556ee6;
+	border-color: #556ee6
+}
 
 .form-check-input:checked[type=checkbox] {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e")
+}
+.form-check-inputs:checked[type=checkbox] {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z'/%3e%3c/svg%3e")
+	
 }
 
 .form-check-input:checked[type=radio] {
@@ -2722,6 +2737,49 @@ textarea.form-control-lg {
 	border-radius: 2em;
 	-webkit-transition: background-position .15s ease-in-out;
 	transition: background-position .15s ease-in-out
+}
+.form-switch .form-check-inputs {
+	width: 2em;
+	margin-left: -2.5em;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+	background-position: left center;
+	border-radius: 2em;
+	-webkit-transition: background-position .15s ease-in-out;
+	transition: background-position .15s ease-in-out
+}
+
+
+.cos[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-color: #b9bfc4;
+    position: relative;
+	left:-20px;
+	border: 1px solid #c6c6c6;
+	top: 7px;
+}
+.cos[type="checkbox"]:checked {
+    background: #f46a6a;
+}
+.ms-minus{margin-left:-20px;}
+
+.cos[type="checkbox"]:checked:after {
+    /* Heres your symbol replacement */
+    content: "X";
+    color: #fff;
+    /* The following positions my tick in the center, 
+     * but you could just overlay the entire box
+     * with a full after element with a background if you want to */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -9493,6 +9551,11 @@ fieldset:disabled .btn {
 .bg-body {
 	--bs-bg-opacity: 1;
 	background-color: rgba(var(--bs-body-rgb), var(--bs-bg-opacity))!important
+}
+
+.bg-blue {
+	--bs-bg-opacity: 1;
+	background-color: rgba(23, 158, 170, 1)!important
 }
 
 .bg-transparent {

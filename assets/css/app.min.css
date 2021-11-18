@@ -34,6 +34,9 @@
 	text-align: center;
 	width: 115px
 }
+.navbar-ser{width: 160px;
+	padding: 0 1.5rem;
+	text-align: center;}
 
 .logo {
 	line-height: 70px
@@ -5163,3 +5166,7 @@ opacity: 1;}
   z-index: 99999;
 }
 .bxs-down-arrow-circle{font-size:19px;}
+.company-ser{width: 20px;
+    height: 20px;
+    border-radius: 50% !important;
+    margin-right: 8px;}
