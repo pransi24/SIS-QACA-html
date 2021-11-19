@@ -40,6 +40,14 @@
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
+			<div class="btn-group" role="group">
+				<button id="btnGroupVerticalDrop1" type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-chevron-down"></i>
+				</button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+					<a class="dropdown-item" href="#"><img src="assets/images/sis.jpg" alt="" height="92"></a><hr>
+					<a class="dropdown-item" href="#"><img src="assets/images/servicemaster.png" alt="" height="92"></a>
+				</div>
+			</div>
              <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
@@ -129,39 +137,32 @@
 
     <div data-simplebar class="h-100">
 
-          <!--- Sidemenu -->
+        <!--- Sidemenu -->
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
-					<ul class="nav nav-pills bg-dark rounded " role="tablist" style=" width: 70%;float:left">
-						<li class="nav-item nav-items-side">
-							<a class="nav-link text-white active" data-bs-toggle="tab" href="#site" role="tab" aria-selected="true">Site</a>
-						</li>
-						<li class="nav-item nav-items-side">
-							<a class="nav-link " data-bs-toggle="tab" href="#sell-tab" role="tab" aria-selected="false">12Sites</a>
-						</li>
-						
-					</ul>
-					<ul class="nav nav-pills nav-fill rounded" role="tablist" style=" width: 29%;">
-						<li class="nav-item nav-items-side ms-2"><a class="nav-link active" data-bs-toggle="tab" href="#sell-tab1" role="tab" aria-selected="false"><i class="fa fa-list-ul text-white text-center pe-3"></i></a></li>
-					</ul>
-					<hr style="color:#000;">
-					<button type="" class="text-white ms-3" style=" background: #465770;border: navajowhite;">
-								STATES <span class="badge badge-soft-light rounded-circle p-1">2</span>
+				
+				<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
+					<select class="form-select side-ste" style="max-width: 80px;">
+						<option value="BT" selected="">Sites</option>
+						<option value="ET">Sites 1</option>
+						<option value="LT">Sites 2</option>
+					</select>
+					<input type="text" class="form-control side-txt me-2 border-r" placeholder="12 Sites"><i class='fa fa-search'></i>
+					<button type="button" class="btn btn-dark waves-effect waves-light me-2">
+						<i class="fa fa-list-ul font-size-16 align-middle"></i>
 					</button>
-					<button type="" class="text-white ms-6" style=" background: #465770;border: navajowhite;">
-								SITES <span class="badge badge-soft-light rounded-circle p-1">12</span>
-					</button>
-					<div class="tab-content side-tab-content mt-4">
-						<div class="tab-pane active" id="site" role="tabpanel">
-							<div id="chart"></div>
-						</div>
-						<div class="tab-pane " id="sell-tab" role="tabpanel">
-							<h5 class="font-size-14 mb-4">12 Sites</h5>
-						</div>
-					</div>
+				</div>
+				<hr style="color:#000;">
+				<button type="" class="text-white ms-3" style=" background: #223044;border: navajowhite;">
+							STATES <span class="badge badge-soft-light rounded-circle p-1">2</span>
+				</button>
+				<button type="" class="text-white ms-6" style=" background: #223044;border: navajowhite;">
+							SITES <span class="badge badge-soft-light rounded-circle p-1">12</span>
+				</button>
+				<div id="chart"></div>
 			</ul>
-			<div class="bg-danger text-white-50 side-box-danger">
+			<div class="bg-danger text-white-50 side-box-danger mb-3">
 				<div class="card-body row">
 				<div class="col-md-7">
 				<small class="font-size-9">For any quires contact</small>
@@ -172,7 +173,7 @@
 					<img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
 				</div>
 				<div class="col-md-12">
-					<button type="button" class="btn btn-secondary btn-sm waves-effect waves-light pull-left"><i class="fas fa-envelope me-1"></i>Email</button>
+					<button type="button" class="btn btn-email btn-sm waves-effect waves-light pull-left"><i class="fas fa-envelope me-2"></i>Email</button>
 					<span class="font-size-13 text-white">Escalate Issue <i class="fa fa-angle-right"></i></span>
 				</div>
 				</div>
@@ -904,8 +905,8 @@
   
   
    <script type="text/javascript">
-    var w = 250;
-    var h = 450;
+    var w = 280;
+    var h = 480;
     var proj = d3.geo.mercator();
     var path = d3.geo.path().projection(proj);
     var t = proj.translate(); // the projection's default translation
@@ -1008,7 +1009,7 @@
     });
 
    function initialize() {
-      proj.scale(2900);
+      proj.scale(3000);
       proj.translate([-540, 350]);
     }
 
