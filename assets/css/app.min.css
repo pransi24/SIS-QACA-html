@@ -30,9 +30,9 @@
 }
 
 .navbar-brand-box {
-	padding: 0 1.5rem;
-	text-align: center;
-	width: 115px
+	/*padding: 0 1.5rem;
+	text-align: center;*/
+	width: 95px
 }
 .navbar-ser{width: 160px;
 	padding: 0 1.5rem;
@@ -405,7 +405,7 @@ body[data-layout=horizontal] .footer {
 }
 
 .vertical-menu {
-	width: 250px;
+	width: 280px;
 	z-index: 1001;
 	background: #fff;
 	bottom: 0;
@@ -417,7 +417,7 @@ body[data-layout=horizontal] .footer {
 }
 
 .main-content {
-	margin-left: 250px;
+	margin-left: 280px;
 	overflow: hidden
 }
 
@@ -703,7 +703,7 @@ body[data-layout=horizontal] .footer {
 }
 
 body[data-sidebar=dark] .vertical-menu {
-	background: #465770
+	background: #223044;
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li a {
