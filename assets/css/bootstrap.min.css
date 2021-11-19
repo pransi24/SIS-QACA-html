@@ -13375,7 +13375,7 @@ label {
 }
 .badge-soft-gray {
 	color: #fff;
-	background-color: rgb(108 121 157)
+	background-color: #3c4c62;
 }
 
 .badge-soft-info[href]:focus,
