@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Internal Dashboard | SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+        <!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	
+	
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+             <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+					
+                </a>
+				
+            </div>
+<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+			
+        </div>
+
+        <div class="d-flex">
+
+            <div class="dropdown d-inline-block d-lg-none ms-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                    <form class="p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+             <form class="app-search d-none d-lg-block">
+                <div class="position-relative" id="datepicker4">
+                    <input type="text" class="form-control" data-date-container='#datepicker4' data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1" placeholder="This Month">
+                    <span class="bx bx-calendar caler"></span>
+                </div>
+            </form>
+			
+			<button type="button" class="btn header-item waves-effect noti-icon ">
+				<i class="fa fa-bullhorn rounded-circle border p-2  text-white bg-primary"></i>
+				<span class="badge bg-danger rounded-pill">3</span>
+			</button>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+				
+				<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
+					<select class="form-select side-ste" style="max-width: 80px;">
+						<option value="BT" selected="">Branch</option>
+						<option value="ET">Branch 1</option>
+						<option value="LT">Branch 2</option>
+					</select>
+					<input type="text" class="form-control side-txt me-2 border-r" placeholder="Search"><i class='fa fa-search'></i>
+					<button type="button" class="btn btn-dark waves-effect waves-light me-2">
+						<i class="fa fa-list-ul font-size-16 align-middle"></i>
+					</button>
+				</div>
+				<hr style="color:#000;">
+				<button type="" class="text-white ms-1" style=" background: #223044;border: navajowhite;">
+							STATES <span class="badge badge-soft-light rounded-circle p-1">2</span>
+				</button>
+				<button type="" class="text-white ms-1" style=" background: #223044;border: navajowhite;">
+							BRANCHES <span class="badge badge-soft-light rounded-circle p-1">12</span>
+				</button>
+				<button type="" class="text-white ms-1" style=" background: #223044;border: navajowhite;">
+							CLIENTS <span class="badge badge-soft-light rounded-circle p-1">48</span>
+				</button>
+				<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Harayana&nbsp; &nbsp; 
+					<div class="avatar-ss mt-1 ms-7 dis"><i class="fa fa-angle-right"></i>
+					</div>
+					</span>
+					<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Maharastra 
+					<div class="avatar-ss mt-1 ms-7 dis">
+						<i class="fa fa-angle-right"></i>
+					</div>
+					</span>
+					<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Punjab&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+					<div class="avatar-ss mt-1 ms-7 dis">
+						<i class="fa fa-angle-right"></i>
+					</div>
+				</span>
+			</ul>
+
+            
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+					
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card overflow-hidden">
+                                    <div class="bg-warning bg-soft">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <div class="p-2">
+                                                    <h4 class=""><img src="assets/images/handemoji.png" class="img-responsive me-3"/>Good Afternoon! </h4>
+                                                  
+                                                </div>
+                                            </div>
+                                            <div class="col-2 mt-3">
+											<div class="d-flex">												
+												<div class="col-6 d-flex">
+													<a href="#"><p class="text-primary mb-0 font-size-14 mt-2"> MoM </p></a>
+													<div class="avatar-ss mt-2 ms-1">
+														<span class="mdi mdi-arrow-right-drop-circle text-info "></span>
+													</div>
+												</div>
+												<div class="col-6 d-flex">
+													<a href="#"><p class="text-danger mb-0 font-size-14 mt-2" >Issues </p></a>
+													<div class="avatar-ss mt-2 ms-1">
+														<span class="avatar-title rounded-circle bg-danger">
+															4
+														</span>
+													</div>
+												</div>
+											</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                           
+									</div>
+									
+				<div class="col-2 ">
+				<form class="app-search d-none d-lg-block">
+					<div class="position-relative">
+						<input type="text" class="form-control" placeholder="Search Account">
+						<span class="bx bx-search-alt p-ab"></span>
+					</div>
+				</form>
+				</div>
+				<div class="col-12">
+                    <div class="card">
+						<div class="mt-4 mt-sm-0">
+							<img src="assets/images/airtel.png" alt="" height="30" class="mt-3 ms-3">
+                            <p class="card-title-desc ms-3 text-light">Bharti Airtel Pvt Ltd</p>
+						</div>
+						<div class="card-body">
+						 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/sislogo.png" alt="" class="ms-3" height="60">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							
+							 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/servicemaster.png" alt="" class="ms-3" height="60">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/protect.jpg" alt="" class="ms-3" height="50">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							</div>
+                        </div>
+						
+					<div class="card">
+						<div class="">
+						<div class="col-xl-12">
+						<div class="accordion" id="accordionExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne">
+									<button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+									 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ICICI_Bank_Logo.svg/2560px-ICICI_Bank_Logo.svg.png" alt="" height="30"><br>
+									</button>
+									 <p class="font-size-14 ms-4 text-light">ICICI Bank Limited</p>
+								</h2>
+								
+								<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+									<div class="accordion-body">
+										<div class="">
+						 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/sislogo.png" alt="" class="ms-3" height="60">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							
+							 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/servicemaster.png" alt="" class="ms-3" height="60">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/protect.jpg" alt="" class="ms-3" height="50">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							</div>
+                        
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end accordion -->
+						</div>
+					</div>
+					<!-- end row -->
+                          
+                    </div>
+					
+					
+					
+					<div class="card">
+						<div class="">
+						<div class="col-xl-12">
+						<div class="accordion" id="accordionExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingTwo">
+									<button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+									 <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Mitsubishi_Electric_logo.png" alt="" height="30"><br>
+									</button>
+									<p class="font-size-14 ms-4 text-light">Mitsubishi Electric India Pvt Ltd.</p>
+								</h2>
+								
+								<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+									<div class="accordion-body">
+										<div class="">
+							<div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/sislogo.png" alt="" class="ms-3" height="60">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							
+							 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/servicemaster.png" alt="" class="ms-3" height="60">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							 <div class="p-2 border mb-4">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="avatar-sm me-3">
+												<img src="assets/images/protect.jpg" alt="" class="ms-3" height="50">
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">Contracts</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+										   <h5 class="text-muted mb-2 font-size-12">QACA Score</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-4 mt-sm-0">
+											<a href="#" class="text-primary float-end  me-2 mt-4">View Dasboard <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							</div>
+                        
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end accordion -->
+						</div>
+					</div>
+					<!-- end row -->
+                          
+                    </div>
+						
+						
+                    </div>
+					
+								
+				</div>
+							
+                        </div>
+                        <!-- end row -->
+						
+
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+			
+
+        </div>
+        <!-- END layout-wrapper -->
+		
+		
+
+        <!-- Right Sidebar -->
+
+<!-- /Right-bar -->
+<div class="right-bar">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+        <!-- Settings -->
+		<div class="p-3">
+			<ul>
+				<li>Home</li>
+				<li>About Us</li>
+			</ul>			
+		</div>
+		<div class="clearfix"></div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<script src="assets/libs/select2/js/select2.min.js"></script>
+<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+<script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+<script>
+
+    // set the dimensions and margins of the graph
+    var width = 40
+    height = 40
+    margin = 1
+
+    // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+    var radius = Math.min(width, height) / 2 - margin
+
+    // append the svg object to the div called 'my_dataviz'
+    var svg = d3.select("#KioskChart")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    // Create dummy data
+    var data = { a: 96, b: 4 }
+
+    // set the color scale
+    var color = d3.scaleOrdinal()
+        .domain(["a"])
+        .range(d3.schemeDark2);
+
+    // Compute the position of each group on the pie:
+    var pie = d3.pie()
+        .sort(null) // Do not sort group by size
+        .value(function (d) { return d.value; })
+    var data_ready = pie(d3.entries(data))
+
+    // The arc generator
+    var arc = d3.arc()
+        .innerRadius(radius * 0.65)         // This is the size of the donut hole
+        .outerRadius(radius * 0.8)
+
+    // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+    dcolor = ['#49c063', '#d93f59'];
+
+    svg
+        .selectAll('allSlices')
+        .data(data_ready)
+        .enter()
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', function (d) { return (color(d.data.key)) })
+        .attr("stroke", "white")
+        .style("stroke-width", "0px")
+
+        //.style("opacity", 0.7)
+        .style("fill", function (d, i) { return dcolor[i]; })
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .attr('fill', "black")
+        .attr('y', -10)
+        .text("");
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .style('fill', "black")
+        .attr('y', 10)
+        .text("");
+</script>
+
+<script>
+
+    // set the dimensions and margins of the graph
+    var width = 40
+    height = 40
+    margin = 1
+
+    // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+    var radius = Math.min(width, height) / 2 - margin
+
+    // append the svg object to the div called 'my_dataviz'
+    var svg = d3.select("#KioskChart1")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    // Create dummy data
+    var data = { a: 96, b: 4 }
+
+    // set the color scale
+    var color = d3.scaleOrdinal()
+        .domain(["a"])
+        .range(d3.schemeDark2);
+
+    // Compute the position of each group on the pie:
+    var pie = d3.pie()
+        .sort(null) // Do not sort group by size
+        .value(function (d) { return d.value; })
+    var data_ready = pie(d3.entries(data))
+
+    // The arc generator
+    var arc = d3.arc()
+        .innerRadius(radius * 0.65)         // This is the size of the donut hole
+        .outerRadius(radius * 0.8)
+
+    // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+    dcolor = ['#49c063', '#d93f59'];
+
+    svg
+        .selectAll('allSlices')
+        .data(data_ready)
+        .enter()
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', function (d) { return (color(d.data.key)) })
+        .attr("stroke", "white")
+        .style("stroke-width", "0px")
+
+        //.style("opacity", 0.7)
+        .style("fill", function (d, i) { return dcolor[i]; })
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .attr('fill', "black")
+        .attr('y', -10)
+        .text("");
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .style('fill', "black")
+        .attr('y', 10)
+        .text("");
+
+</script>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/d3.geo.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/d3.min.js"></script>
+<script type="text/javascript" src="assets/js/states.json"></script>-->
+  
+  
+   <script type="text/javascript">
+    var w = 250;
+    var h = 450;
+    var proj = d3.geo.mercator();
+    var path = d3.geo.path().projection(proj);
+    var t = proj.translate(); // the projection's default translation
+    var s = proj.scale() // the projection's default scale
+
+    var buckets = 1,
+      colors = [ "#6c799d"]; // alternatively colorbrewer.YlGnBu[1]
+
+    var map = d3.select("#chart").append("svg:svg")
+      .attr("width", w)
+      .attr("height", h)
+      //.call(d3.behavior.zoom().on("zoom", redraw))
+      .call(initialize);
+
+    var india = map.append("svg:g")
+      .attr("id", "india");
+
+    var div = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+
+    d3.json("assets/js/states.json", function (json) {
+
+      var maxTotal = d3.max(json.features, function (d) { return d.total });
+
+      var colorScale = d3.scale.quantile()
+        .domain(d3.range(buckets).map(function (d) { return (d / buckets) * maxTotal }))
+        .range(colors);
+
+
+      var y = d3.scale.sqrt()
+        .domain([0, 10000])
+        .range([0,300]);
+
+      var yAxis = d3.svg.axis()
+          .scale(y)
+          .tickValues(colorScale.domain())
+          .orient("right");
+
+
+      india.selectAll("path")
+        .data(json.features)
+        .enter().append("path")
+        .attr("d", path)
+        .style("fill", colors[0])
+        .style("opacity", 0.5)
+
+        .on('click', function (d, i) {
+          d3.select(this).transition().duration(300).style("opacity", 1);
+          div.transition().duration(300)
+            .style("opacity", 1)
+          div.text(d.id + " : " + d.total)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 30) + "px");
+        })
+
+        .on('mouseleave', function (d, i) {
+          d3.select(this).transition().duration(300)
+            .style("opacity", 0.5);
+          div.transition().duration(300)
+            .style("opacity", 0);
+        })
+        .on('mouseenter', function (d, i) {
+          d3.select(this).transition().duration(300)
+            .style("opacity", 0.5);
+          div.transition().duration(300)
+            .style("opacity", 0);
+
+        });
+
+      india.selectAll("path").transition().duration(1000)
+        .style("fill", function (d) { return colorScale(d.total); });
+
+
+
+      //Adding legend for our Choropleth
+
+     
+      var g = india.append("g")
+                .attr("class", "key")
+                .attr("transform", "translate(445, 305)")
+                .call(yAxis);
+
+            g.selectAll("rect")
+                .data(colorScale.range().map(function(d, i) {
+                    return {
+                        y0: i ? y(colorScale.domain()[i - 1]) : y.range()[0],
+                        y1: i < colorScale.domain().length ? y(colorScale.domain()[i]) : y.range()[1],
+                        z: d
+                    };
+                }))
+                .enter().append("rect")
+                    .attr("width", 7)
+                    .attr("y", function(d) { return d.y0; })
+                    .attr("height", function(d) { return d.y1 - d.y0; })
+                    .style("fill", function(d) { return d.z; });
+
+
+    });
+
+   function initialize() {
+      proj.scale(2900);
+      proj.translate([-540, 350]);
+    }
+
+
+
+  </script>
+
+	<script type="text/javascript">
+   var ctx = document.getElementById("myChart");
+   var myChart = new Chart(ctx, {
+      type: 'bar',
+         data: {
+            labels: ["01", "02" , "03" , "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15","16", "17", "18", "19", "20", "21"],
+            datasets: [
+               { 
+               data: [55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],
+               backgroundColor :['rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			  
+            ],
+         }
+      ]
+   },
+   options: {
+      scales: {
+         yAxes: [{
+            ticks: {
+               beginAtZero:true
+            }
+         }]
+      }
+   }
+});
+</script>
+
+    </body>
+</html>
