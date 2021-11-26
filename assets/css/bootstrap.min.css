@@ -14017,6 +14017,10 @@ svg {
     background-color: #556ee6 !important;
     border-color: #556ee6;
 }
+.max-h-58{max-height:580px;
+		 overflow: scroll;
+		 overflow-x: hidden;
+		}
 .min-h-57{min-height:570px;}
 .min-h-65{min-height:650px;}
 .text-d-g{color: #363636;}
