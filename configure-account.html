@@ -115,7 +115,7 @@
 								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>CONFIGURE ACCOUNT</h4>
 								<div class="float-end mt-2 me-3">
 									<button type="button" class="btn btn-primary float-end w-md">Create Account</button>
-									<span class="text-primary float-end mt-2 me-3 ">Cancel</span>
+									<span class="text-primary float-end mt-2 me-4 ">Cancel</span>
 								</div>
 							</div>
 						</div>						
@@ -150,14 +150,14 @@
                     <!-- container-fluid -->
 					  <div class="tab-content bg-none p-3 m-3">
                         <div class="tab-pane active" id="home1" role="tabpanel">
-						 <div class="p-3">
+						 <div class="p-2">
 							<p class="font-size-16">CUSTOMER DETAILS</P> 
 							  <form action="#" class="dropzone col-md-3">
 									<div class="fallback">
 										<input name="file" type="file" multiple="multiple">
 									</div>
 									<div class="dz-message needsclick">
-										<div class="mb-3">
+										<div class="mb-2">
 											<i class="display-4 text-muted bx bxs-cloud-upload"></i>
 										</div>
 
@@ -183,6 +183,7 @@
 										</select>
 									</div>
 								</div>
+								<button type="button" class="btn btn-primary waves-effect waves-light float-end">Save Configuration </button>
 						</div>							
                         </div>
 						
@@ -216,8 +217,8 @@
 										<td class="p-4">3</td>
 										<td class="p-4">30</td>
 										<td class="p-4">3</td>
-										<td class="p-4">23 Contacts <i class="bx bx-error-circle"></i></td>
-										<td class="p-4"><a href="#">Service Master Clean</a></td>
+										<td class="p-4">23 Contacts </td>
+										<td class="p-4"><a href="#">Edit Escalation Matrix</a></td>
 										<td class="p-4"><a href="#">Configure Company</a></td>
 									</tr>
 									<tr>
@@ -227,7 +228,7 @@
 										<td class="p-4">3</td>
 										<td class="p-4">30</td>
 										<td class="p-4">3</td>
-										<td class="p-4">23 Contacts <i class="bx bx-error-circle"></i></td>
+										<td class="p-4  text-danger">Not Added </td>
 										<td class="p-4"><a href="#">Add Escalation Matrix</a></td>
 										<td class="p-4"><a href="#">Configure Company</a></td>
 									</tr>
@@ -240,13 +241,188 @@
                         
 						
                         <div class="tab-pane" id="profile1" role="tabpanel">
-                        <div class="card p-3">
-                            <div class="col-xl-12">								
-									<p>Users</p>
-								
-                            </div>
+                        <div class="row mb-3">
+							<div class="col-md-3">
+							<form class="app-search d-none d-lg-block">
+								<div class="position-relative">
+									<input type="text" class="form-control" placeholder="Search Name / Email ID / Mobile Number">
+									<span class="bx bx-search-alt p-ab"></span>
+								</div>
+							</form>
+							</div>
+							<div class="col-md-7"></div>
+							<div class="col-md-2">
+								<a href="#" class="right-bar-toggle "><button type="button" class="btn btn-primary float-end w-md">Add New User</button></a>
+							</div>
+						</div>
+                        <div class="card">
+                            <div class="table-responsive">
+									<table class="table align-middle table-nowrap mb-0 ">
+										<thead class="table-light">
+											<tr>
+												<th class="align-middle">User Name</th>
+												<th class="align-middle">User Type</th>
+												<th class="align-middle">Sites</th>
+												<th class="align-middle">User Created On</th>
+												<th class="align-middle">Last Password Change</th>
+												<th class="align-middle">Last Login</th>
+												<th class="align-middle"></th>
+												<th class="align-middle"></th>
+												<th class="align-middle"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Resend Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+									
                         </div>
-                                    </div>
+                       </div>
                       </div>
                 </div>
                 <!-- End Page-content -->
@@ -267,15 +443,15 @@
             </a>
         </div>
         <!-- Settings -->
-		<div class="p-3" style="background:#FAFAFA">
+		<div class="p-3 min-h-65" style="background:#FAFAFA">
 		<p>Select Company</p>
 			<div class="">
 				<div class="row p-3">
 				<div class="col-md-12">
 					<div class="form-check ">
 						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/dts.jpg" alt="" height="30" class="mb-2">
-					<span class="ms-3 text-light">Service Master Clean</span>
+						<img src="assets/images/dts.jpg" alt="" height="30" class="mb-2 col-md-3">
+					<span class="ms-3 text-light col-md-8">Service Master Clean</span>
 					</div>
 				</div>
 				</div>
@@ -285,8 +461,8 @@
 				<div class="col-md-12">
 					<div class="form-check ">
 						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/rare.jpg" alt="" height="20" class="mb-2">
-					<span class="ms-3 text-light">Service Master Clean</span>
+						<img src="assets/images/rare.jpg" alt="" height="20" class="mb-2 col-md-3">
+					<span class="ms-3 text-light col-md-8">Service Master Clean</span>
 					</div>
 				</div>
 				</div>
@@ -296,8 +472,8 @@
 				<div class="col-md-12">
 					<div class="form-check ">
 						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/protect.jpg" alt="" height="30" class="mb-2">
-					<span class="ms-3 text-light">VProtect</span>
+						<img src="assets/images/protect.jpg" alt="" height="30" class="mb-2 col-md-3">
+					<span class="ms-3 text-light col-md-8">VProtect</span>
 					</div>
 				</div>
 				</div>
@@ -307,8 +483,8 @@
 				<div class="col-md-12">
 					<div class="form-check ">
 						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/slv.jpg" alt="" height="30" class="mb-2">
-					<span class="ms-3 text-light">Service Master Clean</span>
+						<img src="assets/images/slv.jpg" alt="" height="30" class="mb-2 col-md-3">
+					<span class="ms-3 text-light col-md-8">Service Master Clean</span>
 					</div>
 				</div>
 				</div>
