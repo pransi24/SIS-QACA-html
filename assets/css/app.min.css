@@ -52,18 +52,18 @@
 }
 
 .app-search {
-	padding: calc(32px / 2) 0
+	/*padding: calc(32px / 2) 0*/
 }
 
 .app-search .form-control {
 	border: none;
-	height: 38px;
+	height: 40px;
 	padding-left: 40px;
 	padding-right: 20px;
-	background-color: #f3f3f9;
+	background-color: #F8F8F8;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	border-radius: 30px
+	border-radius: 30px;
 }
 
 .app-search span {
