@@ -10,18 +10,16 @@
 <meta content="Themesbrand" name="author" />
 <!-- App favicon -->
 <link rel="shortcut icon" href="assets/images/favicon.ico">
- <!-- Plugins css -->
-    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 <!-- Bootstrap Css -->
 <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
 <!-- Icons Css -->
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-<script src="https://code.jquery.com/jquery.min.js"></script>
+
     </head>
 
-    <body data-sidebar="dark">
+    <body data-sidebar="dark" >
         <!-- Begin page -->
         <div id="layout-wrapper">
 
@@ -106,37 +104,31 @@
             <!-- ============================================================== -->
             <!-- Start right Content here -->
             <!-- ============================================================== -->
+			
             <div class="">
                 <div class="page-content2">
                     <div class="container-fluid ">	
                     <div class="row card shadow-none ">
 						<div class="col-12">
 							<div class="page-title-box d-sm-flex justify-content-between ms-4 mt-2">
-								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>CONFIGURE ACCOUNT</h4>
-								<div class="float-end mt-2 me-3">
-									<button type="button" class="btn btn-primary float-end w-md">Create Account</button>
-									<span class="text-primary float-end mt-2 me-4 ">Cancel</span>
-								</div>
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>EDIT ESCALATION MATRIX SERVICE MASTER CLEAN</h4>
+							</div>
+							<div class="page-title-box d-sm-flex justify-content-between ms-4 mt-2">
+								<h1 class="mb-sm-0 font-size-16">Bharati Airtel PVT Ltd.</h1>
 							</div>
 						</div>						
-						<div class="col-xl-12 mt-3"> 
-						<p class="font-size-20 mb-4 ms-4">Bharti Airtel Pvt. Ltd.</p>
+						<div class="col-xl-12 mt-4">                               
 						<div class="ms-4">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs nav-tabs-custom " role="tablist">
 								<li class="nav-item w-10">
 									<a class="nav-link active bg-none" data-bs-toggle="tab" href="#home1" role="tab" aria-selected="true">
-										<span class="d-none d-sm-block">Customer Details</span>
+										<span class="d-none d-sm-block">SIS Contacts</span>
 									</a>
 								</li>
-								<li class="nav-item w-10">
-									<a class="nav-link bg-none" data-bs-toggle="tab" href="#sis-com" role="tab" aria-selected="true">
-										<span class="d-none d-sm-block">SIS Company</span>
-									</a>
-								</li>
-								<li class="nav-item w-10">
+								<li class="nav-item w-15">
 									<a class="nav-link bg-none" data-bs-toggle="tab" href="#profile1" role="tab" aria-selected="false">
-										<span class="d-none d-sm-block">Users</span>
+										<span class="d-none d-sm-block">Customer Contacts</span>
 									</a>
 								</li>
 							</ul>
@@ -146,106 +138,121 @@
                         <!-- end row -->
                     </div>
 					
+					<div class="row mb-2 ms-3">
+						<div class="col-md-4">
+							<button type="button" class="btn btn-dark rounded-pill">
+								Site Level 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill ms-2">
+								Contract Level 
+							</button>
+						</div>
+						<div class="col-md-5"></div>
+						<div class="col-md-3 float-end">
+							<button type="button" class="btn btn-primary">
+								Sync For ERP
+							</button>
+							<button type="button" class="btn btn-primary ms-3">
+								Bulk Upload
+							</button>
+							<button type="button" class="btn btn-primary ms-3">
+								Add Contacts
+							</button>
+						</div>
+					</div>
 					<div class="clearfix"></div>
                     <!-- container-fluid -->
-					  <div class="tab-content bg-none p-3 m-3">
+					  <div class="tab-content bg-none p-2 m-3">
                         <div class="tab-pane active" id="home1" role="tabpanel">
-						 <div class="p-2">
-							<p class="font-size-16">CUSTOMER DETAILS</P> 
-							<div class="text-danger">
-								Please select a valid Image, Upload size( Max 2 MB).
-							</div>
-							  <form action="#" class="dropzone col-md-3">
-									<div class="fallback">
-										<input name="file" type="file" multiple="multiple" required>
-									</div>
-									<div class="dz-message needsclick">
-										<div class="mb-2">
-											<i class="display-4 text-muted bx bxs-cloud-upload"></i>
-										</div>
-
-										<h4>Drag & Drop to upload.</h4>
-										<h6 class="text-primary">or Browes</h6>
-									</div>
-								</form>
-								<div class="col-lg-3 mt-3">
-									<div class="mb-3">
-										<label for="formrow-inputState" class="form-label">Is QACA applicable for this account?</label>
-										<select class="form-select" id="designselectedchange">
-											<option value="yes">Yes</option>
-											<option value="subscribeModal">No</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-lg-3 mt-3">
-									<div class="mb-3">
-										<label for="formrow-inputState" class="form-label">How frequently should data be updated?</label>
-										<select id="formrow-inputState" class="form-select">
-											<option selected="">Live Data</option>
-											<option>No</option>
-										</select>
-									</div>
-									<button type="button" class="btn btn-primary waves-effect waves-light float-end">Save Configuration </button>
-								</div>
-								
-						</div>							
-                        </div>
-						
-						<div class="tab-pane" id="sis-com" role="tabpanel">
 						<div class="row mb-3">
-							<div class="col-md-10"></div>
 							<div class="col-md-2">
-								<a href="#" class="right-bar-toggle "><button type="button" class="btn btn-primary float-end w-md">Add Company</button></a>
+							<form class="app-search d-none d-lg-block">
+								<div class="position-relative">
+									<input type="text" class="form-control" placeholder="Search Name / Email ID / Mobile Number">
+									<span class="bx bx-search-alt p-ab"></span>
+								</div>
+							</form>
 							</div>
+							<div class="col-md-10"></div>
 						</div>
-						<div class="table-responsive card">
-							<table class="table align-middle table-nowrap mb-0">
-								<thead class="table-light">
-									<tr>
-										<th class="align-middle"></th>
-										<th class="align-middle">Company</th>
-										<th class="align-middle">Service Availed</th>
-										<th class="align-middle">States</th>
-										<th class="align-middle">Sites</th>
-										<th class="align-middle">Users</th>
-										<th class="align-middle">Escalation Matrix</th>
-										<th class="align-middle"></th>
-										<th class="align-middle"></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><img src="assets/images/dts.jpg" class="rounded-circle avatar-sm"/></td>
-										<td class="p-4">Service Master Clean</td>
-										<td class="p-4">3</td>
-										<td class="p-4">3</td>
-										<td class="p-4">30</td>
-										<td class="p-4">3</td>
-										<td class="p-4">23 Contacts </td>
-										<td class="p-4"><a href="#">Edit Escalation Matrix</a></td>
-										<td class="p-4"><a href="#">Configure Company</a></td>
-									</tr>
-									<tr>
-										<td><img src="assets/images/slv.jpg" class="rounded-circle avatar-sm"/></td>
-										<td class="p-4">SLV Group Security</td>
-										<td class="p-4">3</td>
-										<td class="p-4">3</td>
-										<td class="p-4">30</td>
-										<td class="p-4">3</td>
-										<td class="p-4  text-danger">Not Added </td>
-										<td class="p-4"><a href="#">Add Escalation Matrix</a></td>
-										<td class="p-4"><a href="#">Configure Company</a></td>
-									</tr>
-								</tbody>
-							</table>
-
-						</div>
+						<div class="card">
+                            <div class="table-responsive">
+									<table class="table align-middle table-nowrap mb-0 ">
+										<thead class="table-light">
+											<tr>
+												
+												<th class="align-middle"><select class="bg-bo"><option>State</option><option>Uttar Pradesh</option><option>Maharastra</option></select></th>
+												<th class="align-middle"><select class="bg-bo"><option>Location</option><option>Uttar Pradesh</option><option>Maharastra</option></select></th>
+												<th class="align-middle">Level 5 <br> Area Officer</th>
+												<th class="align-middle">Level 4 <br>Manager Operation</th>
+												<th class="align-middle">Level 3 <br>Branch Head</th>
+												<th class="align-middle">Level 2 <br>VP</th>
+												<th class="align-middle">Level 1 <br>Executive Director</th>
+												<th class="align-middle"></th>
+												<th class="align-middle"></th>
+												
+												
+												
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												
+												<td>Maharastra</td>
+												<td>Bund Garden Branch<br><br>HSBC, Amar Avinash Corporate<br> City, Sector -11, Bund Garden<br> Road, Pune -411001</td>
+												<td>Sudhir Rout<br>9830199407<br><a href="#">sudhir.rout@sisindia.com</a></td>
+												<td>Vishal Giri<br>9029839300<br><a href="#">vishal.giri@sisindia.com<a></td>
+												<td>Vishal Jagtap<br>9343169843<br><a href="#">vishal@sisindia.com</a></td>
+												<td>Ajay Anupam<br>9092019590<br><a href="#">anupam@sisindia.com</a></td>
+												<td>Brig. Arun Shamrao Harge<br>7045351022<br><a href="#">arun.harge@sisindia.com</a></td>
+									
+												<td><a href="#"> <i class="fas fa-edit right-bar-toggle"></i><br>Edit</a></td>
+												
+											</tr>
+											<tr>
+													<td>Maharastra</td>
+												<td>Bund Garden Branch<br><br>HSBC, Amar Avinash Corporate<br> City, Sector -11, Bund Garden Road,<br> Pune -411001</td>
+												<td>Sudhir Rout<br>9830199407<br><a href="#">sudhir.rout@sisindia.com</a></td>
+												<td>Vishal Giri<br>9029839300<br><a href="#">vishal.giri@sisindia.com<a></td>
+												<td>Vishal Jagtap<br>9343169843<br><a href="#">vishal@sisindia.com</a></td>
+												<td>Ajay Anupam<br>9092019590<br><a href="#">anupam@sisindia.com</a></td>
+												<td>Brig. Arun Shamrao Harge<br>7045351022<br><a href="#">arun.harge@sisindia.com</a></td>
+											
+												<td class="border-left"><a href="#"> <i class="fas fa-edit right-bar-toggle"></i><br>Edit</a></td>
+											</tr>
+											<tr>
+	                                            <td>Maharastra</td>
+												<td>Bund Garden Branch<br><br>HSBC, Amar Avinash Corporate<br> City, Sector -11, Bund Garden<br> Road, Pune -411001</td>
+												<td>Sudhir Rout<br>9830199407<br><a href="#">sudhir.rout@sisindia.com</a></td>
+												<td>Vishal Giri<br>9029839300<br><a href="#">vishal.giri@sisindia.com<a></td>
+												<td>Vishal Jagtap<br>9343169843<br><a href="#">vishal@sisindia.com</a></td>
+												<td>Ajay Anupam<br>9092019590<br><a href="#">anupam@sisindia.com</a></td>
+												<td>Brig. Arun Shamrao Harge<br>7045351022<br><a href="#">arun.harge@sisindia.com</a></td>
+												<td><a href="#"> <i class="fas fa-edit right-bar-toggle"></i><br>Edit</a></td>
+											     
+											</tr>
+											
+											<tr>
+	                                            <td>Maharastra</td>
+												<td>Bund Garden Branch<br><br>HSBC, Amar Avinash Corporate City,<br> Sector -11, Bund Garden<br> Road, Pune -411001</td>
+												<td>Sudhir Rout<br>9830199407<br><a href="#">sudhir.rout@sisindia.com</a></td>
+												<td>Vishal Giri<br>9029839300<br><a href="#">vishal.giri@sisindia.com<a></td>
+												<td>Vishal Jagtap<br>9343169843<br><a href="#">vishal@sisindia.com</a></td>
+												<td>Ajay Anupam<br>9092019590<br><a href="#">anupam@sisindia.com</a></td>
+												<td>Brig. Arun Shamrao Harge<br>7045351022<br><a href="#">arun.harge@sisindia.com</a></td>
+												<td><a href="#"> <i class="fas fa-edit right-bar-toggle"></i><br>Edit</a></td>
+											     
+											</tr>		
+											
+										</tbody>
+									</table>
+								</div>
 									
                         </div>
-                        
 						
+                        </div>
                         <div class="tab-pane" id="profile1" role="tabpanel">
-                        <div class="row mb-3">
+						<div class="row mb-3">
 							<div class="col-md-3">
 							<form class="app-search d-none d-lg-block">
 								<div class="position-relative">
@@ -259,7 +266,7 @@
 								<a href="#" class="right-bar-toggle "><button type="button" class="btn btn-primary float-end w-md">Add New User</button></a>
 							</div>
 						</div>
-                        <div class="card mb-3">
+                        <div class="card">
                             <div class="table-responsive">
 									<table class="table align-middle table-nowrap mb-0 ">
 										<thead class="table-light">
@@ -426,7 +433,7 @@
 								</div>
 									
                         </div>
-                       </div>
+                        </div>
                       </div>
                 </div>
                 <!-- End Page-content -->
@@ -435,105 +442,137 @@
 
         </div>
         <!-- END layout-wrapper -->
-		
-		
-		<!-- Modal -->
-                <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header border-bottom-0">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="text-center mb-4">
-                                    <div class="avatar-md mx-auto mb-4">
-                                        <div class="avatar-title bg-light rounded-circle text-primary h1">
-                                            <i class="mdi mdi-email-open"></i>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-10">
-                                            <h4 class="text-primary"> QACA Applicability</h4>
-                                            <p class="text-muted font-size-14 mb-4">Are you sure the QACA is not applicable for the customer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary">Ok</button>
-								<button type="button" class="btn btn-light">Cancel</button>
-							</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end modal -->
-
-		
-		
-		
 	 <style>
 		.right-bar {right: -400px;}
 	 </style>
 <div class="right-bar" style="width:400px;">
     <div data-simplebar class="h-100">
         <div class="rightbar-title d-flex align-items-center px-3 py-4">
-            <h5 class="m-0 me-2">ADD COMPANY</h5><br>
+            <h5 class="m-2 me-2">EDIT</h5><br>
             <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
                 <i class="mdi mdi-close noti-icon"></i>
             </a>
         </div>
+		
         <!-- Settings -->
-		<div class="p-3 min-h-65" style="background:#FAFAFA">
-		<p>Select Company</p>
-			<div class="">
+		<div class="p-2 min-h-65" style="background:#FAFAFA">
+			
+			
+			
+			
+		<div class="p-2">
+			<form class="custom-validation" action="#" novalidate="">
+				<div class="mb-3">
+					<label class="form-label">State</label>
+					<input type="text" class="form-control" required="" placeholder="Maharashtra">
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Branch</label>
+					<input type="text" class="form-control" required="" placeholder="Bund Garden Branch">
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Address</label>
+					<textarea class="form-control">HSBC, Amar Avinash Corporate City, Sector -11, Bund Garden Road, Pune -411001</textarea>
+					<!--<input type="text" class="form-control" required="" placeholder="HSBC, Amar Avinash Corporate City, Sector -11, Bund Garden Road, Pune -411001">-->
+				</div>
+			</form>
+		</div>
+							  <div class="">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="mt-4">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                          LEVEL 5 Area Officer
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                           <form class=" d-none d-lg-block m-4">
+			                                            <input type="text" class="form-control" placeholder="Search Account">
+		                                                        </form>
+                                                        </div>
+														<div class="card shadow-none m-2 mb-3">
 				<div class="row p-3">
 				<div class="col-md-12">
 					<div class="form-check ">
 						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/dts.jpg" alt="" height="30" class="mb-2 col-md-3">
-					<span class="ms-3 text-light col-md-8">Service Master Clean</span>
+						<img src="assets/images/sir.png" alt="" height="30" class="mb-2">
+					
+					<span class="ms-3 text-light">Name Surname<br>namesurname@sisindia.com<br> +919876543210</span>
 					</div>
 				</div>
 				</div>
-			</div>
-			<div class=" mb-1">
 				<div class="row p-3">
 				<div class="col-md-12">
 					<div class="form-check ">
 						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/rare.jpg" alt="" height="20" class="mb-2 col-md-3">
-					<span class="ms-3 text-light col-md-8">Service Master Clean</span>
+						<img src="assets/images/sir.png" alt="" height="30" class="mb-2">
+				<span class="ms-3 text-light">Name Surname<br>namesurname@sisindia.com<br> +919876543210</span>
 					</div>
 				</div>
 				</div>
-			</div>
-			<div class="mb-1">
 				<div class="row p-3">
 				<div class="col-md-12">
 					<div class="form-check ">
 						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/protect.jpg" alt="" height="30" class="mb-2 col-md-3">
-					<span class="ms-3 text-light col-md-8">VProtect</span>
+						<img src="assets/images/sir.png" alt="" height="30" class="mb-2">
+					<span class="ms-3 text-light">Name Surname<br>namesurname@sisindia.com<br> +919876543210</span>
 					</div>
 				</div>
 				</div>
 			</div>
-			<div class="mb-1">
-				<div class="row p-3">
-				<div class="col-md-12">
-					<div class="form-check ">
-						<input class="form-check-input mt-2 me-4" type="radio" name="formRadios" id="formRadios1">
-						<img src="assets/images/slv.jpg" alt="" height="30" class="mb-2 col-md-3">
-					<span class="ms-3 text-light col-md-8">Service Master Clean</span>
-					</div>
-				</div>
-				</div>
-			</div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingTwo">
+                                                        <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                          LEVEL 4 Manager Operation
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <div class="text-muted">
+                                                                <strong class="text-dark">This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingThree">
+                                                        <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                     LEVEL 3 Branch Head
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <div class="text-muted">
+                                                                <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end accordion -->
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+
+                                   
+                                    <!-- end col -->
+                                </div>
+                                <!-- end row -->
+                            </div>
+			
 		
 		</div>
 		<div class="m-3">
 			<button type="button" class="btn btn-light waves-effect ">Cancel</button>
-			<button type="button" class="btn btn-primary waves-effect waves-light float-end">Configure Company</button>
+			<button type="button" class="btn btn-primary waves-effect waves-light float-end">Save</button>
 		</div>
 		<div class="clearfix"></div>
 
@@ -542,37 +581,14 @@
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
-
-<script>
-//setTimeout(function () {
-  //  $('#subscribeModal').modal('show');
-//}, 2000);
-
-$(function() {
-  $('#designselectedchange').on('change', function() { 
-    if ($(this).val() === 'subscribeModal') {
-      $('#subscribeModal').modal('show');
-    } else {
-      var url = $(this).val(); // get selected value
-      if (url) { // require a URL
-        window.location = url; // redirect
-      }
-    }
-  });
-});
-
-</script>
         <!-- JAVASCRIPT -->
 <script src="assets/libs/jquery/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/libs/metismenu/metisMenu.min.js"></script>
 <script src="assets/libs/simplebar/simplebar.min.js"></script>
 <script src="assets/libs/node-waves/waves.min.js"></script>
-<!-- Plugins js -->
-<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
 <!-- App js -->
 <script src="assets/js/app.js"></script>
-
-
     </body>
 </html>
