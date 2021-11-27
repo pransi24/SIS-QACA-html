@@ -8414,6 +8414,9 @@ fieldset:disabled .btn {
 .w-10 {
 	width: 10%!important
 }
+.w-15 {
+	width: 15%!important
+}
 .w-25 {
 	width: 25%!important
 }
@@ -14018,10 +14021,53 @@ svg {
     border-color: #556ee6;
 }
 .max-h-58{max-height:580px;
+		 min-height:580px;
 		 overflow: scroll;
 		 overflow-x: hidden;
 		}
 .min-h-57{min-height:570px;}
-.min-h-65{min-height:650px;}
+.min-h-65{min-height:670px;
+		overflow: scroll;
+		 overflow-x: hidden;
+		 }
 .text-d-g{color: #363636;}
 .mb-12{margin-bottom:12px !important;}
+
+ul.tree li {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.tree li ul {
+    display: none;
+}
+
+ul.tree li.open > ul {
+    display: block;
+}
+
+ul.tree li a {
+    color: black;
+    text-decoration: none;
+}
+
+ul.tree li a:before {
+    height: 1em;
+    padding:0 .1em;
+    font-size: 1.3em;
+    display: block;
+    position: absolute;
+    left: -1.3em;
+    top: 0em;
+}
+
+ul.tree li > a:not(:last-child):before {
+	font-family: FontAwesome;
+    content: "\f107";
+}
+
+ul.tree li.open > a:not(:last-child):before {
+	font-family: FontAwesome;
+    content: "\f106";
+}
+.min-top{margin-top:250px !important;}

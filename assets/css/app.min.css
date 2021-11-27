@@ -107,6 +107,10 @@
 	padding: calc(70px + 24px) calc(430px / 2) 60px calc(430px / 2);
 }
 
+.page-content2 {
+    padding: calc(47px + 24px) calc(0px / 2) 60px calc(0px / 2);
+}
+
 .header-item {
 	height: 70px;
 	-webkit-box-shadow: none!important;
@@ -3413,7 +3417,7 @@ input[switch=dark]:checked+label:before {
 }
 
 .dropzone {
-	min-height: 200px;
+	min-height: 170px;
 	border: 2px dashed #ced4da;
 	background: #EDF1F5;
 	border-radius: 6px
