@@ -18,7 +18,7 @@
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
+<script src="https://code.jquery.com/jquery.min.js"></script>
     </head>
 
     <body data-sidebar="dark">
@@ -171,9 +171,9 @@
 								<div class="col-lg-3 mt-3">
 									<div class="mb-3">
 										<label for="formrow-inputState" class="form-label">Is QACA applicable for this account?</label>
-										<select id="formrow-inputState" class="form-select">
-											<option selected="">Yes</option>
-											<option>No</option>
+										<select class="form-select" id="designselectedchange">
+											<option value="yes">Yes</option>
+											<option value="subscribeModal">No</option>
 										</select>
 									</div>
 								</div>
@@ -259,7 +259,7 @@
 								<a href="#" class="right-bar-toggle "><button type="button" class="btn btn-primary float-end w-md">Add New User</button></a>
 							</div>
 						</div>
-                        <div class="card">
+                        <div class="card mb-3">
                             <div class="table-responsive">
 									<table class="table align-middle table-nowrap mb-0 ">
 										<thead class="table-light">
@@ -435,6 +435,42 @@
 
         </div>
         <!-- END layout-wrapper -->
+		
+		
+		<!-- Modal -->
+                <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center mb-4">
+                                    <div class="avatar-md mx-auto mb-4">
+                                        <div class="avatar-title bg-light rounded-circle text-primary h1">
+                                            <i class="mdi mdi-email-open"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-10">
+                                            <h4 class="text-primary"> QACA Applicability</h4>
+                                            <p class="text-muted font-size-14 mb-4">Are you sure the QACA is not applicable for the customer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary">Ok</button>
+								<button type="button" class="btn btn-light">Cancel</button>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+
+		
+		
+		
 	 <style>
 		.right-bar {right: -400px;}
 	 </style>
@@ -506,6 +542,26 @@
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
+
+<script>
+//setTimeout(function () {
+  //  $('#subscribeModal').modal('show');
+//}, 2000);
+
+$(function() {
+  $('#designselectedchange').on('change', function() { 
+    if ($(this).val() === 'subscribeModal') {
+      $('#subscribeModal').modal('show');
+    } else {
+      var url = $(this).val(); // get selected value
+      if (url) { // require a URL
+        window.location = url; // redirect
+      }
+    }
+  });
+});
+
+</script>
         <!-- JAVASCRIPT -->
 <script src="assets/libs/jquery/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -516,5 +572,7 @@
 <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
 <!-- App js -->
 <script src="assets/js/app.js"></script>
+
+
     </body>
 </html>
