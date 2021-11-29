@@ -14071,3 +14071,4 @@ ul.tree li.open > a:not(:last-child):before {
     content: "\f106";
 }
 .min-top{margin-top:250px !important;}
+.max-67{max-height:670px !important;}
