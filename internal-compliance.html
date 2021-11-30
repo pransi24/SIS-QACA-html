@@ -301,6 +301,55 @@
 		
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
+
+
+  <!--jQuery library file -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
+  <!--Datatable plugin JS library file -->
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+  </script>
+<script>
+      $(document).ready(function () {
+ 
+        var myTable = $("#datatable").DataTable({
+          paging: false,
+          searching: true,
+          info: false,
+        });
+
+        myTable
+          .columns()
+          .flatten()
+          .each(function (colID) {
+ 
+            // Create the select list in the
+            var mySelectList = $("<select class='bg-bo' />")
+              .appendTo(myTable.column(colID).header())
+              .on("change", function () {
+                myTable.column(colID).search($(this).val());
+ 
+                // update the changes using draw() method
+                myTable.column(colID).draw();
+              });
+ 
+            // Get the search cached data for the
+            myTable
+              .column(colID)
+              .cache("search")
+              .sort()
+              .each(function (param) {
+                mySelectList.append(
+                  $('<option value="' + param + '">'
+                    + param + "</option>")
+                );
+              });
+          });
+      });
+	  
+  </script>
+
+
         <!-- JAVASCRIPT -->
 <script src="assets/libs/jquery/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
