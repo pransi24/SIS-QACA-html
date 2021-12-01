@@ -10,15 +10,13 @@
 <meta content="Themesbrand" name="author" />
 <!-- App favicon -->
 <link rel="shortcut icon" href="assets/images/favicon.ico">
- <!-- Plugins css -->
-    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
 <!-- Bootstrap Css -->
 <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
 <!-- Icons Css -->
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
 
     <body data-sidebar="dark">
@@ -112,21 +110,16 @@
                     <div class="row card shadow-none ">
 						<div class="col-12">
 							<div class="page-title-box d-sm-flex justify-content-between ms-4 mt-2">
-								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>NEW ACCOUNT</h4>
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>CONFIGURATION</h4>
 							</div>
 						</div>						
-						<div class="col-xl-12 mt-3"> 
+						<div class="col-xl-12 mt-4">                               
 						<div class="ms-4">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs nav-tabs-custom " role="tablist">
 								<li class="nav-item w-auto">
 									<a class="nav-link active bg-none" data-bs-toggle="tab" href="#home1" role="tab" aria-selected="true">
-										<span class="d-none d-sm-block">Customer Details</span>
-									</a>
-								</li>
-								<li class="nav-item w-auto">
-									<a class="nav-link bg-none" data-bs-toggle="tab" href="#sis-com" role="tab" aria-selected="true">
-										<span class="d-none d-sm-block">Services</span>
+										<span class="d-none d-sm-block">Accounts</span>
 									</a>
 								</li>
 								<li class="nav-item w-auto">
@@ -140,126 +133,228 @@
 						</div>
                         <!-- end row -->
                     </div>
-					
 					<div class="clearfix"></div>
                     <!-- container-fluid -->
-					  <div class="tab-content bg-none p-3 m-3">
+					  <div class="tab-content bg-none p-2 m-3">
                         <div class="tab-pane active" id="home1" role="tabpanel">
-						 <div class="p-3">
-							<p class="font-size-16">CUSTOMER DETAILS</P> 
-								<div class="text-danger">
-									Please select a valid Image, Upload size( Max 2 MB).
-								</div>
-							  <form action="#" class="dropzone col-md-3">
-									<div class="fallback">
-										<input name="file" type="file" multiple="multiple">
-									</div>
-									<div class="dz-message needsclick">
-										<div class="mb-3">
-											<i class="display-4 text-muted bx bxs-cloud-upload"></i>
-										</div>
-
-										<h4>Drag & Drop to upload.</h4>
-										<h6 class="text-primary">or Browes</h6>
-									</div>
-								</form>
-								<div class="col-lg-3 mt-3">
-									<div class="mb-3">
-										<label for="formrow-inputState" class="form-label">Is QACA applicable for this account?</label>
-										<select id="formrow-inputState" class="form-select">
-											<option selected="">Yes</option>
-											<option>No</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-lg-3 mt-3">
-									<div class="mb-3">
-										<label for="formrow-inputState" class="form-label">How frequently should data be updated?</label>
-										<select id="formrow-inputState" class="form-select">
-											<option selected="">Live Data</option>
-											<option>No</option>
-										</select>
-									</div>
-								</div>
-						</div>							
-                        </div>
-						
-						<div class="tab-pane" id="sis-com" role="tabpanel">
-						<div class="row mb-3">
-							<div class="col-md-10"></div>
+						<div class="row">
 							<div class="col-md-2">
-								<a href="#" class="right-bar-toggle "><button type="button" class="btn btn-primary float-end w-md">Add Company</button></a>
+							<form class="app-search d-none d-lg-block">
+								<div class="position-relative">
+									<input type="text" class="form-control" placeholder="Search Account">
+									<span class="bx bx-search-alt p-ab"></span>
+								</div>
+							</form>
+							</div>
+							<div class="col-md-7"></div>
+							<div class="col-md-3 ">
+								<a href="#" class="right-bar-toggle "><button type="button" class="btn btn-primary float-end w-md">Add New Account</button></a>
+							</div>
+							
+							<div class="col-md-12 mt-2">
+								<div class="alert alert-primary" role="alert">
+									Total Number of <span class="text-danger">4 Records</span> Found
+								</div>
 							</div>
 						</div>
-						<div class="table-responsive card">
-							<table class="table align-middle table-nowrap mb-0">
-								<thead class="table-light">
-									<tr>
-										<th class="align-middle ms-4">Company</th>
-										<th class="align-middle">Service Availed</th>
-										<th class="align-middle">States</th>
-										<th class="align-middle">Sites</th>
-										<th class="align-middle">Users</th>
-										<th class="align-middle"></th>
-										<th class="align-middle"></th>
-										<th class="align-middle"></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
+						<div class="card mb-12">
+						 <div class="p-2">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
 										<div class="d-flex">
-											<div class="avatar-xs align-self-center me-2">
-												<div class="avatar-title text-success font-size-20">
-													<img src="assets/images/dts.jpg" class="avatar-sm"/>
-												</div>
-											</div>
-
-											<div class="overflow-hidden me-auto ms-2">
-												<h5 class="font-size-13 text-truncate mt-3">Service Master Clean</h5>
+											<div class="me-3">
+												<img src="assets/images/airtel.png" alt="" height="50" class="ms-3"><br>
+												<span class="ms-3 text-light d-block">Bharti Airtel Pvt Ltd</span>
 											</div>
 										</div>
-										</td>
-										<td class="p-3">3</td>
-										<td class="p-3">3</td>
-										<td class="p-3">30</td>
-										<td class="p-3">3</td>
-										<td class="p-3"></td>
-										<td class="p-3"><a href="#" class="float-end">Service Master Clean</a></td>
-										<td class="p-3"><a href="#" class="float-end me-4">Configure Company</a></td>
-									</tr>
-									<tr>
-										<td>
-										<div class="d-flex">
-											<div class="avatar-xs align-self-center me-2">
-												<div class="avatar-title text-success font-size-20">
-													<img src="assets/images/dts.jpg" class="avatar-sm"/>
-												</div>
-											</div>
-
-											<div class="overflow-hidden me-auto ms-2">
-												<h5 class="font-size-13 text-truncate mt-3">Service Master Clean</h5>
-											</div>
-										</div>
-										</td>
-										<td class="p-3">3</td>
-										<td class="p-3">3</td>
-										<td class="p-3">30</td>
-										<td class="p-3">3</td>
-										<td class="p-3"></td>
-										<td class="p-3"><a href="#" class="float-end">Service Master Clean</a></td>
-										<td class="p-3"><a href="#" class="float-end me-4">Configure Company</a></td>
-									</tr>
-								</tbody>
-							</table>
-
-						</div>
+									</div>
 									
-                        </div>
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">Sites</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Users</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-2">
+											<a href="configure-account.html" class="text-primary float-end  me-2 mt-3">Edit Account<i class="fa fa-chevron-right float-end ms-4 mt-1"></i></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>	
+							</div>
+                        
+						<div class="card mb-12">
+						 <div class="p-2">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="me-3">
+												<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ICICI_Bank_Logo.svg/2560px-ICICI_Bank_Logo.svg.png" alt="" class="ms-3 mb-1" height="30" width="115"><br>
+												<span class="ms-3 text-light d-block">ICICI Bank Limited</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">Sites</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Users</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-2">
+											<a href="configure-account.html" class="text-primary float-end  me-2 mt-3">Edit Account<i class="fa fa-chevron-right float-end ms-4 mt-1"></i></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							
+							</div>
+                        <div class="card mb-12">
+						 <div class="p-2">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="me-3">
+												<img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Mitsubishi_Electric_logo.png" alt="" class="ms-3 mb-1" height="30"><br>
+												<span class="ms-3 text-light d-block">Mitsubishi Electric India Pvt. Ltd.</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">Sites</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Users</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-2">
+											<a href="configure-account.html" class="text-primary float-end  me-2 mt-3">Edit Account<i class="fa fa-chevron-right float-end ms-4 mt-1"></i></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>
+							
+							
+							</div>
+                        <div class="card mb-12">
+						 <div class="p-2">
+								<div class="row ">
+									<div class="col-xl-2 col-sm-4">
+										<div class="d-flex">
+											<div class="me-3">
+												<img src="assets/images/airtel.png" alt="" height="50" class="ms-3"><br>
+												<span class="ms-3 text-light d-block">Bharti Airtel Pvt Ltd</span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">States</h5>
+												<h2>2</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+											<h5 class="text-muted mb-2 font-size-12">Sites</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+
+									<div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Services</h5>
+												<h2>1</h2>
+										</div>
+									</div>
+									 <div class="col-xl-1 col-sm-4">
+										<div class="mt-2">
+										   <h5 class="text-muted mb-2 font-size-12">Users</h5>
+												<h2>82</h2>
+										</div>
+									</div>
+									<div class="col-xl-4 col-sm-4"></div>
+									<div class="col-xl-2 col-sm-4">
+										<div class="mt-2">
+											<a href="configure-account.html" class="text-primary float-end  me-2 mt-3">Edit Account<i class="fa fa-chevron-right float-end ms-4 mt-1"></i></span></a>
+										</div>
+									</div>
+								</div>           
+							</div>	
+							</div>
                         
 						
+                        </div>
                         <div class="tab-pane" id="profile1" role="tabpanel">
-                       <div class="row mb-3">
+						<div class="row mb-5">
 							<div class="col-md-3">
 							<form class="app-search d-none d-lg-block">
 								<div class="position-relative">
@@ -312,7 +407,7 @@
 												<td>1-7-2021 | 15:31</td>
 												<td><a href="#">Send Email</a></td>
 												<td><a href="#">Configure User</a></td>
-												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+												<td><a href="#"><i class="fa fa-chevron-right right-bar-toggle"></i></a></td>
 											</tr>
 											<tr>
 												<td class="p-3">
@@ -336,7 +431,7 @@
 												<td>1-7-2021 | 15:31</td>
 												<td><a href="#">Send Email</a></td>
 												<td><a href="#">Configure User</a></td>
-												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+												<td><a href="#"><i class="fa fa-chevron-right right-bar-toggle"></i></a></td>
 											</tr>
 											<tr>
 												<td class="p-3">
@@ -360,7 +455,7 @@
 												<td>1-7-2021 | 15:31</td>
 												<td><a href="#">Send Email</a></td>
 												<td><a href="#">Configure User</a></td>
-												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+												<td><a href="#"><i class="fa fa-chevron-right right-bar-toggle"></i></a></td>
 											</tr>
 											<tr>
 												<td class="p-3">
@@ -384,7 +479,7 @@
 												<td>1-7-2021 | 15:31</td>
 												<td><a href="#">Resend Email</a></td>
 												<td><a href="#">Configure User</a></td>
-												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+												<td><a href="#"><i class="fa fa-chevron-right right-bar-toggle"></i></a></td>
 											</tr>
 											<tr>
 												<td class="p-3">
@@ -408,7 +503,7 @@
 												<td>1-7-2021 | 15:31</td>
 												<td><a href="#">Send Email</a></td>
 												<td><a href="#">Configure User</a></td>
-												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+												<td><a href="#"><i class="fa fa-chevron-right right-bar-toggle"></i></a></td>
 											</tr>
 											<tr>
 												<td class="p-3">
@@ -432,7 +527,7 @@
 												<td>1-7-2021 | 15:31</td>
 												<td><a href="#">Send Email</a></td>
 												<td><a href="#">Configure User</a></td>
-												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+												<td><a href="#"><i class="fa fa-chevron-right right-bar-toggle"></i></a></td>
 											</tr>
 											
 										</tbody>
@@ -455,198 +550,107 @@
 <div class="right-bar" style="width:400px;">
     <div data-simplebar class="h-100">
         <div class="rightbar-title d-flex align-items-center px-3 py-4">
-            <h5 class="m-0 me-2">CONFIGURE COMPANY</h5><br>
+            <h5 class="m-2 me-2">ADD ACCOUNT</h5><br>
             <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
                 <i class="mdi mdi-close noti-icon"></i>
             </a>
         </div>
-		<p class="font-size-18 m-4">Service Master Clean
-		<img src="assets/images/dts.jpg" class="float-end"/></p>
+		<form class=" d-none d-lg-block m-4">
+			<input type="text" class="form-control" placeholder="Search Account">
+		</form>
         <!-- Settings -->
-		<ul class="nav nav-tabs-custom nav-justified" role="tablist">
-			<li class="nav-item">
-				<a class="nav-link active" data-bs-toggle="tab" href="#services" role="tab">
-					<span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-					<span class="d-none d-sm-block">Services</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="tab" href="#functions" role="tab">
-					<span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-					<span class="d-none d-sm-block">Functions</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" data-bs-toggle="tab" href="#locations" role="tab">
-					<span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-					<span class="d-none d-sm-block">Locations</span>
-				</a>
-			</li>
-		</ul>
-		<div class="tab-content p-3 text-muted min-h-57" style="background: #f7f5f5;">
-			<div class="tab-pane active" id="services" role="tabpanel">
-				<p><b>Select Services</b></p>
-				<div class="">
-					<div class="row p-3">
-					<div class="col-md-12 mb-4">
-						<div class="form-check ">
-							<input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">HouseKeeping</span>
-						</div>
-					</div>
-					<div class="col-md-12 mb-4">
-						<div class="form-check ">
-							<input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">landscaping</span>
-						</div>
-					</div>
-					<div class="col-md-12 mb-4">
-						<div class="form-check ">
-							<input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">Waste Management</span>
-						</div>
-					</div>
-					<div class="col-md-12 mb-4">
-						<div class="form-check ">
-							<input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">EHS</span>
-						</div>
-					</div>
-					<div class="col-md-12 mb-4">
-						<div class="form-check ">
-							<input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">Laundry</span>
-						</div>
-					</div><div class="col-md-12 mb-3">
-						<div class="form-check ">
-							<input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">Pantry Services</span>
-						</div>
-					</div>
-					<div class="col-md-12 mb-4">
-						<div class="form-check ">
-							<input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">Guest House Management</span>
-						</div>
-					</div>
-					<div class="col-md-12 mb-4">
-						<div class="form-check ">
-							<input class="form-check-input mt-2 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1">
-							<span class="font-size-14">Warehouse Management</span>
-						</div>
-					</div>
+		<div class="p-2 max-h-58" style="background:#FAFAFA">
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
 					</div>
 				</div>
+				</div>
 			</div>
-			<div class="tab-pane" id="functions" role="tabpanel">
-				<p><b>Select Functions</b></p>
-				<div class="">
-					<div class="row p-3">
-					<ul class="tree">
-					  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><span class="font-size-14">All</span></li>
-					  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Manpower</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Daily Attendance</a></li>
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Deployed Vs Authorized Strength</a></li>
-						</ul>
-					  </li>
-
-					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Operations</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Operations</a></li>
-						</ul>
-					  </li>
-
-					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Training</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Training</a></li>
-						</ul>
-					  </li>
-					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Compliance</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Compliance</a></li>
-						</ul>
-					  </li>
-					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Billing</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Invoices</a></li>
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Outstanding Amount</a></li>
-						</ul>
-					  </li>
-					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Reports</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Mmr</a></li>
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Mom</a></li>
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Sla Report</a></li>
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 ">Audit Report</a></li>
-						</ul>
-					  </li>
-					</ul>
-					
-				
-				
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
 					</div>
 				</div>
-			
+				</div>
 			</div>
-			<div class="tab-pane" id="locations" role="tabpanel">
-			<p><b>Select Sites</b></p>
-				<div class="row p-3">	
-					<ul class="tree">
-					  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><span class="font-size-14">All</span></li>
-					  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Haryana</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Gurugram</a></li>
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Faridabad</a></li>
-						</ul>
-					  </li>
-
-					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Punjab</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Punjab</a></li>
-						</ul>
-					  </li>
-
-					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Himachal</a>
-						<ul class="mt-2 ">
-						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Himachal</a></li>
-						</ul>
-					  </li>
-					</ul>
-				
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
 					</div>
-				
+				</div>
+				</div>
+			</div>
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="card m-2 mb-2">
+				<div class="row p-3">
+				<div class="col-md-12">
+					<div class="form-check ">
+						<input class="form-check-input mt-1 me-2" type="radio" name="formRadios" id="formRadios1">
+						<span class="text-light col-md-11"> Bharti Airtel Private Limited SiS manpower India Private Limited</span>
+					</div>
+				</div>
+				</div>
 			</div>
 			
 		</div>
 		<div class="m-3">
 			<button type="button" class="btn btn-light waves-effect ">Cancel</button>
-			<button type="button" class="btn btn-primary waves-effect waves-light float-end">Save Configuration </button>
+			<button type="button" class="btn btn-primary waves-effect waves-light float-end">Continue</button>
 		</div>
 		<div class="clearfix"></div>
 
     </div> <!-- end slimscroll-menu-->
 </div>
 
-
-<script>
-var tree = document.querySelectorAll('ul.tree a:not(:last-child)');
-for(var i = 0; i < tree.length; i++){
-    tree[i].addEventListener('click', function(e) {
-        var parent = e.target.parentElement;
-        var classList = parent.classList;
-        if(classList.contains("open")) {
-            classList.remove('open');
-            var opensubs = parent.querySelectorAll(':scope .open');
-            for(var i = 0; i < opensubs.length; i++){
-                opensubs[i].classList.remove('open');
-            }
-        } else {
-            classList.add('open');
-        }
-    });
-}
-</script>
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
         <!-- JAVASCRIPT -->
@@ -655,8 +659,7 @@ for(var i = 0; i < tree.length; i++){
 <script src="assets/libs/metismenu/metisMenu.min.js"></script>
 <script src="assets/libs/simplebar/simplebar.min.js"></script>
 <script src="assets/libs/node-waves/waves.min.js"></script>
-<!-- Plugins js -->
-<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+
 <!-- App js -->
 <script src="assets/js/app.js"></script>
     </body>
