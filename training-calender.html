@@ -16,6 +16,10 @@
     <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+	
+	    <link rel="stylesheet" type="text/css" href="assets/libs/tui-time-picker/tui-time-picker.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/libs/tui-date-picker/tui-date-picker.min.css">
+        <link href="assets/libs/tui-calendar/tui-calendar.min.css" rel="stylesheet" type="text/css" />
 
         <!-- Bootstrap Css -->
 <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -32,7 +36,7 @@
 	
     </head>
 
-     <body data-sidebar="dark">
+    <body data-sidebar="dark">
         <!-- Begin page -->
         <div id="layout-wrapper">
 
@@ -40,15 +44,7 @@
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
-			<div class="btn-group" role="group">
-				<button id="btnGroupVerticalDrop1" type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-chevron-down"></i>
-				</button>
-				<div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-					<a class="dropdown-item" href="#"><img src="assets/images/sis.jpg" alt="" height="92"></a><hr>
-					<a class="dropdown-item" href="#"><img src="assets/images/servicemaster.png" alt="" height="92"></a>
-				</div>
-			</div>
-             <div class="navbar-brand-box">
+            <div class="navbar-brand-box ms-3">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/images/sis-admin.jpg" alt="" height="22">
@@ -70,7 +66,6 @@
 				
             </div>
 <span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
-
             <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
@@ -79,7 +74,6 @@
 			<span class="logo-lg ms-30">
 				<img src="assets/images/airtel.png" alt="" height="60">
 			</span>
-			
         </div>
 
         <div class="d-flex">
@@ -90,7 +84,7 @@
                 </div>
             </form>
 			
-			<button type="button" class="btn header-item waves-effect ">
+			<button type="button" class="btn header-item waves-effect right-bar-toggle">
 				<i class="bx bx-download rounded-circle border p-2 bg-gray"></i>
 			</button>
 			
@@ -103,7 +97,7 @@
                     <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
                     <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                    <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                 </div>
             </div>
 
@@ -125,7 +119,7 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
-					<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
+				<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
 					<select class="form-select side-ste" style="max-width: 80px;">
 						<option value="BT" selected="">Sites</option>
 						<option value="ET">Sites 1</option>
@@ -135,7 +129,7 @@
 					<button type="button" class="btn btn-dark waves-effect waves-light me-2">
 						<i class="fa fa-list-ul font-size-16 align-middle"></i>
 					</button>
-					</div>
+				</div>
 					<hr style="color:#000;">
 					<button type="" class="text-white ms-3" style=" background: #223044;border: navajowhite;">
 								STATES <span class="badge badge-soft-light rounded-circle text-dark m-1">2</span>
@@ -164,8 +158,7 @@
 								2
 							</span>
 						</div>
-					</span>
-					
+					</span>	
 			</ul>
 			<div class="bg-danger text-white-50 side-box-danger mb-3">
 				<div class="card-body row">
@@ -201,153 +194,47 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
-								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Training</h4>
-								<div class="page-title-right">
-								<ol class="breadcrumb m-0">
-									<a href="training-calender.html"><li class="breadcrumb-item "><a href="#" class="text-primary">Training Calender</a></li>
-									<li class="ms-2"><i class="fa fa-chevron-circle-right text-primary"></i></li></a>
-								</ol>
-								</div>
-								
-							</div>
-							<div class="float-end mb-2">
-								<div class="calendar-prev scroll-man">
-									<a href="#"><i class="fa fa-chevron-left ms-2" id="left"></i> </a>
-									<a href="#"><i class="fa fa-chevron-right ms-2" id="right"></i> </a>
-								</div>
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Training CALENDAR</h4>
 							</div>
 						</div>
 					</div>
 					<!-- end page title -->
-                        <div class="row">
-                            <div class="col-xl-12">
-                               <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted fw-medium font-size-11">Training Session (Actual vs pla..)</p>
-													<h4 class="mb-0"><b>8</b> / 10</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Avg. Training Hours per Site</p>
-													<h4 class="mb-0"><b>12</b> / 15hrs</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11 ">Total Trained Man Hours</p>
-													<h4 class="mb-0">433 Hrs</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-									<div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Trained Vs Total Employees</p>
-													<h4 class="mb-0"><b>4700</b> / 5603</h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Topic Covered</p>
-													<h4 class="mb-0"><b>10</b></h4>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="card mini-stats-wid p-3 manpower-cc">
-											<div class="d-flex">
-												<div class="flex-grow-1">
-													<p class="text-muted font-size-11">Background Verifiations</p>
-													<h4 class="mb-0"><b>246</b> / 246</h4>
-												</div>
-											</div>
+					<div class="row mb-2">
+						<div class="col-md-10">
+							<button type="button" class="btn btn-dark rounded-pill font-size-11">
+								All Types
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Classroom 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Client Training 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Van Training 
+							</button>
+						</div>
+						
+						<div class="col-md-2">
+							<a href="training-details.html"><button type="button" class="btn btn-primary float-end">
+									View Details 
+							</button></a>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="">
+                                        <div id="lnb">
+                                            <div id="calendarList" class="lnb-calendars-d1"></div>
+                                            
+                                            
+                                            <div id="calendar" style="height: 809px;"></div>
+                                            
                                         </div>
                                     </div>
                                 </div>
-								
-							
-					<div class="clearfix"></div>
-								
-									<div class="">
-										<div class="col-xl-12 card">
-										<div class="table-responsive">
-                                            <table class="table align-middle table-nowrap mb-0">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th class="align-middle">Training Type</th>
-                                                        <th class="align-middle">Sessions</th>
-                                                        <th class="align-middle">Sites</th>
-                                                        <th class="align-middle">Total Durations</th>
-                                                        <th class="align-middle">Topic Covered</th>
-                                                        <th class="align-middle">Employees Trained</th>
-                                                        <th class="align-middle"></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="p-4">Classroom</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="p-4">Virtual</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="p-4">OTJ</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
-                                                    </tr>
-													<tr>
-                                                        <td class="p-4">Self-Learning</td>
-                                                        <td class="p-4">20</td>
-                                                        <td class="p-4">1</td>
-                                                        <td class="p-4">45 Hours</td>
-                                                        <td class="p-4">4 <i class="bx bx-error-circle"></i></td>
-                                                        <td class="p-4">200</td>
-                                                        <td class="p-4"><a href="#"><i class="fa fa-angle-right"></i></a></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-									</div>
-								</div>
-
-								
-								
                             </div>
                         </div>
                         <!-- end row -->
@@ -361,7 +248,101 @@
 
         </div>
         <!-- END layout-wrapper -->
+	 <style>
+		.right-bar {right: -430px;}
+	 </style>
+        <!-- Right Sidebar -->
+<div class="right-bar" style="width:430px;">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <h5 class="m-0 me-2">TRAINING DETAILS</h5>
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+		<div class="row">
+			<h4 class="ms-4 mb-4 col-md-4">5-10-2021</h4>
+			<div class="col-md-2 calendar-prev">
+				<a href="#"><i class="fa fa-chevron-left"></i> </a>
+				<a href="#"><i class="fa fa-chevron-right ms-1"></i> </a>
+			</div>
+			<div class="col-md-5"></div>
+		</div>
+        <!-- Settings -->
+		<div class="p-4 h-75" style="background:#FAFAFA">
+			<div class="row font-size-11 text-light">
+				<div class="col-md-2">
+					<span>10:00 AM</span>
+				</div>
+				<div class="col-md-2">
+					<span>OTJ</span>
+				</div>
+				<div class="col-md-4">
+					<span>GGN_UNT_000001<br> Manesar, Gurugram</span>
+				</div>
+				<div class="col-md-3">
+					<span class="text-success">Done</span>
+				</div>
+				<div class="col-md-1">
+					<a href="#"><i class="fa fa-chevron-right float-end"></i></a>
+				</div>
+			</div><hr>
+			<div class="row font-size-11 text-light">
+				<div class="col-md-2">
+					<span>12:00 PM</span>
+				</div>
+				<div class="col-md-2">
+					<span>OTJ</span>
+				</div>
+				<div class="col-md-4">
+					<span>GGN_UNT_000001<br> Manesar, Gurugram</span>
+				</div>
+				<div class="col-md-3">
+					<span class="text-danger">Not Done</span>
+				</div>
+				<div class="col-md-1">
+					<a href="#"><i class="fa fa-chevron-right float-end"></i></a>
+				</div>
+			</div><hr>
+			<div class="row font-size-11 text-light">
+				<div class="col-md-2">
+					<span>3:00 PM</span>
+				</div>
+				<div class="col-md-2">
+					<span>OTJ</span>
+				</div>
+				<div class="col-md-4">
+					<span>GGN_UNT_000001<br> Manesar, Gurugram</span>
+				</div>
+				<div class="col-md-3">
+					<span>Planned</span>
+				</div>
+				<div class="col-md-1">
+					<a href="#"><i class="fa fa-chevron-right float-end"></i></a>
+				</div>
+			</div><hr>
+			<div class="row font-size-11 text-light">
+				<div class="col-md-2">
+					<span>5:00 PM</span>
+				</div>
+				<div class="col-md-2">
+					<span>OTJ</span>
+				</div>
+				<div class="col-md-4">
+					<span>GGN_UNT_000001<br> Manesar, Gurugram</span>
+				</div>
+				<div class="col-md-3">
+					<span>Planned</span>
+				</div>
+				<div class="col-md-1">
+					<a href="#"><i class="fa fa-chevron-right float-end"></i></a>
+				</div>
+			</div><hr>
+		</div>
 
+    </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
 
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
@@ -380,6 +361,17 @@
 <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="assets/js/tui-code-snippet.min.js"></script>
+        <script src="assets/libs/tui-dom/tui-dom.min.js"></script>
+
+        <script src="assets/libs/tui-time-picker/tui-time-picker.min.js"></script>
+        <script src="assets/libs/tui-date-picker/tui-date-picker.min.js"></script>
+		
+		<script src="assets/libs/tui-calendar/tui-calendar.min.js"></script>
+
+        <script src="assets/js/pages/calendars.js"></script>
+        <script src="assets/js/pages/schedules.js"></script>
+        <script src="assets/js/pages/calendar.init.js"></script>
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
