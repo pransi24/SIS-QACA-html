@@ -2232,7 +2232,8 @@ progress {
 
 .table-responsive {
 	overflow-x: auto;
-	-webkit-overflow-scrolling: touch
+	-webkit-overflow-scrolling: touch;
+	border-radius: 7px;
 }
 
 @media (max-width:575.98px) {
@@ -9493,6 +9494,25 @@ fieldset:disabled .btn {
 	color: rgba(var(--bs-body-rgb), var(--bs-text-opacity))!important
 }
 
+.text-danger12 {
+	--bs-text-opacity: 1;
+	color: #C34C37!important
+}
+
+.text-red {
+	--bs-text-opacity: 1;
+	color: #FF0000!important
+}
+
+.text-green {
+	--bs-text-opacity: 1;
+	color: #49C063!important
+}
+.text-orange {
+	--bs-text-opacity: 1;
+	color: #FF7600!important
+}
+
 .text-muted {
 	--bs-text-opacity: 1;
 	color: #223044!important
@@ -13628,7 +13648,8 @@ button {
 	align-items: center;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
-	justify-content: center
+	justify-content: center;
+	
 }
 
 .btn-label.btn-light .label-icon {
@@ -13647,7 +13668,8 @@ button {
 .card {
 	margin-bottom: 24px;
 	-webkit-box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03);
-	box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03)
+	box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03);
+	border-radius: 6px;
 }
 
 .card-drop {
@@ -14096,3 +14118,24 @@ ul.tree li.open > a:not(:last-child):before {
 .text-end{text-align: end;}
 .gray-border{border:1px solid #ddd}
 .d-block{display:block}
+.scroll-man{position: absolute;
+    margin-left: -46px;
+    margin-top: 39px;
+    z-index: 2;
+	box-shadow: 2px 1px 107px 2px #000;}
+.radius-none{border-radius:0px !important}
+.m-min-45{margin-top: -145px;}
+.m-min-40{margin-top: -40px;}
+.alert-danger1 {
+    color: #924040;
+    background-color: #924040;
+    border-color: #924040;
+	padding:7px;
+}
+.bg-light-gray{background:#e2e4e733;}
+.bg-red-line{border-bottom: 3px solid #B73933;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 1;
+	}
+.wd-260{width:275px;}
