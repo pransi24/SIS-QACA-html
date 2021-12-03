@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Dashboard | SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+        <!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+			<div class="btn-group" role="group">
+				<button id="btnGroupVerticalDrop1" type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-chevron-down"></i>
+				</button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+					<a class="dropdown-item" href="#"><img src="assets/images/sis.jpg" alt="" height="92"></a><hr>
+					<a class="dropdown-item" href="#"><img src="assets/images/servicemaster.png" alt="" height="92"></a>
+				</div>
+			</div>
+             <div class="navbar-brand-box">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+					
+                </a>
+				
+            </div>
+<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+			
+			
+			<span class="logo-lg ms-30">
+				<img src="assets/images/airtel.png" alt="" height="60">
+			</span>
+			
+        </div>
+
+        <div class="d-flex">
+             <form class="app-search d-none d-lg-block mt-3">
+                <div class="position-relative" id="datepicker4">
+                    <input type="text" class="form-control" data-date-container='#datepicker4' data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1" placeholder="This Month">
+                    <span class="bx bx-calendar caler"></span>
+                </div>
+            </form>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+
+            <!--<div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="bx bx-cog"></i>
+                </button>
+            </div>-->
+
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+				
+				<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
+					<select class="form-select side-ste" style="max-width: 80px;">
+						<option value="BT" selected="">Sites</option>
+						<option value="ET">Sites 1</option>
+						<option value="LT">Sites 2</option>
+					</select>
+					<input type="text" class="form-control side-txt me-2 border-r" placeholder="12 Sites"><i class='fa fa-search'></i>
+					<button type="button" class="btn btn-dark waves-effect waves-light me-2">
+						<i class="fa fa-list-ul font-size-16 align-middle"></i>
+					</button>
+				</div>
+				<hr style="color:#000;">
+				<button type="" class="text-white ms-3" style=" background: #223044;border: navajowhite;">
+							STATES <span class="badge badge-soft-light rounded-circle text-dark">2</span>
+				</button>
+				<button type="" class="text-white ms-6" style=" background: #223044;border: navajowhite;">
+							SITES <span class="badge badge-soft-light rounded-circle p-1 text-dark">12</span>
+				</button>
+				<div id="chart"></div>
+			</ul>
+			<div class="bg-danger text-white-50 side-box-danger mb-3">
+				<div class="card-body row">
+				<div class="col-md-7">
+				<small class="font-size-9">For any quires contact</small>
+					<h5 class="mt-0 mb-1 text-white">Priyanka K</h5>
+					<p class="card-text">Service Executive</p>
+				</div>
+				<div class="col-md-5">
+					<img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
+				</div>
+				<div class="col-md-12">
+					<button type="button" class="btn btn-email btn-sm waves-effect waves-light pull-left"><i class="fas fa-envelope me-2"></i>Email</button>
+					<span class="font-size-13 text-white">Escalate Issue <i class="fa fa-angle-right"></i></span>
+				</div>
+				</div>
+			</div>
+
+            
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="card overflow-hidden" style="margin-bottom:10px;">
+                                    <div class="bg-warning bg-soft">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="p-3">
+                                                    <h4 class=""><img src="assets/images/handemoji.png" class="img-responsive me-3"/>Good Afternoon! </h4>
+                                                    <p class="ms-6 mb-0">We have renewed the PSARA license.  <a href="#">View License Document</a><br>
+													Do contact me, if you have any queries.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 mt-3">
+											<div class="d-flex">
+												<div class="me-3">
+													<img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
+												</div>
+												<div class="flex-grow-1 align-self-center">
+													<div class="text-muted">
+														<h5 class="mb-1">Priyanka K</h5>
+														<p class="mb-0">CRM Executive</p>
+													</div>
+												</div>
+											</div>
+											
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" pt-0 bg-light-orange">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="pt-3">
+                                                    <div class="row">
+														<div class="col-1 d-flex"></div>
+                                                        <div class="col-3 d-flex">
+                                                            <h5 class="font-size-30 me-2">2</h5>
+                                                            <a href="#"><p class="text-muted mb-0 font-size-18 mt-1">Open Issues</p></a>
+                                                        </div>
+                                                        <div class="col-4 d-flex">
+                                                            <h5 class="font-size-30 me-2">2</h5>
+                                                            <a href="#"><p class="text-muted mb-0 font-size-18 mt-1">Customer Meetings</p></a>
+                                                        </div>
+														<div class="col-2 d-flex">
+                                                            <a href="#"><p class="text-primary mb-0 font-size-12 mt-2">View MOM </p></a>
+															<div class="avatar-ss mt-2 ms-1">
+																<span class="avatar-title rounded-circle bg-primary">
+																	2
+																</span>
+															</div>
+                                                        </div>
+														<div class="col-2 d-flex">
+                                                            <a href="#"><p class="text-primary mb-0 font-size-12 mt-2">View Reports </p></a>
+															<div class="avatar-ss mt-2 ms-1">
+																<span class="avatar-title rounded-circle bg-primary">
+																	2
+																</span>
+															</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+									<div class="row">
+										<div class="col-xl-6">
+										<h5>QUALITY</h5>
+										<div class="card" style="margin-bottom:10px;">
+											<div class="" >
+												<!-- Nav tabs -->
+												<ul class="nav nav-pills nav-justified p-1 bg-gray" role="tablist" >
+													<li class="nav-item waves-effect waves-light">
+														<a class="nav-link nav-link-d active" data-bs-toggle="tab" href="#home-1" role="tab" aria-selected="true">
+															<span class="d-none d-sm-block">Manpower</span>
+														</a>
+													</li>
+													<li class="nav-item waves-effect waves-light">
+														<a class="nav-link nav-link-d" data-bs-toggle="tab" href="#operations-1" role="tab" aria-selected="false">
+															<span class="d-none d-sm-block">Opertaions</span>
+														</a>
+													</li>
+													<li class="nav-item waves-effect waves-light">
+														<a class="nav-link nav-link-d" data-bs-toggle="tab" href="#messages-1" role="tab" aria-selected="false">
+															<span class="d-none d-sm-block">Training</span>
+														</a>
+													</li>
+													<li class="nav-item waves-effect waves-light"></li>
+												</ul>
+
+												<!-- Tab panes -->
+												<div class="tab-content text-muted">
+													<div class="tab-pane active" id="home-1" role="tabpanel">
+													<div class="row m-2 mb-0">
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Deployed vs Authorised <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>4950</b> / 5200</p> 
+																</div>
+															</div>
+														</div>
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Today's Attendance <i class="fa fa-angle-right"></i></h5>
+																	<div class="row">
+																		<div class="col-md-3">
+																			<div id="KioskChart"></div>
+																		</div>
+																		<div class="col-md-5">
+																			<p class="mb-0 font-size-18 text-success"><b>94%</b></p> 
+																			<p class="mb-0 font-size-9">Attendance</p>
+																		</div>
+																		<div class="col-md-4">
+																			<p class="mb-0 font-size-18 text-danger"><b>6%</b></p> 
+																			<p class="mb-0 font-size-8">Shortage</p> 
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+														<hr>
+														<h5 class="font-size-13 text-truncate m-2">Attendance This Month <i class="fa fa-angle-right"></i></h5>
+														<canvas id="myChart" width="500" height="122"></canvas>
+														<div class="clearfix"></div>
+														<div class="card-footer bg-transparent border-top mb-2 ">
+															<a href="#" class="text-primary float-end  me-2 mb-2">View Manpower Details <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+														</div>
+													</div>
+													<div class="tab-pane" id="operations-1" role="tabpanel">
+													<div class="row m-2">
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Day Checks <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>22</b> / 30</p> 
+																</div>
+															</div>
+														</div>
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Night Checks <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>1</b> / 1</p> 
+																</div>
+															</div>
+														</div>
+													</div>
+													<hr>
+													<div class="row m-2">
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Operations Visit <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>12</b></p> 
+																</div>
+															</div>
+														</div>
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Client Meetings <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>18</b></p> 
+																</div>
+															</div>
+														</div>
+													</div>
+													<hr>
+														<div class=" shadow-none col-md-12 m-2">
+															<div class="">
+																<div class="overflow-hidden m-2">
+																	<h5 class="font-size-12 mb-3">Reward & Recoginitions <i class="fa fa-angle-right"></i></h5>
+																<div class="row">
+																	<div class="col-md-6">
+																		<p class="mb-0 font-size-24"><b>4</b></p> 
+																	</div>
+																	<div class="col-md-6">
+																	<div class="avatar-group float-end me-5">
+																		<div class="avatar-group-item">
+																			<a href="javascript: void(0);" class="d-inline-block">
+																				<div class="avatar-xs">
+																					<span class="avatar-title rounded-circle bg-danger text-white font-size-16">
+																						M
+																					</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="avatar-group-item">
+																			<a href="javascript: void(0);" class="d-inline-block">
+																				<div class="avatar-xs">
+																					<span class="avatar-title rounded-circle bg-warning text-white font-size-16">
+																						M
+																					</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="avatar-group-item">
+																			<a href="javascript: void(0);" class="d-inline-block">
+																				<div class="avatar-xs">
+																					<span class="avatar-title rounded-circle bg-danger text-white font-size-16">
+																						K
+																					</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="avatar-group-item">
+																			<a href="javascript: void(0);" class="d-inline-block">
+																				<div class="avatar-xs">
+																					<span class="avatar-title rounded-circle bg-warning text-white font-size-16">
+																						M
+																					</span>
+																				</div>
+																			</a>
+																		</div>
+																	</div>
+																	</div>
+																</div>
+																</div>
+															</div>
+														</div>
+													<div class="clearfix"></div>
+													<div class="card-footer bg-transparent border-top mb-3 ">
+														<a href="#" class="text-primary float-end  me-2 mb-3">View Operations Details <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+													</div>
+													</div>
+												<!----------------------------tab-3----------------------------------------->
+													<div class="tab-pane" id="messages-1" role="tabpanel">
+														<div class="row m-2">
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Site Covered <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>25</b></p> 
+																</div>
+															</div>
+														</div>
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Total Employees Trained <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>13500</b></p> 
+																</div>
+															</div>
+														</div>
+													</div>
+													<hr>
+													<div class="row m-2">
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Training Durations <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>42</b>hrs</p> 
+																</div>
+															</div>
+														</div>
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Training Man Hours <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>13000</b></p> 
+																</div>
+															</div>
+														</div>
+													</div>
+													<hr>
+														<div class=" shadow-none col-md-12 m-2">
+														<div class="">
+															<div class="overflow-hidden m-2">
+																<h5 class="font-size-12 mb-3 ">Uninque Employee Trained <i class="fa fa-angle-right"></i></h5>
+																<p class="mb-0 font-size-24"><b>13000</b></p> 
+															</div>
+															</div>
+														</div>
+													<div class="clearfix"></div>
+													<div class="card-footer bg-transparent border-top mb-3 ">
+														<a href="#" class="text-primary float-end  me-2 mb-3">View Training Details <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+													</div>
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									<div class="col-xl-6">
+										<h5>COMPLIANCE</h5>
+										<div class="card" style="margin-bottom:10px;">
+											
+										<div class="container" id="list-wrapper">
+										  <div class="scroller scroller-left"><i class="fa fa-angle-left"></i></div>
+											
+										  <div class="scroller scroller-right"><i class="fa fa-angle-right"></i></div>
+										  <div class="wrapper">
+										  <div class="nav nav-tabs list" id="list" role="tablist">
+										  <ul class="nav nav-pills nav-justified p-1 bg-gray" role="tablist">
+											 <li class="nav-item waves-effect waves-light dashboard2_tab shadow">
+												<a class="nav-link nav-link-d dd_nav active" data-bs-toggle="tab" href="#registrations-1" role="tab" aria-selected="false">
+													<span class="d-none d-sm-block dd_max">Registrations & Licences</span>
+												</a>
+											</li>
+											 <li class="nav-item waves-effect waves-light dashboard2_tab">
+												<a class="nav-link nav-link-d dd_nav" data-bs-toggle="tab" href="#abstracts-1" role="tab" aria-selected="false">
+													<span class="d-none d-sm-block dd_max">Abstracts & Notices</span>
+												</a>
+											</li>
+											<li class="nav-item waves-effect waves-light dashboard2_tab">
+												<a class="nav-link nav-link-d dd_nav" data-bs-toggle="tab" href="#challans-1" role="tab" aria-selected="false">
+													<span class="d-none d-sm-block dd_max">Challans & Remittances </span>
+												</a>
+											</li>
+											<li class="nav-item waves-effect waves-light dashboard2_tab">
+												<a class="nav-link nav-link-d dd_nav" data-bs-toggle="tab" href="#register-and-records" role="tab" aria-selected="false">
+													<span class="d-none d-sm-block dd_max">Register and Records </span>
+												</a>
+											</li>
+											<li class="nav-item waves-effect waves-light dashboard2_tab">
+												<a class="nav-link nav-link-d dd_nav" data-bs-toggle="tab" href="#statutory-returns" role="tab" aria-selected="false">
+													<span class="d-none d-sm-block dd_max">Statutory Returns </span>
+												</a>
+											</li>
+											<li class="nav-item waves-effect waves-light dashboard2_tab">
+												<a class="nav-link nav-link-d dd_nav" data-bs-toggle="tab" href="#misc-documents" role="tab" aria-selected="false">
+													<span class="d-none d-sm-block dd_max">Misc Documents </span>
+												</a>
+											</li>
+											</ul>
+										  </div>
+
+										  </div>
+										</div>
+
+											<div class="">
+												<!-- Tab panes -->
+												<div class="tab-content text-muted">
+													<div class="tab-pane active" id="registrations-1" role="tabpanel">
+													<div class="row m-2">
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3">Registrations & licences <i class="fa fa-angle-right"></i></h5>
+																	<p class="mb-0 font-size-24"><b>30</b> / 36</p> 
+																</div>
+															</div>
+														</div>
+														<div class=" shadow-none col-md-6">
+															<div class="d-flex">
+																<div class="overflow-hidden me-auto">
+																	<h5 class="font-size-12 mb-3"></h5>
+																	<div class="row">
+																		<div class="col-md-4 me-1 mt-2">
+																			<div id="KioskChart1"></div>
+																		</div>
+																		<div class="col-md-7 mt-2">
+																			<p class="mb-0 font-size-18 text-success"><b>90%</b></p> 
+																			<p class="mb-0 font-size-9">Up to Date</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+														<hr>
+													<h5 class="font-size-12 mb-1 m-2">Recent Update <i class="fa fa-angle-right"></i></h5>
+													<div class="table-responsive">
+														<table class="table mb-0">
+															<tbody>
+																<tr>
+																	<td><i class="fa fa-file me-1"></i> Document Name</td>
+																	<td>DD MM</td>
+																	<td><a href="#">View</a></td>
+																</tr>
+																<tr>
+																	<td><i class="fa fa-file me-1"></i> Document Name</td>
+																	<td>DD MM</td>
+																	<td><a href="#">View</a></td>
+																</tr>
+																<tr>
+																	<td><i class="fa fa-file me-1"></i> Document Name</td>
+																	<td>DD MM</td>
+																	<td><a href="#">View</a></td>
+																</tr>
+																
+															</tbody>
+														</table>
+													</div>
+													<div class="clearfix"></div>
+													<div class="card-footer bg-transparent mb-3 ">
+														<a href="#" class="text-primary float-end me-2 mb-2">View Registrations & licences <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+													</div>
+													</div>
+													<div class="tab-pane" id="abstracts-1" role="tabpanel">
+														<p class="mb-0 m-3">
+															Abstracts & Notices
+														</p>
+													</div>
+													<div class="tab-pane" id="challans-1" role="tabpanel">
+														<p class="mb-0 m-3">
+															Challans & Notices
+														</p>
+													</div>
+													<div class="tab-pane" id="register-and-records" role="tabpanel">
+														<p class="mb-0 m-3">
+															Register and Records 
+														</p>
+													</div>
+													<div class="tab-pane" id="statutory-returns" role="tabpanel">
+														<p class="mb-0 m-3">
+															Statutory Returns
+														</p>
+													</div>
+													<div class="tab-pane" id="misc-documents" role="tabpanel">
+														<p class="mb-0 m-3">
+															Misc Documents
+														</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								
+								<h5 class="font-size-13 text-truncate mb-1">Activity Feed </h5>
+								<div class="carousel" data-flickity='{ "freeScroll": true ,  "wrapAround": true, "pageDots": false}'>
+								<div class="carousel-cell">
+									<img src="assets/images/small/img-7.jpg" style="width:100%">
+									<div class="carousel-caption d-md-block text-white-50">
+										<h5 class="text-white text-left font-size-12">Activity Name</h5>
+										<p class="text-left">16 Sep 2021</p>
+									</div>
+								</div>
+								<div class="carousel-cell">
+									<img src="assets/images/small/img-2.jpg" style="width:100%">
+									<div class="carousel-caption d-md-block text-white-50">
+										<h5 class="text-white text-left font-size-12">Activity Name</h5>
+										<p class="text-left">16 Sep 2021</p>
+									</div>
+								</div>
+								<div class="carousel-cell">
+									<img src="assets/images/small/img-1.jpg" style="width:100%">
+									<div class="carousel-caption d-md-block text-white-50">
+										<h5 class="text-white text-left font-size-12">Activity Name</h5>
+										<p class="text-left">16 Sep 2021</p>
+									</div>
+								</div>
+								<div class="carousel-cell">
+									<img src="assets/images/small/img-3.jpg" style="width:100%">
+									<div class="carousel-caption d-md-block text-white-50">
+										<h5 class="text-white text-left font-size-12">Activity Name</h5>
+										<p class="text-left">16 Sep 2021</p>
+									</div>
+								</div>
+								<div class="carousel-cell">
+									<img src="assets/images/small/img-2.jpg" style="width:100%">
+									<div class="carousel-caption d-md-block text-white-50">
+										<h5 class="text-white text-left font-size-12">Activity Name</h5>
+										<p class="text-left">16 Sep 2021</p>
+									</div>
+								</div>
+								</div>
+								
+                            </div>
+							
+							<div class="col-md-3">
+								<div class="card overflow-hidden">
+									<h5 class="mt-2 ms-3">CONTRACT</h5>
+									<!-- Settings -->
+									<h6 class="mb-2 ms-3">Applicable Contracts <span class=" float-end me-3">1</span></h6>
+									<hr class="mt-0" />
+									<h6 class="mb-2 ms-3 mt-1">Contract Period</h6>
+									<h6 class="mb-2 ms-3">Start Date <span class=" float-end me-3"><b>01-05-2021</b></span></h6>
+									<h6 class="mb-2 ms-3">End Date <span class=" float-end me-3"><b>12-06-2021</b></span></h6>
+									<hr class="mt-0 mb-0" />
+									<div class="bg-danger bg-soft p-0">
+										<h6 class="mb-2 ms-3 mt-2">PO Status</h6>
+										<div class="row p-1 ms-3">
+											<div class="col-3">
+												<h5 class="font-size-16 text-success mb-0"><b>2</b></h5>
+												<p class="mb-0"><b>Valid</b></p>
+											</div>
+											<div class="col-5">
+												<h5 class="font-size-16 text-danger mb-0"><b>2</b></h5>
+												<p class="mb-0"><b>Expiry Soon</b></p>
+											</div>
+											<div class="col-4">
+												<h5 class="font-size-16 text-danger mb-0"><b>2</b></h5>
+												<p class="mb-0"><b>Expired</b></p>
+											</div>
+										</div>
+										<hr class="mt-0" />
+										<h6 class="mb-1 ms-3">Effective Rate <span class=" float-end me-3"><b>12-06-2021</b></span></h6>
+										<p class="mb-2 ms-3 text-danger">Review Due on 30-04-2022</p>
+									</div>
+									<hr class="mt-0" />
+									<h6 class="mb-1 ms-3">Effective Wage Rate <span class=" float-end me-3"><b>12-06-2021</b></span></h6>
+									<h6 class="mb-2 ms-3 text-success">Up to Date</h6>
+								</div>
+							
+							<div class="card overflow-hidden">
+								<h5 class="p-1 mt-1 ms-2">BILLING</h5>
+								<hr class="mt-0 mb-0" />
+								<div class="bg-danger bg-soft p-0">
+								<h6 class="mb-2 ms-3 mt-1">Invoices</h6>
+								<h6 class="mb-2 ms-3">Outstanding <span class=" float-end me-3"><b>3.2 CR</b></span></h6>
+								<h6 class="mb-2 ms-3">Current invoice <span class=" float-end me-3"><b>1.4 CR</b></span></h6>
+								<h6 class="mb-2 ms-3">Under DSO <span class=" float-end me-3"><b>0.4 CR</b></span></h6>
+								<h6 class="mb-2 ms-3">> DSO (90 Days) <span class=" float-end me-3 text-danger"><b>1.4 CR</b></span></h6>
+								<hr class="mt-0 mb-0" />
+								<h6 class="mb-2 ms-3 mt-2">Bill Submission <span class=" float-end me-3"><b>06-09-2021</b></span></h6>
+								<p class="mb-1 ms-3 text-danger">Delayed by 1 Day</p>
+								</div>
+								<hr class="mt-0 mb-0" />
+								<h6 class="mb-1 ms-3 mt-2">Bill Compliance Docs <span class=" float-end me-3"><b>17/17</b></span></h6>
+								<h6 class="mb-1 ms-3 text-success">Submitted</h6>
+								<hr class="mt-0 mb-0" />
+								<h6 class="mb-2 ms-3 mt-2">Wages Payment <span class=" float-end me-3"><b>07-09-2021</b></span></h6>
+								<h6 class="mb-0 ms-3 text-success">100% Manpower Paid</h6>
+								<h6 class="mb-2 ms-3 text-success">Timely Paid</h6>
+							</div>
+							
+							</div>
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<script src="assets/libs/select2/js/select2.min.js"></script>
+<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+<script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+<script>
+
+    // set the dimensions and margins of the graph
+    var width = 40
+    height = 40
+    margin = 1
+
+    // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+    var radius = Math.min(width, height) / 2 - margin
+
+    // append the svg object to the div called 'my_dataviz'
+    var svg = d3.select("#KioskChart")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    // Create dummy data
+    var data = { a: 94, b: 6 }
+
+    // set the color scale
+    var color = d3.scaleOrdinal()
+        .domain(["a"])
+        .range(d3.schemeDark2);
+
+    // Compute the position of each group on the pie:
+    var pie = d3.pie()
+        .sort(null) // Do not sort group by size
+        .value(function (d) { return d.value; })
+    var data_ready = pie(d3.entries(data))
+
+    // The arc generator
+    var arc = d3.arc()
+        .innerRadius(radius * 0.65)         // This is the size of the donut hole
+        .outerRadius(radius * 1)
+
+    // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+    dcolor = ['#49c063', '#d93f59'];
+
+    svg
+        .selectAll('allSlices')
+        .data(data_ready)
+        .enter()
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', function (d) { return (color(d.data.key)) })
+        .attr("stroke", "white")
+        .style("stroke-width", "0px")
+
+        //.style("opacity", 0.7)
+        .style("fill", function (d, i) { return dcolor[i]; })
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .attr('fill', "black")
+        .attr('y', -10)
+        .text("");
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .style('fill', "black")
+        .attr('y', 10)
+        .text("");
+</script>
+
+<script>
+
+    // set the dimensions and margins of the graph
+    var width = 40
+    height = 40
+    margin = 1
+
+    // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
+    var radius = Math.min(width, height) / 2 - margin
+
+    // append the svg object to the div called 'my_dataviz'
+    var svg = d3.select("#KioskChart1")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+    // Create dummy data
+    var data = { a: 90, b: 10 }
+
+    // set the color scale
+    var color = d3.scaleOrdinal()
+        .domain(["a"])
+        .range(d3.schemeDark2);
+
+    // Compute the position of each group on the pie:
+    var pie = d3.pie()
+        .sort(null) // Do not sort group by size
+        .value(function (d) { return d.value; })
+    var data_ready = pie(d3.entries(data))
+
+    // The arc generator
+    var arc = d3.arc()
+        .innerRadius(radius * 0.65)         // This is the size of the donut hole
+        .outerRadius(radius * 1)
+
+    // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+    dcolor = ['#49c063', '#d93f59'];
+
+    svg
+        .selectAll('allSlices')
+        .data(data_ready)
+        .enter()
+        .append('path')
+        .attr('d', arc)
+        .attr('fill', function (d) { return (color(d.data.key)) })
+        .attr("stroke", "white")
+        .style("stroke-width", "0px")
+
+        //.style("opacity", 0.7)
+        .style("fill", function (d, i) { return dcolor[i]; })
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .attr('fill', "black")
+        .attr('y', -10)
+        .text("");
+
+    svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr('font-size', '1.2em')
+        .style('fill', "black")
+        .attr('y', 10)
+        .text("");
+
+</script>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/d3.geo.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/d3.min.js"></script>
+<script type="text/javascript" src="assets/js/states.json"></script>-->
+  
+  
+   <script type="text/javascript">
+    var w = 280;
+    var h = 480;
+    var proj = d3.geo.mercator();
+    var path = d3.geo.path().projection(proj);
+    var t = proj.translate(); // the projection's default translation
+    var s = proj.scale() // the projection's default scale
+
+    var buckets = 1,
+      colors = [ "#6c799d"]; // alternatively colorbrewer.YlGnBu[1]
+
+    var map = d3.select("#chart").append("svg:svg")
+      .attr("width", w)
+      .attr("height", h)
+      //.call(d3.behavior.zoom().on("zoom", redraw))
+      .call(initialize);
+
+    var india = map.append("svg:g")
+      .attr("id", "india");
+
+    var div = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+
+    d3.json("assets/js/states.json", function (json) {
+
+      var maxTotal = d3.max(json.features, function (d) { return d.total });
+
+      var colorScale = d3.scale.quantile()
+        .domain(d3.range(buckets).map(function (d) { return (d / buckets) * maxTotal }))
+        .range(colors);
+
+
+      var y = d3.scale.sqrt()
+        .domain([0, 10000])
+        .range([0,300]);
+
+      var yAxis = d3.svg.axis()
+          .scale(y)
+          .tickValues(colorScale.domain())
+          .orient("right");
+
+
+      india.selectAll("path")
+        .data(json.features)
+        .enter().append("path")
+        .attr("d", path)
+        .style("fill", colors[0])
+        .style("opacity", 0.5)
+
+        .on('click', function (d, i) {
+          d3.select(this).transition().duration(300).style("opacity", 1);
+          div.transition().duration(300)
+            .style("opacity", 1)
+          div.text(d.id + " : " + d.total)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 30) + "px");
+        })
+
+        .on('mouseleave', function (d, i) {
+          d3.select(this).transition().duration(300)
+            .style("opacity", 0.5);
+          div.transition().duration(300)
+            .style("opacity", 0);
+        })
+        .on('mouseenter', function (d, i) {
+          d3.select(this).transition().duration(300)
+            .style("opacity", 0.5);
+          div.transition().duration(300)
+            .style("opacity", 0);
+
+        });
+
+      india.selectAll("path").transition().duration(1000)
+        .style("fill", function (d) { return colorScale(d.total); });
+
+
+
+      //Adding legend for our Choropleth
+
+     
+      var g = india.append("g")
+                .attr("class", "key")
+                .attr("transform", "translate(445, 305)")
+                .call(yAxis);
+
+            g.selectAll("rect")
+                .data(colorScale.range().map(function(d, i) {
+                    return {
+                        y0: i ? y(colorScale.domain()[i - 1]) : y.range()[0],
+                        y1: i < colorScale.domain().length ? y(colorScale.domain()[i]) : y.range()[1],
+                        z: d
+                    };
+                }))
+                .enter().append("rect")
+                    .attr("width", 7)
+                    .attr("y", function(d) { return d.y0; })
+                    .attr("height", function(d) { return d.y1 - d.y0; })
+                    .style("fill", function(d) { return d.z; });
+
+
+    });
+
+   function initialize() {
+      proj.scale(3000);
+      proj.translate([-540, 350]);
+    }
+
+
+
+  </script>
+
+	<script type="text/javascript">
+   var ctx = document.getElementById("myChart");
+   var myChart = new Chart(ctx, {
+      type: 'bar',
+         data: {
+            labels: ["01", "02" , "03" , "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15","16", "17", "18", "19", "20", "21"],
+            datasets: [
+               { 
+               data: [55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],
+               backgroundColor :['rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+               'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			   'rgba(73, 192, 99, 1)',
+			  
+            ],
+         }
+      ]
+   },
+   options: {
+      scales: {
+         yAxes: [{
+            ticks: {
+               beginAtZero:true
+            }
+         }]
+      }
+   }
+});
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  function scrollTabs(param){
+  let hidWidth;
+let scrollBarWidths = 20;
+
+let widthOfList = function(){
+  let itemsWidth = 0;
+  $(`#${param} li`).each(function(){
+    let itemWidth = $(this).outerWidth();
+    itemsWidth+=itemWidth;
+  });
+  return itemsWidth;
+};
+
+var widthOfHidden = function(){
+  return (($(`#${param}-wrapper `+'.wrapper').outerWidth())-widthOfList()-getLeftPosi())-scrollBarWidths;
+};
+
+let getLeftPosi = function(){
+  return $(`#${param}`).position().left;
+};
+
+var reAdjust = function(){
+  if (($(`#${param}-wrapper `+'.wrapper').outerWidth()) < widthOfList()) {
+    $(`#${param}-wrapper `+'.scroller-right').show();
+  }
+  else {
+    $(`#${param}-wrapper `+'.scroller-right').hide();
+  }
+  
+  if (getLeftPosi()<0) {
+    $(`#${param}-wrapper `+'.scroller-left').show();
+  }
+  else {
+    $(`#${param}-wrapper `+'.item').animate({left:"-="+getLeftPosi()+"px"},'slow');
+  	$(`#${param}-wrapper `+'.scroller-left').hide();
+  }
+}
+
+reAdjust();
+
+$(window).on('resize',function(e){  
+  	reAdjust();
+});
+let ScrollPosArray=[];
+$(`#${param}-wrapper `+'.scroller-right').click(function() {
+  
+  $(`#${param}-wrapper `+'.scroller-left').fadeIn('slow');
+  
+  
+  let widthOfHidden1 = (-widthOfHidden() < $('.wrapper').outerWidth()) ?          widthOfHidden():-$('.wrapper').outerWidth() 
+  
+  ScrollPosArray.push(widthOfHidden1);
+  console.log(ScrollPosArray)
+  $(`#${param}`).animate({left:"+="+widthOfHidden1+"px"},'slow',function(){
+   // console.log(widthOfHidden())
+    if(-widthOfHidden() <1 ){
+      $(`#${param}-wrapper `+'.scroller-right').fadeOut('slow');
+    }
+  });
+});
+
+$(`#${param}-wrapper `+'.scroller-left').click(function() {
+  if(ScrollPosArray.length !==0){
+    $(`#${param}`).animate({left:"-="+ScrollPosArray[ScrollPosArray.length -1]+"px"},'slow',function(){
+  	ScrollPosArray.pop();
+      if(ScrollPosArray.length ==0){
+        $(`#${param}-wrapper `+'.scroller-right').fadeIn('slow');
+	$(`#${param}-wrapper `+'.scroller-left').fadeOut('slow');
+      }
+      	
+  	});
+  }
+  console.log(ScrollPosArray)
+});    
+}
+scrollTabs("list");
+scrollTabs("list1");
+</script>
+
+    </body>
+</html>
