@@ -5181,7 +5181,7 @@ opacity: 1;}
 .bg-none{background:none !important;}
 
 
-
+/*
 .month {
   padding: 70px 25px;
   width: 100%;
@@ -5245,7 +5245,7 @@ opacity: 1;}
   background: #1abc9c;
   color: white !important
 }
-
+*/
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}

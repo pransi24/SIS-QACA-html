@@ -8439,11 +8439,18 @@ fieldset:disabled .btn {
 .w-50 {
 	width: 50%!important
 }
-
+.w-60 {
+	width: 60%!important
+}
+.w-70 {
+	width: 70%!important
+}
 .w-75 {
 	width: 75%!important
 }
-
+.w-80 {
+	width: 80%!important
+}
 .w-100 {
 	width: 100%!important
 }
@@ -8971,6 +8978,12 @@ fieldset:disabled .btn {
 
 .ms-5 {
 	margin-left: 3rem!important
+}
+.ms-10 {
+	margin-left: 10rem!important
+}
+.ms-13 {
+	margin-left: 13rem!important
 }
 .ms-6 {
 	margin-left: 4.2rem !important;
@@ -14065,6 +14078,7 @@ svg {
 		overflow: scroll;
 		 overflow-x: hidden;
 		 }
+.min-h-67{min-height:670px;}
 .text-d-g{color: #363636;}
 .mb-12{margin-bottom:12px !important;}
 
@@ -14114,6 +14128,8 @@ ul.tree li.open > a:not(:last-child):before {
     background: #F8F8F8;
 	margin-left: -25px;
 	}
+.h-65{min-height: 650px;}
+.h-69{min-height: 690px;}
 .h-75{min-height: 750px;}
 .text-end{text-align: end;}
 .gray-border{border:1px solid #ddd}
@@ -14139,3 +14155,8 @@ ul.tree li.open > a:not(:last-child):before {
     opacity: 1;
 	}
 .wd-260{width:275px;}
+.bg-light-report{
+    background: #EDF1F5;
+}
+.mt-20{margin-top:-20px;}
+.ms-30{margin-left: 30rem!important;}
