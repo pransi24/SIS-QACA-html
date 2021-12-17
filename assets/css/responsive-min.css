@@ -1,0 +1,94 @@
+@media (prefers-reduced-motion:no-preference) {
+	:root {
+		scroll-behavior: smooth
+	}
+}
+@media screen and (max-width:1366px) {
+ :root {
+	 --bs-body-font-size: 0.6125rem !important;
+ }
+*,
+::after,
+::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+	body {
+	font-size: var(--bs-body-font-size) !important;
+   }
+  .scroller-left {
+    float: left;
+    left: 337px;
+    z-index: 0;
+	}
+	.flickity-prev-next-button {
+    top: 45% !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    transform: translateY(-50%);
+	}
+	.carousel-caption {
+    position: absolute;
+    bottom: 2.25rem !important;
+    left: 5%;
+    color: #fff;
+	}
+	.flickity-viewport{
+		height: 112px !important;
+	}
+	
+	.dd_max {
+    /* width: max-content; */
+    width: 123px;
+	}
+	.dd_nav {
+    padding: 9px 1px !important;
+	}
+	.font-size-18{font-size:15px !important; }
+	.font-size-30{font-size:25px !important; }
+	.font-size-16{font-size:13px !important;}
+		.h3,
+		h3 {
+				font-size: 1.42188rem
+			}
+		}
+
+		.h4,
+		h4 {
+			font-size: 1.21875rem
+		}
+
+		.h5,
+		h5 {
+			font-size: 1.01563rem
+		}
+
+		@media (min-width:1200px) {
+			.h5,
+			h5 {
+				font-size: 0.9rem !important
+			}
+		}
+
+		.h6,
+		h6 {
+			font-size: .7125rem !important
+		}
+
+		p {
+			margin-top: 0;
+			margin-bottom: 1rem
+		}
+	.qaca {
+    font-size: 12px;
+	}
+	.ms-30 {
+    margin-left: 20rem!important;
+	}
+	
+	
+	
+	
+	
+}
