@@ -53,7 +53,7 @@
 	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 	--bs-body-font-family: var(--bs-font-sans-serif);
-	--bs-body-font-size: 0.8125rem;
+	--bs-body-font-size: 0.8125rem !important;
 	--bs-body-font-weight: 400;
 	--bs-body-line-height: 1.5;
 	--bs-body-color: #000;
@@ -76,7 +76,7 @@
 body {
 	margin: 0;
 	font-family: var(--bs-body-font-family);
-	font-size: var(--bs-body-font-size);
+	font-size: var(--bs-body-font-size) !important;
 	font-weight: var(--bs-body-font-weight);
 	line-height: var(--bs-body-line-height);
 	color: var(--bs-body-color);
@@ -165,13 +165,13 @@ h5 {
 @media (min-width:1200px) {
 	.h5,
 	h5 {
-		font-size: 1.01562rem
+		font-size: 1.01562rem !important
 	}
 }
 
 .h6,
 h6 {
-	font-size: .8125rem
+	font-size: .8125rem !important
 }
 
 p {
@@ -5841,7 +5841,15 @@ fieldset:disabled .btn {
 .accordion-flush .accordion-item .accordion-button {
 	border-radius: 0
 }
-
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
 .breadcrumb {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -5861,7 +5869,7 @@ fieldset:disabled .btn {
 	float: left;
 	padding-right: .5rem;
 	color: #74788d;
-	content: var(--bs-breadcrumb-divider, "../../index.html")
+	content: var(--bs-breadcrumb-divider, "/")
 }
 
 .breadcrumb-item.active {
@@ -13871,7 +13879,7 @@ button {
 
 .table-nowrap td,
 .table-nowrap th {
-	white-space: nowrap
+	white-space: pre-line;
 }
 
 .pagination-rounded .page-link {
@@ -14160,3 +14168,4 @@ ul.tree li.open > a:not(:last-child):before {
 }
 .mt-20{margin-top:-20px;}
 .ms-30{margin-left: 30rem!important;}
+.d-flex{display:flex;}
