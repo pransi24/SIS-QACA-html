@@ -13879,7 +13879,7 @@ button {
 
 .table-nowrap td,
 .table-nowrap th {
-	white-space: pre-line;
+	white-space: nowrap;
 }
 
 .pagination-rounded .page-link {
@@ -14170,3 +14170,10 @@ ul.tree li.open > a:not(:last-child):before {
 .ms-30{margin-left: 30rem!important;}
 .d-flex{display:flex;}
 .car-login{width:540px;}
+.tab-white{white-space: pre-line !important;}
+.mar-min-40{margin-left: -28px!important;
+			border:none !important;}
+.avatar-md1 {
+    height: 3.5rem;
+    width: 3.5rem;
+}

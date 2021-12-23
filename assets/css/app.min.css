@@ -111,6 +111,10 @@
     padding: calc(47px + 24px) calc(0px / 2) 60px calc(0px / 2);
 }
 
+.page-content3 {
+    padding: calc(70px + 20px) calc(0px / 2) 60px calc(20px / 2);
+}
+
 .header-item {
 	height: 70px;
 	-webkit-box-shadow: none!important;
