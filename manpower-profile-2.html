@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Manpower Profile | SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery.min.js"></script>
+
+	  <link href='assets/fullcalendar/packages/core/main.css' rel='stylesheet' />
+      <link href='assets/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+	  <link rel="stylesheet" href="assets/css/style-calender.css">
+
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+    <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box ms-3">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+                </a>
+				
+            </div>
+			<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+        </div>
+        <div class="d-flex">
+            <div class="dropdown d-inline-block d-lg-none ms-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                    <form class="p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+			<button type="button" class="btn header-item waves-effect noti-icon rounded-circle">
+				<i class="fa fa-bullhorn rounded-circle border p-2  text-white bg-gray"></i>
+				<span class="badge bg-danger rounded-circle  p-1">24</span>
+			</button>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="">
+                <div class="page-content2">
+                    <div class="container-fluid ">	
+                    <div class="row card shadow-none ">
+                    <div class="row">
+						<div class="col-11">
+							<div class="page-title-box d-sm-flex justify-content-between ms-4 mt-2">
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>Profile</h4>
+							</div>
+							<div class="mb-4 ms-5">
+								<h4>Ramkishan Pradhan</h4>
+								<span class="font-size-14">Staff</span>
+							</div>
+							
+						</div>
+						<div class="col-1">
+							<img src="assets/images/reward.png" class="rounded-circle avatar-lg mt-5"/>
+						</div>
+					</div>	
+						<div class="col-xl-12 mt-3"> 
+						<div class="ms-4">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs nav-tabs-custom " role="tablist">
+								<li class="nav-item w-auto">
+									<a class="nav-link active bg-none" data-bs-toggle="tab" href="#home1" role="tab" aria-selected="true">
+										<span class="d-none d-sm-block">Bio Data</span>
+									</a>
+								</li>
+								<li class="nav-item w-auto">
+									<a class="nav-link bg-none" data-bs-toggle="tab" href="#sis-com" role="tab" aria-selected="true">
+										<span class="d-none d-sm-block">Attendance History</span>
+									</a>
+								</li>
+								<li class="nav-item w-auto">
+									<a class="nav-link bg-none" data-bs-toggle="tab" href="#profile1" role="tab" aria-selected="false">
+										<span class="d-none d-sm-block">Training History</span>
+									</a>
+								</li>
+								<li class="nav-item w-auto">
+									<a class="nav-link bg-none" data-bs-toggle="tab" href="#reward1" role="tab" aria-selected="false">
+										<span class="d-none d-sm-block">Rewards & Recognitions</span>
+									</a>
+								</li>
+								
+							</ul>
+							<!-- Tab panes -->
+						</div>
+						</div>
+                        <!-- end row -->
+                    </div>
+					
+					<div class="clearfix"></div>
+                    <!-- container-fluid -->
+					  <div class="tab-content bg-none p-3 m-3">
+                        <div class="tab-pane active" id="home1" role="tabpanel">
+						<div class="card">
+						 <div class="row">
+							<div class="col-md-3 m-4">
+								 <span class="text-light">Father's Name</span>
+                                 <p class="mt-1">Dev Prakash Singh Solanki</p>
+								 <hr class="text-light">
+								 <span class="text-light">Date of Birth (as per 10th certificate)</span>
+                                 <p class="mt-1">10-Aug-1992</p>
+								 <hr class="text-light">
+								 <span class="text-light">Educational Qualifiaction</span>
+                                 <p class="mt-1">Graduate</p>
+								 <hr class="text-light">
+								 <span class="text-light">Physical measurement</span>
+                                 <p class="mt-1">Height 172.10   <span class="ms-5">Weight 75.42</span></p>
+								 <hr class="text-light">
+								 <span class="text-light">Date of Joining</span>
+                                 <p class="mt-1">02-Aug-2018</p>
+								 <hr class="text-light">
+								 <span class="text-light">Reg No.</span>
+                                 <p class="mt-1">PAT000SG1</p>
+								 <hr class="text-light">
+							</div>
+						    <div class="col-md-4 m-4">
+								<span class="text-light">Present Address</span>
+                                 <p class="mt-1">Door No. 125, Gali 16, Sikh Vihar, Gurgaon Haryan, 110023</p>
+								 <hr class="text-light">
+								 <span class="text-light">Permanent Address</span>
+                                 <p class="mt-1">Vill Birher, Post Birher Ps, Ghatampur Kanpur</p>
+								 <hr class="text-light">
+								 <span class="text-light">Mobile Number</span>
+                                 <p class="mt-1">+91 7530966096</p>
+								 <hr class="text-light">
+								 <span class="text-light">Total Experience in Security Industry</span>
+                                 <p class="mt-1">4</p>
+								 <hr class="text-light">
+								 <span class="text-light">Gender</span>
+                                 <p class="mt-1">Male</p>
+								 <hr class="text-light">
+								 <span class="text-light">Marital Status</span>
+                                 <p class="mt-1">Married</p>
+								 <hr class="text-light">
+							</div>
+							<div class="col-md-3 m-4">
+								<span class="text-light">Aadhar Number</span>
+                                 <p class="mt-1">7656 0222 5717</p>
+								 <hr class="text-light">
+								 <span class="text-light">Rank</span>
+                                 <p class="mt-1">597591</p>
+								 <hr class="text-light">
+								 <span class="text-light">PFNo</span>
+                                 <p class="mt-1">67175 91746</p>
+								 <hr class="text-light">
+								 <span class="text-light">ESIC Number</span>
+                                 <p class="mt-1">67175 91746</p>
+								 <hr class="text-light">
+								 <span class="text-light">Nominee</span>
+                                 <p class="mt-1">Savitri Pradhan   <span class="ms-5"> +91 9191919191</span></p>
+								 <hr class="text-light">
+							</div>
+						 </div>	
+						</div>
+                        </div>
+						
+						<div class="tab-pane" id="sis-com" role="tabpanel">
+						<div class="col-xl-12 card">
+							<div class="table-responsive">
+								<table class="table align-middle table-nowrap mb-0 ">
+									<thead class="table-light">
+										<tr>
+											<th class="align-middle"><select class="bg-bo"><option>Months</option><option>Jan</option><option>Feb</option></select></th>
+											<th class="align-middle"><select class="bg-bo"><option>Site</option><option>Code 1</option><option>Code 1</option></select></th>
+											<th class="align-middle">Shift</th>
+											<th class="align-middle">Days</th>
+											<th class="align-middle">Hours</th>
+											<th class="align-middle">Status</th>
+											<th class="align-middle"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Jan-2022</td>
+											<td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+											<td>Shift A</td>
+											<td>20</td>
+											<td>15.30</td>
+											<td><span class="badge bg-success p-1 font-size-13 mb-2">24 Days Present</span></td>
+											<td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">View Details</button></td>
+										</tr>
+										<tr>
+											<td>Jan-2022</td>
+											<td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+											<td>Shift A</td>
+											<td>20</td>
+											<td>15.30</td>
+										   <td><span class="badge bg-success p-1 font-size-13 mb-2">24 Days Present</span></td>
+										   <td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">View Details</button></td>
+										</tr>
+										<tr>
+											<td>Jan-2022</td>
+											<td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+											<td>Shift A</td>
+											<td>20</td>
+											<td>15.30</td>
+										   <td><span class="badge bg-success p-1 font-size-13 mb-2">24 Days Present</span></td>
+										   <td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">View Details</button></td>
+										</tr>
+										<tr>
+											<td>Jan-2022</td>
+											<td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+											<td>Shift A</td>
+											<td>20</td>
+											<td>15.30</td>
+										   <td><span class="badge bg-success p-1 font-size-13 mb-2">24 Days Present</span></td>
+										   <td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">View Details</button></td>
+										</tr>
+										<tr>
+											<td>Jan-2022</td>
+											<td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+											<td>Shift A</td>
+											<td>20</td>
+											<td>15.30</td>
+											<td><span class="badge bg-success p-1 font-size-13 mb-2">24 Days Present</span></td>
+											<td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">View Details</button></td>
+										</tr>
+										<tr>
+											<td>Jan-2022</td>
+											<td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+											<td>Shift A</td>
+											<td>20</td>
+											<td>15.30</td>
+										   <td><span class="badge bg-success p-1 font-size-13 mb-2">24 Days Present</span></td>
+										   <td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">View Details</button></td>
+										</tr>
+										<tr>
+											<td>Jan-2022</td>
+											<td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+											<td>Shift A</td>
+											<td>20</td>
+											<td>15.30</td>
+										    <td><span class="badge bg-success p-1 font-size-13 mb-2">24 Days Present</span></td>
+											<td><button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-example-modal-center">View Details</button></td>
+										</tr>
+										
+									</tbody>
+								</table>
+								
+							</div>
+						</div>
+							
+							<nav aria-label="Page navigation example">
+								  <ul class="pagination" style="margin-left: 592px;">
+									<li class="page-item">
+									  <a class="page-link" href="#" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+										<span class="sr-only">Previous</span>
+									  </a>
+									</li>
+									<li class="page-item"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item">
+									  <a class="page-link" href="#" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+										<span class="sr-only">Next</span>
+									  </a>
+									</li>
+								  </ul>
+								</nav>
+							
+                        </div>
+                        
+						
+                        <div class="tab-pane" id="profile1" role="tabpanel">
+                        <div class="row">
+                            <div class="col-xl-12">								
+									<div class="">
+										<div class="col-xl-12 card">
+										<div class="table-responsive">
+                                            <table class="table align-middle table-nowrap mb-0 ">
+                                                <thead class="table-light">
+                                                    <tr>
+														<th class="align-middle"><select class="bg-bo"><option>Topics</option><option>Jan</option><option>Feb</option></select></th>
+                                                        <th class="align-middle">Date</th>
+                                                        <th class="align-middle">Duaration</th>
+                                                        <th class="align-middle">Trainer</th>
+                                                        <th class="align-middle">Certificate</th>
+                                                        <th class="align-middle">Site</th>
+                                                        <th class="align-middle"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Body Action in different Si…</td>
+                                                        <td>22 January, 2022</td>
+                                                        <td>2 hrs</td>
+                                                        <td>Ramesh Deo</td>
+                                                        <td>Yes<i class="fa fa-eye ms-2"></i></td>
+                                                        <td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Access Control</td>
+                                                        <td>22 January, 2022</td>
+                                                        <td>2 hrs</td>
+                                                        <td>Ramesh Deo</td>
+                                                        <td>Yes<i class="fa fa-eye ms-2"></i></td>
+                                                        <td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Physical Fitness Awaren…</td>
+                                                        <td>22 January, 2022</td>
+                                                        <td>2 hrs</td>
+                                                        <td>Ramesh Deo</td>
+                                                        <td>Yes<i class="fa fa-eye ms-2"></i></td>
+                                                        <td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+											</div>
+									</div>
+								</div>
+
+                            </div>
+                        </div>
+						</div>
+						
+						<div class="tab-pane" id="reward1" role="tabpanel">
+                        <div class="row">
+                            <div class="col-xl-12">								
+								<div class="">
+										<div class="col-xl-12 card">
+										<div class="table-responsive">
+                                            <table class="table align-middle table-nowrap mb-0 ">
+                                                <thead class="table-light">
+                                                    <tr>
+														<th class="align-middle"></th>
+														<th class="align-middle"><select class="bg-bo"><option>Type</option><option>Jan</option><option>Feb</option></select></th>
+                                                        <th class="align-middle">Date</th>
+														<th class="align-middle">Given By</th>
+                                                        <th class="align-middle w-40">Site</th>
+														<th class="align-middle"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+														<div class="avatar-xs">
+															<span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+																<i class="fas fa-trophy"></i>
+															</span> 
+														</div>
+														</td>
+														<td>Reward & Recoginitions Name</td>
+                                                        <td>22 Jan 2022</td>
+                                                        <td>Ramesh Due</td>
+                                                        <td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+														<td><a href="#"><i class="fa fa-chevron-right"></i> </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+														<div class="avatar-xs">
+															<span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+																<i class="fas fa-trophy"></i>
+															</span> 
+														</div>
+														</td>
+														<td>Reward & Recoginitions Name</td>
+                                                        <td>22 Jan 2022</td>
+                                                        <td>Ramesh Due</td>
+                                                        <td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+														<td><a href="#"><i class="fa fa-chevron-right"></i> </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+														<div class="avatar-xs">
+															<span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-16">
+																<i class="fas fa-trophy"></i>
+															</span> 
+														</div>
+														</td>
+														<td>Reward & Recoginitions Name</td>
+                                                        <td>22 Jan 2022</td>
+														<td>Ramesh Due</td>
+                                                         <td>GGN_UNT_000001<br>Manesar,Gurugram</td>
+														 <td><a href="#"><i class="fa fa-chevron-right"></i> </a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+											</div>
+									</div>
+								</div>
+						
+						</div>
+						
+                      </div>
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+		
+		
+		<!-- Modal -->
+                <div class="modal fade bs-example-modal-center" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center mb-4">
+								  <div id='calendar-container'>
+									<div id='calendar'></div>
+								  </div>
+								</div>
+                            </div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary">Ok</button>
+								<button type="button" class="btn btn-light">Cancel</button>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->	
+		
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/main-calender.js"></script>
+    <script src='assets/fullcalendar/packages/core/main.js'></script>
+    <script src='assets/fullcalendar/packages/interaction/main.js'></script>
+    <script src='assets/fullcalendar/packages/daygrid/main.js'></script>
+    <script src='assets/fullcalendar/packages/timegrid/main.js'></script>
+    <script src='assets/fullcalendar/packages/list/main.js'></script>		
+ <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+      height: 'parent',
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      defaultView: 'dayGridMonth',
+      defaultDate: '2020-12-25',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'P',
+          start: '2020-12-01',
+        },
+		{
+          title: 'P',
+          start: '2020-12-02',
+        },
+		{
+          title: 'P',
+          start: '2020-12-03',
+        },
+		{
+          title: 'P',
+          start: '2020-12-04',
+        },
+		{
+          title: 'P',
+          start: '2020-12-05',
+        },
+        {
+          title: 'P',
+          start: '2020-12-07',
+        },
+        {
+          title: 'P',
+          start: '2020-12-08'
+        },
+		{
+          title: 'P',
+          start: '2020-12-09',
+        },
+		{
+          title: 'P',
+          start: '2020-12-10',
+        },
+		{
+          title: 'P',
+          start: '2020-12-11',
+        },
+        
+        {
+          title: 'P',
+          start: '2020-12-12',
+        },
+        {
+          title: 'P',
+          start: '2020-12-13'
+        },
+        {
+          title: 'P',
+          start: '2020-12-14'
+        },
+        {
+          title: 'P',
+          start: '2020-12-15'
+        },
+        {
+          title: 'P',
+          start: '2020-12-16'
+        },
+        {
+          title: 'P',
+          start: '2020-12-17'
+        },
+		{
+          title: 'P',
+          start: '2020-12-18'
+        },
+        {
+          title: 'P',
+          start: '2020-12-19',
+        },
+		{
+          title: 'P',
+          start: '2020-12-20',
+        },
+		{
+          title: 'P',
+          start: '2020-12-21',
+        },
+		{
+          title: 'P',
+          start: '2020-12-22',
+        },
+		{
+          title: 'P',
+          start: '2020-12-23',
+        },
+		{
+          title: 'P',
+          start: '2020-12-24',
+        },
+		{
+          title: 'P',
+          start: '2020-12-25',
+        },
+		{
+          title: 'P',
+          start: '2020-12-26',
+        },
+		{
+          title: 'P',
+          start: '2020-12-27',
+        },
+        {
+          title: 'P',
+          url: '#',
+          start: '2020-12-28'
+        },
+		{
+          title: 'P',
+          start: '2020-12-29',
+        },
+      ]
+    });
+
+    calendar.render();
+  });
+
+    </script>
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- App js -->
+<script src="assets/js/app.js"></script>
+    </body>
+</html>
