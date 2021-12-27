@@ -1,15 +1,14 @@
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
-
     var calendar = new FullCalendar.Calendar(calendarEl, {
       plugins: [ 'interaction', 'dayGrid' ],
       height: 'parent',
       header: {
         left: '',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        right: ','
       },
-      defaultView: 'dayGridMonth',
+      defaultView: '',
       defaultDate: '2020-12-25',
       navLinks: false, // can click day/week names to navigate views
       editable: false,
