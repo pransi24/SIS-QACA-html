@@ -23,24 +23,22 @@
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<link href="assets/css/responsive-min.css" id="app-style" rel="stylesheet" type="text/css" />
 	
+	<link href='assets/css/slide-man.css' rel='stylesheet'>
+	<script type='text/javascript' src='assets/js/slide-man.js'></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
     </head>
 
     <body data-sidebar="dark">
         <!-- Begin page -->
         <div id="layout-wrapper">
 
-            <header id="page-topbar">
+                <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
-              <!-- LOGO -->
-             <div class="navbar-brand-box">
+            <!-- LOGO -->
+            <div class="navbar-brand-box ms-3">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/images/sis-admin.jpg" alt="" height="22">
@@ -66,42 +64,21 @@
                 <i class="fa fa-fw fa-bars"></i>
             </button>
 			
+			
 			<span class="logo-lg ms-30">
 				<img src="assets/images/airtel.png" alt="" height="60">
 			</span>
-			
-			
         </div>
 
         <div class="d-flex">
-
-            <div class="dropdown d-inline-block d-lg-none ms-2">
-                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="mdi mdi-magnify"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
-
-                    <form class="p-3">
-                        <div class="form-group m-0">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-             <form class="app-search d-none d-lg-block">
+             <form class="app-search d-none d-lg-block mt-3">
                 <div class="position-relative" id="datepicker4">
                     <input type="text" class="form-control" data-date-container='#datepicker4' data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1" placeholder="This Month">
                     <span class="bx bx-calendar caler"></span>
                 </div>
             </form>
 			
-			<button type="button" class="btn header-item waves-effect ">
+			<button type="button" class="btn header-item waves-effect right-bar-toggle">
 				<i class="bx bx-download rounded-circle border p-2 bg-gray"></i>
 			</button>
 			
@@ -112,6 +89,7 @@
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
                     <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                 </div>
@@ -131,12 +109,11 @@
 
     <div data-simplebar class="h-100">
 
-        <!--- Sidemenu -->
+         <!--- Sidemenu -->
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
-				
-				<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
+					<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
 					<select class="form-select side-ste" style="max-width: 80px;">
 						<option value="BT" selected="">Sites</option>
 						<option value="ET">Sites 1</option>
@@ -146,15 +123,37 @@
 					<button type="button" class="btn btn-dark waves-effect waves-light me-2">
 						<i class="fa fa-list-ul font-size-16 align-middle"></i>
 					</button>
-				</div>
-				<hr style="color:#000;">
-				<button type="" class="text-white ms-3" style=" background: #223044;border: navajowhite;">
-							STATES <span class="badge badge-soft-light rounded-circle p-1">2</span>
-				</button>
-				<button type="" class="text-white ms-6" style=" background: #223044;border: navajowhite;">
-							SITES <span class="badge badge-soft-light rounded-circle p-1">12</span>
-				</button>
-				<div id="chart"></div>
+					</div>
+					<hr style="color:#000;">
+					<button type="" class="text-white ms-3" style=" background: #223044;border: navajowhite;">
+								STATES <span class="badge badge-soft-light rounded-circle text-dark m-1">2</span>
+					</button>
+					<button type="" class="text-white float-end me-2" style=" background: #223044;border: navajowhite;">
+								SITES <span class="badge badge-soft-light rounded-circle p-1 text-dark m-1">12</span>
+					</button>
+						
+					<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Harayana 
+						<div class="avatar-ss mt-1 ms-7 dis float-end">
+							<span class="avatar-title rounded-circle bg-dark ">
+								2
+							</span>
+						</div>
+						</span>
+						<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Maharastra 
+						<div class="avatar-ss mt-1 ms-7 dis float-end">
+							<span class="avatar-title rounded-circle bg-dark ">
+								2
+							</span>
+						</div>
+						</span>
+						<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Punjab
+						<div class="avatar-ss mt-1 ms-7 dis float-end">
+							<span class="avatar-title rounded-circle bg-dark ">
+								2
+							</span>
+						</div>
+					</span>
+					
 			</ul>
 			<div class="bg-danger text-white-50 side-box-danger mb-3">
 				<div class="card-body row">
@@ -178,6 +177,7 @@
         <!-- Sidebar -->
     </div>
 </div>
+<!-- Left Sidebar End -->
             <!-- ============================================================== -->
             <!-- Start right Content here -->
             <!-- ============================================================== -->
@@ -191,80 +191,232 @@
 							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
 								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>MANPOWER</h4>
 							</div>
-						</div>
-					</div>
-			
-					 <div class="row" >
-						<div class="col-md-2">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted fw-medium font-size-11">Deployed vs Authorised</p>
-										<h4 class="mb-0"><b>860</b> / 900</h4>
-									</div>
+							<div class="float-end mb-2">
+								<div class="calendar-prev scroll-man">
+									<a href="#carouselExampleIndicators2" role="button" data-slide="prev"><i class="fa fa-chevron-left ms-2" id="left"></i> </a>
+									<a href="#carouselExampleIndicators2" role="button" data-slide="next"><i class="fa fa-chevron-right ms-2" id="right"></i> </a>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-11">Vaccinated with 2 Doses</p>
-										<h4 class="mb-0"><b>246</b> / 246</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-11">Attrition < 10%</p>
-										<h4 class="mb-0">12</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-11">Background Verifiations</p>
-										<h4 class="mb-0"><b>246</b> / 246</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-11">Police Verifications</p>
-										<h4 class="mb-0"><b>246</b> / 246</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-11">Background Verifiations</p>
-										<h4 class="mb-0"><b>246</b> / 246</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row mb-2">
-						<div class="">
-							<button type="button" class="btn btn-light rounded-pill">
-								Group By Site <span class=""><i class="fa fa-angle-down"></i></span>
-							</button>
 						</div>
 						
 					</div>
-									
+					<div class="row">
+           
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted fw-medium">Deployed vs Authorised</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Vaccinated with 2 Doses</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted ">Attrition < 10%</p>
+												<h4 class="mb-0 font-size-30">12</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div class="col-md-2">
+                                    <div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Background Verifiations</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Police Verifications</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div class="col-md-2">
+                                    <div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Background Verifiations</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted fw-medium">Deployed vs Authorised 1</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Vaccinated with 2 Doses</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted ">Attrition < 10%</p>
+												<h4 class="mb-0 font-size-30">12</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div class="col-md-2">
+                                    <div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Background Verifiations</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Police Verifications</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div class="col-md-2">
+                                    <div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Background Verifiations</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted fw-medium">Deployed vs Authorised</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Vaccinated with 2 Doses</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted ">Attrition < 10%</p>
+												<h4 class="mb-0 font-size-30">12</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div class="col-md-2">
+                                    <div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Background Verifiations</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<div class="col-md-2">
+									<div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Police Verifications</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								 <div class="col-md-2">
+                                    <div class="card mini-stats-wid p-3 manpower-cc">
+										<div class="d-flex">
+											<div class="flex-grow-1">
+												<p class="text-muted">Background Verifiations</p>
+												<h4 class="mb-0 font-size-30">246<span class="text-light font-size-30">/300</span></h4>
+											</div>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>	
+					
+					<div class="row mb-2">
+					<div class="btn-group col-md-1">
+						<button class="btn btn-light rounded-pill dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+							Group By Site <i class="fa fa-angle-down ms-2"></i>
+						</button>
+						
+						<div class="dropdown-menu" data-popper-placement="top-start" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(90px, -30.25px);">
+							<a class="dropdown-item" href="#">Group By Date</a>
+							<a class="dropdown-item" href="#">Group By Rank</a>
+						</div>
+					</div>
+						
+					</div>
 					<div class="clearfix"></div>
                         <div class="row">
                             <div class="col-xl-12">								
@@ -278,18 +430,142 @@
                                                         <th class="align-middle">Shift</th>
                                                         <th class="align-middle">Manpower</th>
                                                         <th class="align-middle row">Dates<br>
-														<div class="col-md-1">01</div> 
-														<div class="col-md-1">02</div>  
-														<div class="col-md-1">03</div>  
-														<div class="col-md-1">04</div>  
-														<div class="col-md-1">05</div>
-														<div class="col-md-1">06</div>
-														<div class="col-md-1">07</div>
-														<div class="col-md-1">08</div>
-														<div class="col-md-1">09</div>
-														<div class="col-md-1">10</div>
+														
+														<div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel" style="background:#dfe4eb00 !important">
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			01
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			02
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			03
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			04
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			05
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			06
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="mini-stats-wid">
+																			07
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			08
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			09
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			10
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			11
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="carousel-item">
+																<div class="row">
+																	
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			12
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			13
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			14
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			15
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			16
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			17
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			18
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			19
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			20
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			21
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" mini-stats-wid">
+																			22
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+														</div>
+
 														</th>
-														<th class="align-middle"></th>
+														<th class="align-middle ">
+														
+														<div class="calendar-prev">
+															<a href="#carouselExampleIndicators3" role="button" data-slide="prev"><i class="fa fa-chevron-left ms-2" id="left"></i> </a>
+															<a href="#carouselExampleIndicators3" role="button" data-slide="next"><i class="fa fa-chevron-right ms-2" id="right"></i> </a>
+														</div>
+														
+														</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -297,65 +573,406 @@
                                                         <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
                                                         <td>Shift A</td>
                                                         <td>2 Gaurds</td>
-                                                        <td class="text-success row">
-														<div class="col-md-1"><span class="text-danger">2P</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div>
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div>												
+                                                       <td class="text-success">
+														
+														<div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel" style="background:#dfe4eb00 !important">
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="carousel-item">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class=" badge bg-success p-2 mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2 mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2 mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			220 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+														</div>
+																									
 														</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+														<td><a href="#"><i class="fa fa-angle-right "></i></a></td>
                                                     </tr>
-                                                </tbody>
-												<tbody>
-                                                    <tr>
+													<tr>
                                                         <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
                                                         <td>Shift A</td>
                                                         <td>2 Gaurds</td>
-                                                        <td class="text-success row">
-														<div class="col-md-1"><span class="text-danger">2P</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div>
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div>												
+                                                       <td class="text-success">
+														
+														<div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel" style="background:#dfe4eb00 !important">
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="carousel-item">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			220 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+														</div>
+																									
 														</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+														<td><a href="#"><i class="fa fa-angle-right "></i></a></td>
                                                     </tr>
-                                                </tbody>
-	
-												<tbody>
-                                                    <tr>
+													<tr>
                                                         <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
                                                         <td>Shift A</td>
                                                         <td>2 Gaurds</td>
-                                                        <td class="text-success row">
-														<div class="col-md-1"><span class="text-danger">2P</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div> 
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div>
-														<div class="col-md-1">246 P <br><span class="text-danger">1%</span></div>												
+                                                       <td class="text-success ">
+														
+														<div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel" style="background:#dfe4eb00 !important">
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2 mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="carousel-item">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			220 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="badge bg-success p-2  mini-stats-wid">
+																			2 P 
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+														</div>
+																									
 														</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+														<td><a href="#"><i class="fa fa-angle-right "></i></a></td>
                                                     </tr>
                                                 </tbody>
+												
                                             </table>
                                         </div>
 									</div>
