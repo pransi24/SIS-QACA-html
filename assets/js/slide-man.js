@@ -490,7 +490,7 @@
         it = "carousel",
         ot = ".bs.carousel",
         st = {
-            interval: 5e3,
+            interval: false, /*5e3*/
             keyboard: !0,
             slide: !1,
             pause: "hover",
