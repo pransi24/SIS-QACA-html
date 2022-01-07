@@ -135,7 +135,7 @@
 				<button type="" class="text-white ms-3" style=" background: #223044;border: navajowhite;">
 							STATES <span class="badge badge-soft-light rounded-circle m-1 text-dark">2</span>
 				</button>
-				<button type="" class="text-white ms-6" style=" background: #223044;border: navajowhite;">
+				<button type="" class="text-white float-end me-2" style=" background: #223044;border: navajowhite;">
 							SITES <span class="badge badge-soft-light rounded-circle p-1 m-1 text-dark">12</span>
 				</button>
 				<div id="chart"></div>
@@ -304,8 +304,7 @@
 
 
   <!--jQuery library file -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-   
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>  
   <!--Datatable plugin JS library file -->
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
   </script>
@@ -324,7 +323,7 @@
           .each(function (colID) {
  
             // Create the select list in the
-            var mySelectList = $("<br><select class='bg-bo' />")
+            var mySelectList = $("<br><select class='bg-bo p-1' />")
               .appendTo(myTable.column(colID).header())
               .on("change", function () {
                 myTable.column(colID).search($(this).val());
