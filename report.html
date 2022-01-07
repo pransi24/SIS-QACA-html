@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Report | SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+        <!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	
+	
+	
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+
+             <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box ms-3">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+					
+                </a>
+				
+            </div>
+<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+			
+			
+			<span class="logo-lg ms-30">
+				<img src="assets/images/airtel.png" alt="" height="60">
+			</span>
+        </div>
+
+        <div class="d-flex">
+             <form class="app-search d-none d-lg-block mt-3">
+                <div class="position-relative" id="datepicker4">
+                    <input type="text" class="form-control" data-date-container='#datepicker4' data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1" placeholder="This Month">
+                    <span class="bx bx-calendar caler"></span>
+                </div>
+            </form>
+			
+			<button type="button" class="btn header-item waves-effect right-bar-toggle">
+				<i class="bx bx-download rounded-circle border p-2 bg-gray"></i>
+			</button>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+
+            <!--<div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="bx bx-cog"></i>
+                </button>
+            </div>-->
+
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+         <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+					<div class="input-group mb-3 ms-2 mt-2" style="width:96%">
+					<select class="form-select side-ste" style="max-width: 80px;">
+						<option value="BT" selected="">Sites</option>
+						<option value="ET">Sites 1</option>
+						<option value="LT">Sites 2</option>
+					</select>
+					<input type="text" class="form-control side-txt me-2 border-r" placeholder="12 Sites"><i class='fa fa-search'></i>
+					<button type="button" class="btn btn-dark waves-effect waves-light me-2">
+						<i class="fa fa-list-ul font-size-16 align-middle"></i>
+					</button>
+					</div>
+					<hr style="color:#000;">
+					<button type="" class="text-white ms-3" style=" background: #223044;border: navajowhite;">
+								STATES <span class="badge badge-soft-light rounded-circle text-dark m-1">2</span>
+					</button>
+					<button type="" class="text-white ms-6" style=" background: #223044;border: navajowhite;">
+								SITES <span class="badge badge-soft-light rounded-circle p-1 text-dark m-1">12</span>
+					</button>
+						
+					<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Harayana 
+						<div class="avatar-ss mt-1 ms-7 dis float-end">
+							<span class="avatar-title rounded-circle bg-dark ">
+								2
+							</span>
+						</div>
+						</span>
+						<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Maharastra 
+						<div class="avatar-ss mt-1 ms-7 dis float-end">
+							<span class="avatar-title rounded-circle bg-dark ">
+								2
+							</span>
+						</div>
+						</span>
+						<span class="badge badge-soft-gray p-3 m-2 col-md-11 font-size-12 text-start">Punjab
+						<div class="avatar-ss mt-1 ms-7 dis float-end">
+							<span class="avatar-title rounded-circle bg-dark ">
+								2
+							</span>
+						</div>
+					</span>
+					
+			</ul>
+			<div class="bg-danger text-white-50 side-box-danger mb-3">
+				<div class="card-body row">
+				<div class="col-md-7">
+				<small class="font-size-9">For any quires contact</small>
+					<h5 class="mt-0 mb-1 text-white">Priyanka K</h5>
+					<p class="card-text">Service Executive</p>
+				</div>
+				<div class="col-md-5">
+					<img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
+				</div>
+				<div class="col-md-12">
+					<button type="button" class="btn btn-email btn-sm waves-effect waves-light pull-left"><i class="fas fa-envelope me-2"></i>Email</button>
+					<span class="font-size-13 text-white">Escalate Issue <i class="fa fa-angle-right"></i></span>
+				</div>
+				</div>
+			</div>
+
+            
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+					<!-- start page title -->
+					<div class="row">
+						<div class="col-12">
+							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>REPORTS</h4>							
+							</div>
+						</div>
+					</div>
+					
+					<!-- end page title -->
+					<div class="row mb-2">
+					
+						<div class="">
+							<button type="button" class="btn btn-dark rounded-pill">
+								All <span class="badge badge-soft-info rounded-circle ms-2">36</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								MMR <span class="badge badge-soft-dark rounded-circle ms-2">6</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								MoM <span class="badge badge-soft-dark rounded-circle ms-2">3</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								SLA Report <span class="badge badge-soft-dark rounded-circle ms-2">26</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Audit Report <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Incidents <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Customer <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Compliance <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+						</div>						
+					</div>
+					
+					
+					<div class="clearfix"></div>
+                        <div class="row">
+                            <div class="col-xl-12">								
+									<div class="">
+										<div class="col-xl-12 card">
+										<div class="table-responsive">
+                                            <table class="table align-middle table-nowrap mb-0 ">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th class="align-middle p-3">Site ID, Site Name</th>
+                                                        <th class="align-middle p-3">Type</th>
+                                                        <th class="align-middle w-50">Date</th>
+														<th class="align-middle"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													
+                                                </tbody>
+                                            </table>
+                                        </div>
+									</div>
+								</div>
+
+								
+								
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+<!---right side bar--->
+<div class="right-bar" style="background-color: #f5f5f5;">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <h5 class="m-0 me-2">GENERATE REPORT</h5><br>
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+		<img src="assets/images/handemoji.png" class="img-responsive me-2 float-start"/><p class="p-1 font-size-11">We have reviewed the PSARA license. view License documents Do contact me, if you have any queries.</p>
+		<hr>
+        <!-- Settings -->
+		<div class="p-3">
+        <h6 class="mb-2 ms-1">Select Category</h6>
+		
+		<div class="accordion" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingOne">
+					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						<i class="bx bx-bar-chart me-2"></i> Compliances
+					</button>
+				</h2>
+				<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="form-group mb-3">
+							<ul class="list-unstyled user-list validate" id="taskassignee">
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+										<label class="form-check-label ms-2" for="member-1">Register and Licenses</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
+										<label class="form-check-label ms-2" for="member-2">Asbtract and Notices</label>	
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Challans and Remittances</label>
+									</div>
+								</li> 
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Register and Records</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Statutory Returns</label>
+									</div>
+								</li> 
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Misc Document</label>
+									</div>
+								</li> 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="accordion mt-3" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingtwoe">
+					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoe" aria-expanded="true" aria-controls="collapseTwoe">
+						<i class="bx bx-bar-chart me-2"></i> Wages
+					</button>
+				</h2>
+				<div id="collapseTwoe" class="accordion-collapse collapse" aria-labelledby="headingtwoe" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="form-group mb-3">
+							<ul class="list-unstyled user-list validate" id="taskassignee">
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+										<label class="form-check-label ms-2" for="member-1">Wages</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
+										<label class="form-check-label ms-2" for="member-2">Social Security</label>	
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Registrations & Licences</label>
+									</div>
+								</li> 
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Chalans & Remittances</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Registers & Records</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Statutory Records</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Industrial Relations</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="accordion mt-3" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingthree">
+					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						<i class="bx bx-bar-chart me-2"></i> All Documents
+					</button>
+				</h2>
+				<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingthree" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="form-group mb-3">
+							<ul class="list-unstyled user-list validate" id="taskassignee">
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+										<label class="form-check-label ms-2" for="member-1">MamPower</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
+										<label class="form-check-label ms-2" for="member-2">Operations</label>	
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Training</label>
+									</div>
+								</li> 
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Compliance</label>
+									</div>
+								</li> 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		 <h6 class="mb-1 ms-1 mt-3">Select Location</h6>
+		 
+		 <div class="accordion mt-2" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingFour">
+					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						<i class="fa fa-compass me-2"></i> All States, All Sites
+					</button>
+				</h2>
+				<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="form-group mb-3">
+							<ul class="list-unstyled user-list validate" id="taskassignee">
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+										<label class="form-check-label ms-2" for="member-1">Maharastra</label>
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
+										<label class="form-check-label ms-2" for="member-2">Pune</label>	
+									</div>
+								</li>
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Gujrat</label>
+									</div>
+								</li> 
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
+										<label class="form-check-label ms-2" for="member-3">Harayana</label>
+									</div>
+								</li> 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		 
+		<h6 class="mb-2 ms-1 mt-3">Select Durations</h6>
+		 <div class="accordion mt-2" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingFive">
+					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+						<i class="fa fa-calendar me-2"></i> Month to Date
+					</button>
+				</h2>
+				<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="form-group mb-3">
+							<ul class="list-unstyled user-list validate" id="taskassignee">
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+										<label class="form-check-label ms-2" for="member-1">MamPower</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h6 class="mb-2 ms-1 mt-3">Group By</h6>
+		 <div class="accordion mt-2" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingSix">
+					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+						Monthly Data
+					</button>
+				</h2>
+				<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="form-group mb-3">
+							<ul class="list-unstyled user-list validate" id="taskassignee">
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+										<label class="form-check-label ms-2" for="member-1">MamPower</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<h6 class="mb-2 ms-1 mt-3">Sort By</h6>
+		 <div class="accordion mt-2" id="accordionExample">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingSeven">
+					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+						Generated Date
+					</button>
+				</h2>
+				<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="form-group mb-3">
+							<ul class="list-unstyled user-list validate" id="taskassignee">
+								<li>
+									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
+										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
+										<label class="form-check-label ms-2" for="member-1">MamPower</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		</div>
+		<hr>
+		<p class="float-end me-2">Add category <i class="fa fa-plus-circle me-4"></i></p>
+		<div class="clearfix"></div>
+		<button type="button" class="btn btn-secondary waves-effect waves-light ms-5">Generate Report</button>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<script src="assets/libs/select2/js/select2.min.js"></script>
+<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+<script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/d3.geo.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/d3.min.js"></script>
+<script type="text/javascript" src="assets/js/states.json"></script>-->
+  
+
+
+    </body>
+</html>

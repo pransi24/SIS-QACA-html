@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Account Management| SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+ <!-- Plugins css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+<!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+    <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box ms-3">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+                </a>
+				
+            </div>
+			<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+        </div>
+        <div class="d-flex">
+            <div class="dropdown d-inline-block d-lg-none ms-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                    <form class="p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+			<button type="button" class="btn header-item waves-effect noti-icon rounded-circle">
+				<i class="fa fa-bullhorn rounded-circle border p-2  text-white bg-gray"></i>
+				<span class="badge bg-danger rounded-circle  p-1">24</span>
+			</button>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="">
+                <div class="page-content2">
+                    <div class="container-fluid ">	
+                    <div class="row card shadow-none ">
+						<div class="col-12">
+							<div class="page-title-box d-sm-flex justify-content-between ms-4 mt-2">
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>CONFIGURE ACCOUNT</h4>
+								<div class="float-end mt-2 me-3">
+									<button type="button" class="btn btn-primary float-end w-md">Create Account</button>
+									<span class="text-primary float-end mt-2 me-4 ">Cancel</span>
+								</div>
+							</div>
+						</div>						
+						<div class="col-xl-12 mt-3"> 
+						<div class="ms-4">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs nav-tabs-custom " role="tablist">
+								<li class="nav-item w-auto">
+									<a class="nav-link active bg-none" data-bs-toggle="tab" href="#home1" role="tab" aria-selected="true">
+										<span class="d-none d-sm-block">Account</span>
+									</a>
+								</li>
+								<li class="nav-item w-auto">
+									<a class="nav-link bg-none" data-bs-toggle="tab" href="#profile1" role="tab" aria-selected="false">
+										<span class="d-none d-sm-block">Users</span>
+									</a>
+								</li>
+							</ul>
+							<!-- Tab panes -->
+						</div>
+						</div>
+                        <!-- end row -->
+                    </div>
+					
+					<div class="clearfix"></div>
+                    <!-- container-fluid -->
+					  <div class="tab-content bg-none p-3 m-3">
+                        <div class="tab-pane active" id="home1" role="tabpanel">
+						 <div class="p-2">
+							<p class="font-size-16">CUSTOMER DETAILS</P> 
+							<div class="text-danger">
+								Please select a valid Image, Upload size( Max 2 MB).
+							</div>
+							  <form action="#" class="dropzone col-md-3">
+									<div class="fallback">
+										<input name="file" type="file" multiple="multiple" required>
+									</div>
+									<div class="dz-message needsclick">
+										<div class="mb-2">
+											<i class="display-4 text-muted bx bxs-cloud-upload"></i>
+										</div>
+
+										<h4>Drag & Drop to upload.</h4>
+										<h6 class="text-primary">or Browes</h6>
+									</div>
+								</form>
+								<div class="col-lg-3 mt-3">
+									<div class="mb-3">
+										<label for="formrow-inputState" class="form-label">Is QACA applicable for this account?</label>
+										<select class="form-select" id="designselectedchange">
+											<option value="yes">Yes</option>
+											<option value="subscribeModal">No</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3 mt-3">
+									<div class="mb-3">
+										<label for="formrow-inputState" class="form-label">How frequently should data be updated?</label>
+										<select id="formrow-inputState" class="form-select">
+											<option selected="">Live Data</option>
+											<option>No</option>
+										</select>
+									</div>
+									<button type="button" class="btn btn-primary waves-effect waves-light float-end">Save Configuration </button>
+								</div>
+								
+						</div>							
+                        </div>
+						 
+						
+                        <div class="tab-pane" id="profile1" role="tabpanel">
+                        <div class="row mb-3">
+							<div class="col-md-3">
+							<form class="app-search d-none d-lg-block">
+								<div class="position-relative">
+									<input type="text" class="form-control right-bar-toggle" placeholder="Search Name / Email ID / Mobile Number">
+									<span class="bx bx-search-alt p-ab"></span>
+								</div>
+							</form>
+							</div>
+							<div class="col-md-7"></div>
+							<div class="col-md-2">
+								<a href="#" class=""><button type="button" class="btn btn-primary float-end w-md">Add New User</button></a>
+							</div>
+						</div>
+                        <div class="card mb-3">
+                            <div class="table-responsive">
+									<table class="table align-middle table-nowrap mb-0 ">
+										<thead class="table-light">
+											<tr>
+												<th class="align-middle">User Name</th>
+												<th class="align-middle">User Type</th>
+												<th class="align-middle">Sites</th>
+												<th class="align-middle">User Created On</th>
+												<th class="align-middle">Last Password Change</th>
+												<th class="align-middle">Last Login</th>
+												<th class="align-middle"></th>
+												<th class="align-middle"></th>
+												<th class="align-middle"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Resend Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+									
+                        </div>
+                       </div>
+                      </div>
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+		
+		
+		<!-- Modal -->
+                <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="text-center mb-4">
+                                    <div class="avatar-md mx-auto mb-4">
+                                        <div class="avatar-title bg-light rounded-circle text-primary h1">
+                                            <i class="mdi mdi-email-open"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-10">
+                                            <h4 class="text-primary"> QACA Applicability</h4>
+                                            <p class="text-muted font-size-14 mb-4">Are you sure the QACA is not applicable for the customer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary">Ok</button>
+								<button type="button" class="btn btn-light">Cancel</button>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end modal -->
+
+		
+		
+		
+	 <style>
+		.right-bar {right: -400px;}
+	 </style>
+<div class="right-bar" style="width:400px;">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <h5 class="m-0 me-2"><i class="fa fa-chevron-left me-2"></i>CONFIGURE USER</h5><br>
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+		<div class="row">
+		
+		<div class="overflow-hidden me-auto m-3 col-md-9">
+			<h5 class="font-size-20 text-truncate mb-1 ">Name Surname</h5>
+			<p class="text-truncate mb-0 text-muted">Designation</p>
+		</div>
+		
+		<div class="avatar-group float-end col-md-2 mt-3">
+			<div class="avatar-group-item mar-min-40">
+				<a href="javascript: void(0);" class="d-inline-block">
+					<div class="avatar-md1">
+						<span class="avatar-title rounded-circle bg-danger text-white font-size-16">
+							K
+						</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		</div>
+		
+        <!-- Settings -->
+		<ul class="nav nav-tabs-custom nav-justified mt-3" role="tablist">
+			<li class="nav-item w-auto">
+				<a class="nav-link active" data-bs-toggle="tab" href="#functions" role="tab">
+					<span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+					<span class="d-none d-sm-block">Accounts</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="tab" href="#locations" role="tab">
+					<span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+					<span class="d-none d-sm-block">User Settings</span>
+				</a>
+			</li>
+		</ul>
+		<div class="tab-content p-3 text-muted min-h-57" style="background: #f7f5f5;">
+			<div class="tab-pane active" id="functions" role="tabpanel">
+				<p><b>Select Accounts</b></p>
+				<input type="text" class="form-control" required="" placeholder="Search Account">
+				<div class="">
+					<div class="row p-3">
+					<ul class="tree">
+					  <li class="col-md-12 mb-3 card p-2"><a href="#" class="font-size-14 d-flex"><input class="form-check-input mt-1 me-2 cus-check" type="checkbox" name="formRadios" id="formRadios1"><img src="assets/images/airtel.png" alt="" height="30">
+							<div class="overflow-hidden me-auto ms-2">
+								<h5 class="font-size-13 text-truncate mb-1">Bharti Airtel Pvt LTD</h5>
+								<p class="text-truncate mb-0 text-green">1 Services Selected</p>
+							</div>
+					 </a>
+						<ul class="mt-3 ">
+						  <li class="col-md-12 mb-3 "><a href="#" class="font-size-14 d-flex"><input class="form-check-input mt-1 cus-check" type="checkbox" name="formRadios" id="formRadios1"><img src="assets/images/dts.jpg" alt="" height="30">
+							<div class="overflow-hidden me-auto ms-2">
+								<h5 class="font-size-13 text-truncate mb-1">SIS Security Pvt. Ltd.</h5>
+								<p class="text-truncate mb-0 text-green">default configuration applied</p>
+							</div>
+						  </a></li>
+						  <li class="col-md-12 mb-3 "><a href="#" class="font-size-14 d-flex"> <input class="form-check-input mt-1 cus-check" type="checkbox" name="formRadios" id="formRadios1"> <img src="assets/images/slv.jpg" alt="" height="30">
+							<div class="overflow-hidden me-auto ms-2">
+								<h5 class="font-size-13 text-truncate mb-1">SLV Group Security</h5>
+								<p class="text-truncate mb-0 text-green"></p>
+							</div>
+						  </a></li>
+						</ul>
+					  </li>
+
+					  <li class="col-md-12 mb-3  card p-2"><a href="#" class="font-size-14 d-flex"><input class="form-check-input mt-1 cus-check" type="checkbox" name="formRadios" id="formRadios1"> <img src="https://lh3.googleusercontent.com/proxy/RuV7G4BzkzglArzgpS_NXQAOu8EgI_y2oYcQSRgJrMJ7lMOs8qqPh_hxbStGJzkuTJk9a7bfKeJz8HEmkxgDL6JZ-oOkpeAG_wJwK6931lon" alt="" height="40">
+							<div class="overflow-hidden me-auto ms-2">
+								<h5 class="font-size-13 text-truncate mb-1"> ICICI Bank Limited </h5>
+								<p class="text-muted text-truncate mb-0">0 Services Selected</p>
+							</div>
+					  </a>
+						<ul class="mt-3 ">
+						  <li class="col-md-12 mb-3 "><a href="#" class="font-size-14 d-flex"><input class="form-check-input mt-1 cus-check" type="checkbox" name="formRadios" id="formRadios1"> <img src="https://lh3.googleusercontent.com/proxy/RuV7G4BzkzglArzgpS_NXQAOu8EgI_y2oYcQSRgJrMJ7lMOs8qqPh_hxbStGJzkuTJk9a7bfKeJz8HEmkxgDL6JZ-oOkpeAG_wJwK6931lon" alt="" height="40">
+							<div class="overflow-hidden me-auto ms-2">
+								<h5 class="font-size-13 text-truncate mb-1"> ICICI Bank Limited </h5>
+								<p class="text-muted text-truncate mb-0">0 Services Selected</p>
+							</div>
+							</a>
+						   </li>
+						</ul>
+					  </li>
+
+					  <li class="col-md-12 mb-3  card p-2"><a href="#" class="font-size-14 d-flex" ><input class="form-check-input me-2 mt-1 cus-check" type="checkbox" name="formRadios" id="formRadios1"><img src="https://cdn.productreview.com.au/resize/listing-picture/f051159e-c042-355e-a876-d3339ed38162?width=1200&height=630&v=2" alt="" height="40"> 
+							<div class="overflow-hidden me-auto ms-2">
+								<h5 class="font-size-13 text-truncate mb-1"> Mitsubishi Electric Ind…</h5>
+								<p class="text-muted text-truncate mb-0">0 Services Selected</p>
+							</div>
+					  </a>
+						<ul class="mt-2 ">
+						  <li class="col-md-12 mb-3 "><a href="#" class="font-size-14 d-flex" ><input class="form-check-input me-2 mt-1 cus-check" type="checkbox" name="formRadios" id="formRadios1"><img src="https://cdn.productreview.com.au/resize/listing-picture/f051159e-c042-355e-a876-d3339ed38162?width=1200&height=630&v=2" alt="" height="40"> 
+							<div class="overflow-hidden me-auto ms-2">
+								<h5 class="font-size-13 text-truncate mb-1"> Mitsubishi Electric Ind…</h5>
+								<p class="text-muted text-truncate mb-0">0 Services Selected</p>
+							</div>
+						</a></li>
+						</ul>
+					  </li>
+					  
+					</ul>
+					
+				
+				
+					</div>
+				</div>
+			
+			</div>
+			<div class="tab-pane" id="locations" role="tabpanel">
+			<p><b>Select Sites</b></p>
+				<div class="row p-3">	
+					<ul class="tree">
+					  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><span class="font-size-14">All</span></li>
+					  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Haryana</a>
+						<ul class="mt-2 ">
+						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Gurugram</a></li>
+						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Faridabad</a></li>
+						</ul>
+					  </li>
+
+					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Punjab</a>
+						<ul class="mt-2 ">
+						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Punjab</a></li>
+						</ul>
+					  </li>
+
+					  <li class="col-md-12 mb-3"><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14">Himachal</a>
+						<ul class="mt-2 ">
+						  <li class="col-md-12 mb-3 "><input class="form-check-input mt-1 me-4 cus-check" type="checkbox" name="formRadios" id="formRadios1"><a href="#" class="font-size-14 text-light">Himachal</a></li>
+						</ul>
+					  </li>
+					</ul>
+				
+					</div>
+				
+			</div>
+			
+		</div>
+		<div class="m-3">
+			<button type="button" class="btn btn-light waves-effect ">Cancel</button>
+			<button type="button" class="btn btn-primary waves-effect waves-light float-end">Save User Configuration </button>
+		</div>
+		<div class="clearfix"></div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+<script>
+var tree = document.querySelectorAll('ul.tree a:not(:last-child)');
+for(var i = 0; i < tree.length; i++){
+    tree[i].addEventListener('click', function(e) {
+        var parent = e.target.parentElement;
+        var classList = parent.classList;
+        if(classList.contains("open")) {
+            classList.remove('open');
+            var opensubs = parent.querySelectorAll(':scope .open');
+            for(var i = 0; i < opensubs.length; i++){
+                opensubs[i].classList.remove('open');
+            }
+        } else {
+            classList.add('open');
+        }
+    });
+}
+</script>
+<script>
+//setTimeout(function () {
+  //  $('#subscribeModal').modal('show');
+//}, 2000);
+
+$(function() {
+  $('#designselectedchange').on('change', function() { 
+    if ($(this).val() === 'subscribeModal') {
+      $('#subscribeModal').modal('show');
+    } else {
+      var url = $(this).val(); // get selected value
+      if (url) { // require a URL
+        window.location = url; // redirect
+      }
+    }
+  });
+});
+
+</script>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<!-- Plugins js -->
+<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+<!-- App js -->
+<script src="assets/js/app.js"></script>
+
+
+    </body>
+</html>

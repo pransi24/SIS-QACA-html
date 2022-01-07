@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Compliances Form VI| SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
+
+        <!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box ms-3">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+					
+                </a>
+				
+            </div>
+<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+			
+			
+			<span class="logo-lg ms-30">
+				<img src="assets/images/airtel.png" alt="" height="60">
+			</span>
+        </div>
+
+        <div class="d-flex">
+             <form class="app-search d-none d-lg-block mt-3">
+                <div class="position-relative" id="datepicker4">
+                    <input type="text" class="form-control" data-date-container='#datepicker4' data-provide="datepicker" data-date-format="MM yyyy" data-date-min-view-mode="1" placeholder="This Month">
+                    <span class="bx bx-calendar caler"></span>
+                </div>
+            </form>
+			
+			<button type="button" class="btn header-item waves-effect right-bar-toggle">
+				<i class="bx bx-download rounded-circle border p-2 bg-gray"></i>
+			</button>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+		 <div class="page-content2">
+			<div class="card">
+				<div class="col-12 p-2">
+					<div class="d-sm-flex align-items-center justify-content-between">
+						<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 ms-4"></i>FORM IV (EMPLOYEE REGISTER)</h4>
+						<div class="page-title-right">
+						<ol class="breadcrumb m-0">
+							<li class="mt-1"><a href="#"> 
+							<div class="avatar-xs">
+								<span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-13">
+									 <i class="fa fa-print "></i>
+								</span> 
+							</div></a></li>
+							<li class="mt-1 ms-4"><a href="#">
+							<div class="avatar-xs">
+								<span class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-13">
+									 <i class="fa fa-download"></i>
+								</span> 
+							</div>
+							</a></li>
+							<li class="ms-4 me-3"><a href="#"><button class="btn btn-primary">Email</button></i></a></li>
+						</ol>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		 </div>
+			
+            <div class="">
+
+                <div class="page-content1">
+                    <div class="container-fluid">
+					<!-- start page title -->
+					<!--<div class="row card">
+						<div class="col-12">
+							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>FORM IV (EMPLOYEE REGISTER)</h4>
+								<div class="page-title-right">
+								<ol class="breadcrumb m-0">
+									<li class="breadcrumb-item "><a href="#">Print</a></li>
+									<li class="ms-2"><i class="fa fa-print"></i></li>
+								</ol>
+								</div>
+							</div>
+							
+						</div>
+					</div>-->
+					<!-- end page title -->
+				
+					<div class="clearfix"></div>
+                        <div class="row m-min-45">
+                            <div class="col-xl-12">								
+								<div class="">
+									<div class="col-xl-12 card">
+									<div class="row col-md-12" style="--bs-gutter-x: 2px !important;">
+										<div class="w-25 text-center mt-3">
+											<img src="assets/images/sis_logo_j.jpg" alt="">
+										</div>
+										<div class="w-75 p-3 bg-dark-red">
+											<h4 class="text-white mt-2 mb-0"><b>STATUTORY RETURN</b></h4>
+											<small class="text-white font-size-13">SIS/QACA/FORM-IV/202110</small>
+											<small class="float-end text-white font-size-13">GENERATED ON 11/10/2021 FROM SIS QACA PORTAL</small>
+										</div>
+									</div>
+										<h5 class="text-center mt-5"><b>Form IV</b></h5>
+										<p class="text-center">[See sub role(3) of rule 38]<br>EMPLOYEE REGISTER</p>
+										<div class="container-fluid p-5">
+											<p class="font-size-14 m-min-40">Name of Establishment: <span  class="float-end font-size-14">Name of the Employer: </span></p>
+											<p class="font-size-14">Name of Owner: <span  class="float-end font-size-14">PAN / TAN of the Employer: </span></p>
+											
+											<p class="mt-4 ms-2 mb-0 font-size-14">Labour Identification Number(LIN):</p>
+											
+										<div class="table-responsive radius-none">
+                                            <table class="table table-bordered mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">SL. No.</th>
+                                                        <th scope="col">Employee Code</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Surname</th>
+                                                        <th scope="col">Gender</th>
+                                                        <th scope="col">Father's/ Spouse Name</th>
+                                                        <th scope="col">Date of Birth</th>
+                                                        <th scope="col">Natiolality</th>
+                                                        <th scope="col">Education Level</th>
+                                                        <th scope="col">Date of Joining</th>
+                                                        <th scope="col">Designation</th>
+                                                        <th scope="col">Category (HS/S/SS/US)*</th>
+                                                        <th scope="col">Type of Employement</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                        <td>3</td>
+                                                        <td>4</td>
+                                                        <td>5</td>
+                                                        <td>6</td>
+                                                        <td>7</td>
+                                                        <td>8</td>
+                                                        <td>9</td>
+                                                        <td>10</td>
+                                                        <td>11</td>
+                                                        <td>12</td>
+                                                        <td>13</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            
+                                        </div>
+										
+										<div class="table-responsive radius-none mt-2 ms-3 me-5">
+                                            <table class="table table-bordered mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Mobile No.</th>
+                                                        <th scope="col">UAN</th>
+                                                        <th scope="col">PAN</th>
+                                                        <th scope="col">ESIC IP</th>
+                                                        <th scope="col">AADHAAR</th>
+                                                        <th scope="col">Bank A/c Number</th>
+                                                        <th scope="col">Bank</th>
+                                                        <th scope="col">Branch (IFSC)</th>
+                                                        <th scope="col">Present Address</th>
+                                                        <th scope="col">Permanent Address</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>15</td>
+                                                        <td>16</td>
+                                                        <td>17</td>
+                                                        <td>18</td>
+                                                        <td>19</td>
+                                                        <td>20</td>
+                                                        <td>21</td>
+                                                        <td>22</td>
+                                                        <td>23</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+										
+										
+										<div class="table-responsive radius-none mt-2 ms-3 me-2">
+                                            <table class="table table-bordered mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Service Book No.</th>
+                                                        <th scope="col">Date of Exit</th>
+                                                        <th scope="col">Reason for Exit</th>
+                                                        <th scope="col">Mark of Identification</th>
+                                                        <th scope="col">Photos</th>
+                                                        <th scope="col">Specimen Signature/ Thumb Impression</th>
+                                                        <th scope="col">Remarks</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>24</td>
+                                                        <td>25</td>
+                                                        <td>26</td>
+                                                        <td>27</td>
+                                                        <td>28</td>
+                                                        <td>29</td>
+                                                        <td>30</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            
+                                        </div>
+										
+										<p class="mt-4">*(Highly Skilled/skilled/Semiskilled/Unskilled)</p>
+											
+										</div>
+									</div>
+									
+								</div>
+
+								
+								
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<script src="assets/libs/select2/js/select2.min.js"></script>
+<script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+<script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+<script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+  <script type="text/javascript" src="assets/js/d3.geo.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/d3.min.js"></script>
+<script type="text/javascript" src="assets/js/states.json"></script>-->
+  
+
+
+    </body>
+</html>

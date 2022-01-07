@@ -4,7 +4,7 @@
 <head>
         
 <meta charset="utf-8" />
-<title>Operations | SIS-QACA</title>
+<title>Internal Compliance | SIS-QACA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="SIS-QACA" name="description" />
 <meta content="Themesbrand" name="author" />
@@ -17,21 +17,15 @@
     <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
 	
-	        <!-- Bootstrap Rating css -->
-        <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
+	<!-- Bootstrap Rating css -->
+<link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
 
-        <!-- Bootstrap Css -->
+<!-- Bootstrap Css -->
 <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
 <!-- Icons Css -->
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	
     </head>
 
@@ -168,6 +162,7 @@
 							</span>
 						</div>
 					</span>
+					
 			</ul>
 			<div class="bg-danger text-white-50 side-box-danger mb-3">
 				<div class="card-body row">
@@ -203,30 +198,37 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
-								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Operations</h4>
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Compliance</h4>
 							</div>
 						</div>
 					</div>
 					<!-- end page title -->
-					<div class="row mb-2">
+					<div class="row mb-4">
+						<div class="">
+							<button type="button" class="btn btn-dark rounded-pill font-size-11">
+								Registrations & Licenses
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Abstracts & Notices 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Challans & Remittances 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Registers & Records 
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Statutory Records
+							</button>
+							<button type="button" class="btn btn-light rounded-pill font-size-11">
+								Misc
+							</button>
+						</div>
+					</div>
+					<div class="row mb-3">
 						<div class="">
 							<button type="button" class="btn btn-light rounded-pill">
-								All
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Day Check <span class="badge badge-soft-dark rounded-circle">9</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Night Check <span class="badge badge-soft-dark rounded-circle">10</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Operations Visit <span class="badge badge-soft-dark rounded-circle">26</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Meeting <span class="badge badge-soft-dark rounded-circle">14</span>
-							</button>
-							<button type="button" class="btn btn-dark rounded-pill">
-								Reward & Recognitions <span class="badge badge-soft-light rounded-circle">3</span>
+								Group By Status <span class=""><i class="fa fa-chevron-down ms-3"></i></span>
 							</button>
 						</div>
 						
@@ -240,47 +242,32 @@
                                             <table class="table align-middle table-nowrap mb-0 ">
                                                 <thead class="table-light">
                                                     <tr>
-														<th class="align-middle"></th>
-														<th class="align-middle">Name. Registration No.</th>
-                                                        <th class="align-middle"><select class="bg-bo"><option>Designation</option><option>Designation 1</option></select></th>
-                                                        <th class="align-middle">Reward / Recognitions</th>
-                                                        <th class="align-middle"><select class="bg-bo"><option>Sites</option><option>Sites 1</option></select></th>
+														<th class="align-middle w-10 "><select class="bg-bo"><option>Status</option><option>Valid</option></select></th>
+                                                        <th class="align-middle w-10"><select class="bg-bo"><option>Applicable at Sites</option><option>Applicable at Sites 1</option></select></th>
+                                                        <th class="align-middle w-70"><select class="bg-bo"><option>Documents</option><option>Documents 1</option></select></th>
                                                         <th class="align-middle"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td class="p-4"><span class="text-red">Expired</span></td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+                                                        <td>23</td>
 														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
                                                     </tr>
 													<tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td class="p-4"><span class="text-orange">Expiring Soon</span></td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+                                                        <td>23</td>
 														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
-                                                    </tr>													
+                                                    </tr>
+													<tr>
+                                                        <td class="p-4"><span class="text-green">Valid</span></td>
+														<td>4 <i class="bx bx-error-circle"></i></td>
+                                                        <td>23</td>
+														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+                                                    </tr>
+                                                    
                                                 </tbody>
                                             </table>
 											
@@ -307,53 +294,139 @@
         <!-- END layout-wrapper -->
      <!-- Right Sidebar -->
 	 <style>
-		.right-bar {right: -400px;}
+		.right-bar {right: -500px;}
+		.flickity-slider { width: 120%;}
+		.carousel { background: #f5f5f5;}
 	 </style>
-<div class="right-bar" style="width:400px;">
+<div class="right-bar" style="width:500px;">
     <div data-simplebar class="h-100">
         <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <h5 class="m-0 me-2">TRAINING REPORT</h5><br>
             <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
                 <i class="mdi mdi-close noti-icon"></i>
             </a>
         </div>
-        <!-- Settings -->
-		<div class="p-4">
-			<img src="assets/images/reward.png" class="rounded-circle avatar-xl ms-7 mb-2"/>
-			<h5 class="mb-5 text-center">Name Surname<br><small>Guard</small></h5>
-			<div class="clearfix"></div>
-			<h6 class="mb-3 ms-2">Registration No.<span class=" float-end me-2"><b>PAT00051A</b></span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Age<span class=" float-end me-2">24</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Qualification <span class=" float-end me-2">12th Pass</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Gun License <span class=" float-end me-2">No</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Ex-Army<span class=" float-end me-2">No</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Reward & Recognitions<span class=" float-end me-2 ">4 </span></h6>		
-			<hr>
-			<h6 class="mb-3 ms-2">Mobile Number<span class=" float-end me-2">+91 8965742589</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Address<span class=" float-end me-2 text-end">Door No. 125 Galli No. 16<br>Sikh Vihar Gurgaon<br> Haryana, 110023</span></h6>	
-			<div class="clearfix"></div>
-			<hr>
-			<p>Attendance This Month</p>
-			<div class="row">
-				<div class="col-md-5 card color-box bg-success bg-soft m-2">
-					<p class="text-success mt-2">Presence</p>
-					<h4 class="text-success">28/28</h4>
+		<div class="ms-4">
+			<h4>1-07-2021</h4>
+			<small>10:00 AM - 12:10 PM (1.42 Hours)</small>
+			<h6>GGN_UNT_000001, Manesar, Gurugram</h6>
+		</div>
+		
+		<ul class="nav nav-tabs-custom nav-justified" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-bs-toggle="tab" href="#home1" role="tab">
+					<span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+					<span class="d-none d-sm-block">Training Summary</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="tab" href="#profile1" role="tab">
+					<span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+					<span class="d-none d-sm-block">Topic Covered</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-bs-toggle="tab" href="#messages1" role="tab">
+					<span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+					<span class="d-none d-sm-block">Emplyees Trained</span>
+				</a>
+			</li>
+		</ul>
+		<div class="tab-content p-3 text-muted" style="background: #f7f5f5;">
+			<div class="tab-pane active" id="home1" role="tabpanel">
+				<div class="p-3">
+				<div class="carousel mb-3" data-flickity='{ "freeScroll": true ,  "wrapAround": true, "pageDots": false}' style="height:185px;">
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation1.png" >
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Rahul Sharma</h5>
+							<p class="text-left">Post: Back Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation2.png">
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Megha Puri</h5>
+							<p class="text-left">Post: East Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation1.png">
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Rahul Sharma</h5>
+							<p class="text-left">Post: Back Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation1.png">
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Megha Puri</h5>
+							<p class="text-left">Post: East Gate</p>
+						</div>
+					</div>
+					<div class="carousel-cell" style="height:185px;">
+						<img src="assets/images/users/operation2.png" >
+						<div class="carousel-caption d-md-block text-white-50">
+							<h5 class="text-white text-left font-size-12">Rahul Sharma</h5>
+							<p class="text-left">Post: Back Gate</p>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-5 card color-box bg-danger bg-soft m-2">
-					<p class="text-danger mt-2">Absence</p>
-					<h4 class="text-danger">0</h4>
+					<div class="clearfix"></div>
+					<h6 class="mb-3 ms-2 mt-3">Task Date, Time <span class=" float-end me-2"><b>01-07-2021, 6:00 - 18:00</b></span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Site ID<span class=" float-end me-2"><b>GGN_UNT_000001</b></span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Site Name <span class=" float-end me-2"><b>Manesar, Gurugram</b></span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Representative <span class=" float-end me-2"><b>Ramesh Deo</b><br>Area officer</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Issued Chcked<span class=" float-end me-2"><b>7</b>/7</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2">Customer Handshake<span class=" float-end me-2 text-success">Done <i class="fa fa-angle-down"></i></span></h6>
+					
+					<div class="card p-3">
+						<h5 class="text-center">Sohan Mohapatra</h5>
+						<h5 class="text-center">+91 8974563214</h5>
+						<div class="text-center">
+							<div class="rating-star">
+								<input type="hidden" class="rating" data-filled="mdi mdi-star text-warning" data-empty="mdi mdi-star-outline text-warning" data-fractions="2"/>
+							</div>
+						</div>
+					</div> 
 				</div>
 			</div>
-			<div class="clearfix"></div>
-			<div class="card-footer bg-transparent mt-2 mb-2 ">
-				<a href="#" class="text-primary float-end  me-2">View More <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+			<div class="tab-pane" id="profile1" role="tabpanel">
+				<div class="p-3">
+					<div class="clearfix"></div>
+					<h6 class="mb-3 ms-2"><b>4 Topics Covered</b></h6>
+					<h6 class="mb-3 ms-2">1. Body action in different situation</h6>
+					<h6 class="mb-3 ms-2">2. Access Control </h6>
+					<h6 class="mb-3 ms-2">3. Physical Fitness Training </h6>
+					<h6 class="mb-3 ms-2">4. Fire Drill Training</h6>
+				</div>
+			</div>
+			<div class="tab-pane" id="messages1" role="tabpanel">
+				<div class="p-3">
+					<div class="clearfix"></div>
+					<h6 class="mb-3 ms-2"><b>4 EMployees Trained</b></h6>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+					<hr>
+					<h6 class="mb-3 ms-2 mt-3"><img src="assets/images/reward.png" class="rounded-circle avatar-sm me-2"/>Name Surname 
+					<!--<small>PAT00000TA1</small>--> <span class=" float-end me-2">Gaurd</span></h6>
+				</div>
 			</div>
 		</div>
+		
+        <!-- Settings -->
+		
 		<div class="clearfix"></div>
 
     </div> <!-- end slimscroll-menu-->

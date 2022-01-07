@@ -4,7 +4,7 @@
 <head>
         
 <meta charset="utf-8" />
-<title>Operations | SIS-QACA</title>
+<title>Report | SIS-QACA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="SIS-QACA" name="description" />
 <meta content="Themesbrand" name="author" />
@@ -16,9 +16,6 @@
     <link href="assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
     <link href="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="assets/libs/%40chenfengyuan/datepicker/datepicker.min.css">
-	
-	        <!-- Bootstrap Rating css -->
-        <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
 
         <!-- Bootstrap Css -->
 <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -33,25 +30,20 @@
 <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	
+	
+	
     </head>
 
     <body data-sidebar="dark">
         <!-- Begin page -->
         <div id="layout-wrapper">
 
-            <header id="page-topbar">
+
+             <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
-			<div class="btn-group" role="group">
-				<button id="btnGroupVerticalDrop1" type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-chevron-down"></i>
-				</button>
-				<div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-					<a class="dropdown-item" href="#"><img src="assets/images/sis.jpg" alt="" height="92"></a><hr>
-					<a class="dropdown-item" href="#"><img src="assets/images/servicemaster.png" alt="" height="92"></a>
-				</div>
-			</div>
-             <div class="navbar-brand-box">
+            <div class="navbar-brand-box ms-3">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/images/sis-admin.jpg" alt="" height="22">
@@ -73,7 +65,6 @@
 				
             </div>
 <span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
-
             <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
@@ -82,7 +73,6 @@
 			<span class="logo-lg ms-30">
 				<img src="assets/images/airtel.png" alt="" height="60">
 			</span>
-			
         </div>
 
         <div class="d-flex">
@@ -93,7 +83,7 @@
                 </div>
             </form>
 			
-			<button type="button" class="btn header-item waves-effect ">
+			<button type="button" class="btn header-item waves-effect right-bar-toggle">
 				<i class="bx bx-download rounded-circle border p-2 bg-gray"></i>
 			</button>
 			
@@ -106,7 +96,7 @@
                     <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
                     <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                    <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                 </div>
             </div>
 
@@ -168,6 +158,7 @@
 							</span>
 						</div>
 					</span>
+					
 			</ul>
 			<div class="bg-danger text-white-50 side-box-danger mb-3">
 				<div class="card-body row">
@@ -203,34 +194,43 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
-								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Operations</h4>
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>REPORTS</h4>							
 							</div>
 						</div>
 					</div>
+					
 					<!-- end page title -->
 					<div class="row mb-2">
+					
 						<div class="">
-							<button type="button" class="btn btn-light rounded-pill">
-								All
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Day Check <span class="badge badge-soft-dark rounded-circle">9</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Night Check <span class="badge badge-soft-dark rounded-circle">10</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Operations Visit <span class="badge badge-soft-dark rounded-circle">26</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill">
-								Meeting <span class="badge badge-soft-dark rounded-circle">14</span>
-							</button>
 							<button type="button" class="btn btn-dark rounded-pill">
-								Reward & Recognitions <span class="badge badge-soft-light rounded-circle">3</span>
+								All <span class="badge badge-soft-info rounded-circle ms-2">36</span>
 							</button>
-						</div>
-						
+							<button type="button" class="btn btn-light rounded-pill">
+								MMR <span class="badge badge-soft-dark rounded-circle ms-2">6</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								MoM <span class="badge badge-soft-dark rounded-circle ms-2">3</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								SLA Report <span class="badge badge-soft-dark rounded-circle ms-2">26</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Audit Report <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Incidents <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Customer <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+							<button type="button" class="btn btn-light rounded-pill">
+								Compliance <span class="badge badge-soft-dark rounded-circle ms-2">36</span>
+							</button>
+						</div>						
 					</div>
+					
+					
 					<div class="clearfix"></div>
                         <div class="row">
                             <div class="col-xl-12">								
@@ -240,54 +240,72 @@
                                             <table class="table align-middle table-nowrap mb-0 ">
                                                 <thead class="table-light">
                                                     <tr>
+                                                        <th class="align-middle p-3">Site ID, Site Name</th>
+                                                        <th class="align-middle p-3">Type</th>
+                                                        <th class="align-middle w-50">Date</th>
 														<th class="align-middle"></th>
-														<th class="align-middle">Name. Registration No.</th>
-                                                        <th class="align-middle"><select class="bg-bo"><option>Designation</option><option>Designation 1</option></select></th>
-                                                        <th class="align-middle">Reward / Recognitions</th>
-                                                        <th class="align-middle"><select class="bg-bo"><option>Sites</option><option>Sites 1</option></select></th>
-                                                        <th class="align-middle"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
                                                     </tr>
 													<tr>
-                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
-                                                        <td><b>Name Surname</b><br>Area Officer</td>
-                                                        <td>Staff</td>
-                                                        <td>Best Staff of the Quarter</td>
-                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
-														<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
-                                                    </tr>													
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													<tr>
+														<td class="p-3">Manesar, Gurugram<br> GGN_UNT_000001</td>
+														<td>MMR</td>
+														<td>05-10-2021</td>
+														<td class="text-black">Download <i class="fa fa-arrow-circle-down fa-lg"></i></td>
+                                                    </tr>
+													
                                                 </tbody>
                                             </table>
-											
-											
                                         </div>
 									</div>
-									
 								</div>
 
 								
@@ -305,56 +323,38 @@
 
         </div>
         <!-- END layout-wrapper -->
-     <!-- Right Sidebar -->
-	 <style>
-		.right-bar {right: -400px;}
-	 </style>
-<div class="right-bar" style="width:400px;">
+<style>
+	.right-bar{right: -700px;}
+</style>
+<!---right side bar--->
+<div class="right-bar" style="width:700px;">
     <div data-simplebar class="h-100">
         <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <h5 class="m-0 me-2">EMAIL</h5><br>
             <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
                 <i class="mdi mdi-close noti-icon"></i>
             </a>
         </div>
         <!-- Settings -->
-		<div class="p-4">
-			<img src="assets/images/reward.png" class="rounded-circle avatar-xl ms-7 mb-2"/>
-			<h5 class="mb-5 text-center">Name Surname<br><small>Guard</small></h5>
-			<div class="clearfix"></div>
-			<h6 class="mb-3 ms-2">Registration No.<span class=" float-end me-2"><b>PAT00051A</b></span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Age<span class=" float-end me-2">24</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Qualification <span class=" float-end me-2">12th Pass</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Gun License <span class=" float-end me-2">No</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Ex-Army<span class=" float-end me-2">No</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Reward & Recognitions<span class=" float-end me-2 ">4 </span></h6>		
-			<hr>
-			<h6 class="mb-3 ms-2">Mobile Number<span class=" float-end me-2">+91 8965742589</span></h6>
-			<hr>
-			<h6 class="mb-3 ms-2">Address<span class=" float-end me-2 text-end">Door No. 125 Galli No. 16<br>Sikh Vihar Gurgaon<br> Haryana, 110023</span></h6>	
-			<div class="clearfix"></div>
-			<hr>
-			<p>Attendance This Month</p>
-			<div class="row">
-				<div class="col-md-5 card color-box bg-success bg-soft m-2">
-					<p class="text-success mt-2">Presence</p>
-					<h4 class="text-success">28/28</h4>
-				</div>
-				<div class="col-md-5 card color-box bg-danger bg-soft m-2">
-					<p class="text-danger mt-2">Absence</p>
-					<h4 class="text-danger">0</h4>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-			<div class="card-footer bg-transparent mt-2 mb-2 ">
-				<a href="#" class="text-primary float-end  me-2">View More <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
-			</div>
+		<div class="p-3">
+        <input type="text" class="form-control mb-2" placeholder="To">
+        <input type="text" class="form-control mb-2" placeholder="Subject">
+        <textarea class="form-control mb-2 ckeditor" rows="22">Dear <to>, 
+Please find attached MoM for the SLA call at Airtel on 1-7-2021.
+		
+Regards,
+Name Surname
+Designation
+SIS Security and Intelligence Services (India) Limited
+		</textarea>
+		<label>Attachment</label>
+		<input type="file" class="form-control" placeholder="To">
+		
 		</div>
+		<hr>
 		<div class="clearfix"></div>
+		<button type="button" class="btn text-primary ms-5">Cancel</button>
+		<button type="button" class="btn btn-primary ms-30">Send <i class="bx bx-send ms-1"></i></button>
 
     </div> <!-- end slimscroll-menu-->
 </div>
@@ -368,11 +368,11 @@
 <script src="assets/libs/simplebar/simplebar.min.js"></script>
 <script src="assets/libs/node-waves/waves.min.js"></script>
 
-<!-- Bootstrap rating js -->
-        <script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
+ <!--tinymce js-->
+<script src="assets/libs/tinymce/tinymce.min.js"></script>
 
-        <script src="assets/js/pages/rating-init.js"></script>
-
+<!-- init js -->
+<script src="assets/js/pages/form-editor.init.js"></script>
 
 <script src="assets/libs/select2/js/select2.min.js"></script>
 <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
@@ -392,10 +392,5 @@
   <script src="http://d3js.org/topojson.v1.min.js"></script>
 
   <script type="text/javascript" src="assets/js/d3.geo.min.js"></script>
-<!--<script type="text/javascript" src="assets/js/d3.min.js"></script>
-<script type="text/javascript" src="assets/js/states.json"></script>-->
-  
-
-
     </body>
 </html>

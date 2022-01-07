@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        
+<meta charset="utf-8" />
+<title>Account Management| SIS-QACA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="SIS-QACA" name="description" />
+<meta content="Themesbrand" name="author" />
+<!-- App favicon -->
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+ <!-- Plugins css -->
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+<!-- Bootstrap Css -->
+<link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+<!-- Icons Css -->
+<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+<!-- App Css-->
+<link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body data-sidebar="dark">
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+    <header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box ms-3">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="17">
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/images/sis-admin.jpg" alt="" height="60">
+                    </span>
+                </a>
+				
+            </div>
+			<span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+        </div>
+        <div class="d-flex">
+            <div class="dropdown d-inline-block d-lg-none ms-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-search-dropdown">
+
+                    <form class="p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+			<button type="button" class="btn header-item waves-effect noti-icon rounded-circle">
+				<i class="fa fa-bullhorn rounded-circle border p-2  text-white bg-gray"></i>
+				<span class="badge bg-danger rounded-circle  p-1">24</span>
+			</button>
+			
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                </div>
+            </div>
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- ========== Left Sidebar Start ========== -->
+
+<!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="">
+                <div class="page-content2">
+                    <div class="container-fluid ">	
+                    <div class="row card shadow-none ">
+						<div class="col-12">
+							<div class="page-title-box d-sm-flex justify-content-between ms-4 mt-2">
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3 mt-3"></i>NEW ACCOUNT</h4>
+							</div>
+						</div>						
+						<div class="col-xl-12 mt-3"> 
+						<div class="ms-4">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs nav-tabs-custom " role="tablist">
+								<li class="nav-item w-auto">
+									<a class="nav-link active bg-none" data-bs-toggle="tab" href="#home1" role="tab" aria-selected="true">
+										<span class="d-none d-sm-block">Customer Details</span>
+									</a>
+								</li>
+								<li class="nav-item w-auto">
+									<a class="nav-link bg-none" data-bs-toggle="tab" href="#sis-com" role="tab" aria-selected="true">
+										<span class="d-none d-sm-block">Services</span>
+									</a>
+								</li>
+								<li class="nav-item w-auto">
+									<a class="nav-link bg-none" data-bs-toggle="tab" href="#profile1" role="tab" aria-selected="false">
+										<span class="d-none d-sm-block">Users</span>
+									</a>
+								</li>
+							</ul>
+							<!-- Tab panes -->
+						</div>
+						</div>
+                        <!-- end row -->
+                    </div>
+					
+					<div class="clearfix"></div>
+                    <!-- container-fluid -->
+					  <div class="tab-content bg-none p-3 m-3">
+                        <div class="tab-pane active" id="home1" role="tabpanel">
+						 <div class="p-3">
+							<p class="font-size-16">CUSTOMER DETAILS</P> 
+								<div class="text-danger">
+									Please select a valid Image, Upload size( Max 2 MB).
+								</div>
+							  <form action="#" class="dropzone col-md-3">
+									<div class="fallback">
+										<input name="file" type="file" multiple="multiple">
+									</div>
+									<div class="dz-message needsclick">
+										<div class="mb-3">
+											<i class="display-4 text-muted bx bxs-cloud-upload"></i>
+										</div>
+
+										<h4>Drag & Drop to upload.</h4>
+										<h6 class="text-primary">or Browes</h6>
+									</div>
+								</form>
+								<div class="col-lg-3 mt-3">
+									<div class="mb-3">
+										<label for="formrow-inputState" class="form-label">Is QACA applicable for this account?</label>
+										<select id="formrow-inputState" class="form-select">
+											<option selected="">Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3 mt-3">
+									<div class="mb-3">
+										<label for="formrow-inputState" class="form-label">How frequently should data be updated?</label>
+										<select id="formrow-inputState" class="form-select">
+											<option selected="">Live Data</option>
+											<option>No</option>
+										</select>
+									</div>
+								</div>
+						</div>							
+                        </div>
+						
+						<div class="tab-pane" id="sis-com" role="tabpanel">
+						<div class="row mb-3">
+							<div class="col-md-10"></div>
+							<div class="col-md-2">
+								<a href="#" class="right-bar-toggle "><button type="button" class="btn btn-primary float-end w-md">Add Company</button></a>
+							</div>
+						</div>
+						<div class="table-responsive card">
+							<table class="table align-middle table-nowrap mb-0">
+								<thead class="table-light">
+									<tr>
+										<th class="align-middle ms-4">Company</th>
+										<th class="align-middle">Service Availed</th>
+										<th class="align-middle">States</th>
+										<th class="align-middle">Sites</th>
+										<th class="align-middle">Users</th>
+										<th class="align-middle"></th>
+										<th class="align-middle"></th>
+										<th class="align-middle"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+										<div class="d-flex">
+											<div class="avatar-xs align-self-center me-2">
+												<div class="avatar-title text-success font-size-20">
+													<img src="assets/images/dts.jpg" class="avatar-sm"/>
+												</div>
+											</div>
+
+											<div class="overflow-hidden me-auto ms-2">
+												<h5 class="font-size-13 text-truncate mt-3">Service Master Clean</h5>
+											</div>
+										</div>
+										</td>
+										<td class="p-3">3</td>
+										<td class="p-3">3</td>
+										<td class="p-3">30</td>
+										<td class="p-3">3</td>
+										<td class="p-3"></td>
+										<td class="p-3"><a href="#" class="float-end">Service Master Clean</a></td>
+										<td class="p-3"><a href="#" class="float-end me-4">Configure Company</a></td>
+									</tr>
+									<tr>
+										<td>
+										<div class="d-flex">
+											<div class="avatar-xs align-self-center me-2">
+												<div class="avatar-title text-success font-size-20">
+													<img src="assets/images/dts.jpg" class="avatar-sm"/>
+												</div>
+											</div>
+
+											<div class="overflow-hidden me-auto ms-2">
+												<h5 class="font-size-13 text-truncate mt-3">Service Master Clean</h5>
+											</div>
+										</div>
+										</td>
+										<td class="p-3">3</td>
+										<td class="p-3">3</td>
+										<td class="p-3">30</td>
+										<td class="p-3">3</td>
+										<td class="p-3"></td>
+										<td class="p-3"><a href="#" class="float-end">Service Master Clean</a></td>
+										<td class="p-3"><a href="#" class="float-end me-4">Configure Company</a></td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+									
+                        </div>
+                        
+						
+                        <div class="tab-pane" id="profile1" role="tabpanel">
+                       <div class="row mb-3">
+							<div class="col-md-3">
+							<form class="app-search d-none d-lg-block">
+								<div class="position-relative">
+									<input type="text" class="form-control" placeholder="Search Name / Email ID / Mobile Number">
+									<span class="bx bx-search-alt p-ab"></span>
+								</div>
+							</form>
+							</div>
+							<div class="col-md-7"></div>
+							<div class="col-md-2">
+								<a href="#" class=""><button type="button" class="btn btn-primary float-end w-md">Add New User</button></a>
+							</div>
+						</div>
+                        <div class="card">
+                            <div class="table-responsive">
+									<table class="table align-middle table-nowrap mb-0 ">
+										<thead class="table-light">
+											<tr>
+												<th class="align-middle">User Name</th>
+												<th class="align-middle">User Type</th>
+												<th class="align-middle">Sites</th>
+												<th class="align-middle">User Created On</th>
+												<th class="align-middle">Last Password Change</th>
+												<th class="align-middle">Last Login</th>
+												<th class="align-middle"></th>
+												<th class="align-middle"></th>
+												<th class="align-middle"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Resend Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											<tr>
+												<td class="p-3">
+												<div class="d-flex">
+													<div class="avatar-xs align-self-center me-2">
+														<div class="avatar-title rounded bg-transparent text-success font-size-20">
+															<img src="assets/images/user1.jpg" class="rounded-circle avatar-sm"/>
+														</div>
+													</div>
+
+													<div class="overflow-hidden me-auto ms-2">
+														<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
+														<p class="text-muted text-truncate mb-0">Employee Code:</p>
+													</div>
+												</div>
+												</td>
+												<td>Customer</td>
+												<td>All</td>
+												<td>1-7-2021</td>
+												<td>1-7-2021 | 15:31</td>
+												<td>1-7-2021 | 15:31</td>
+												<td><a href="#">Send Email</a></td>
+												<td><a href="#">Configure User</a></td>
+												<td><a href="#"><i class="fa fa-angle-right right-bar-toggle"></i></a></td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+									
+                        </div>
+                        </div>
+                      </div>
+                </div>
+                <!-- End Page-content -->
+          </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+	 <style>
+		.right-bar {right: -400px;}
+	 </style>
+<div class="right-bar" style="width:400px;">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+        <!-- Settings -->
+		<div class="p-3">
+			<img src="assets/images/user_2.png" class="rounded-circle avatar-xl ms-7 mb-2"/>
+			<h5 class="mb-5 text-center">Name Surname<br><small>Staff</small></h5>
+			<div class="clearfix"></div>
+			<h6 class="mb-3 ms-2">Registration No.<span class=" float-end me-2"><b>PAT00051A</b></span></h6>
+			<hr>
+			<h6 class="mb-3 ms-2">Email ID<span class=" float-end me-2">name.surname@sisindia.com</span></h6>	
+			<hr>
+			<h6 class="mb-3 ms-2">Mobile Number<span class=" float-end me-2">+91 8965742589</span></h6>
+			<hr>
+			<div class="clearfix"></div>
+			<div class="mt-4">
+				<a href="#" class="text-primary float-end ">Configure User <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+        <!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+<!-- Plugins js -->
+<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+<!-- App js -->
+<script src="assets/js/app.js"></script>
+    </body>
+</html>

@@ -324,7 +324,7 @@
           .each(function (colID) {
  
             // Create the select list in the
-            var mySelectList = $("<select class='bg-bo' />")
+            var mySelectList = $("<br><select class='bg-bo' />")
               .appendTo(myTable.column(colID).header())
               .on("change", function () {
                 myTable.column(colID).search($(this).val());
