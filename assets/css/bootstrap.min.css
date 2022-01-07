@@ -14037,9 +14037,10 @@ svg {
 .ms-6 {
     margin-left: 5rem !important;
 }
-.bg-bo{background: #eff2f7;
-    border: none;
-	color: #6c7996;}
+.bg-bo{ /*background: #eff2f7;*/
+   border: 1px solid #ddd;
+    color: #6c7996;
+    border-radius: 4px;}
 
 .manpower-cc{background:#F5F8FD !important;
 			border-radius: 10px;
