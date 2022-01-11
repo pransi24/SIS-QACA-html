@@ -4,7 +4,7 @@
 <head>
         
 <meta charset="utf-8" />
-<title>Billing | SIS-QACA</title>
+<title>Wage Payment | SIS-QACA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="SIS-QACA" name="description" />
 <meta content="Themesbrand" name="author" />
@@ -23,12 +23,8 @@
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+<link href="assets/css/responsive-min.css" id="app-style" rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	
     </head>
 
@@ -36,11 +32,20 @@
         <!-- Begin page -->
         <div id="layout-wrapper">
 
-             <header id="page-topbar">
+
+            <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
             <!-- LOGO -->
-            <div class="navbar-brand-box ms-3">
+			<div class="btn-group" role="group">
+				<button id="btnGroupVerticalDrop1" type="button" class="btn btn-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-chevron-down"></i>
+				</button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+					<a class="dropdown-item" href="#"><img src="assets/images/sis.jpg" alt="" height="92"></a><hr>
+					<a class="dropdown-item" href="#"><img src="assets/images/servicemaster.png" alt="" height="92"></a>
+				</div>
+			</div>
+             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="assets/images/sis-admin.jpg" alt="" height="22">
@@ -62,6 +67,7 @@
 				
             </div>
 <span class="qaca mt-3"><span class="re-qaca">Q</span>UALITY <span class="re-qaca">A</span>SSURED<br> <span class="re-qaca">C</span>OMPLIANCE <span class="re-qaca">A</span>SSURED</span>
+
             <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                 <i class="fa fa-fw fa-bars"></i>
             </button>
@@ -70,6 +76,7 @@
 			<span class="logo-lg ms-30">
 				<img src="assets/images/airtel.png" alt="" height="60">
 			</span>
+			
         </div>
 
         <div class="d-flex">
@@ -80,7 +87,7 @@
                 </div>
             </form>
 			
-			<button type="button" class="btn header-item waves-effect right-bar-toggle">
+			<button type="button" class="btn header-item waves-effect ">
 				<i class="bx bx-download rounded-circle border p-2 bg-gray"></i>
 			</button>
 			
@@ -93,7 +100,7 @@
                     <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
                     <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                    <a class="dropdown-item text-danger" href="auth-login.html"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                 </div>
             </div>
 
@@ -191,90 +198,19 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="page-title-box d-sm-flex align-items-center justify-content-between">
-								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Billing</h4>
-							</div>
-							<div class="float-end mb-2">
-								<div class="calendar-prev scroll-man">
-									<a href="#"><i class="fa fa-chevron-left ms-2" id="left"></i> </a>
-									<a href="#"><i class="fa fa-chevron-right ms-2" id="right"></i> </a>
-								</div>
+								<h4 class="mb-sm-0 font-size-16"> <i class="fa fa-angle-left me-3"></i>Wage Payment</h4>
 							</div>
 						</div>
-						
 					</div>
-			
-					 <div class="row">
-						<div class="col-md-2 wd-260">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted fw-medium font-size-13">Outstanding</p>
-										<h4 class="mb-0 font-size-30">3.2 CR</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 wd-260">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-13">Current Invoice</p>
-										<h4 class="mb-0 font-size-30">1.4 CR</span></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 wd-260">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-13">Under DSO</p>
-										<h4 class="mb-0 font-size-30">0.2 CR</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 wd-260">
-							<div class="card mini-stats-wid p-3 manpower-cc">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="text-muted font-size-13">> DSO (90 Days)</p>
-										<h4 class="mb-0 font-size-30">1.4 CR</span></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 wd-260">
-							<div class="card mini-stats-wid p-3 bg-danger bg-soft">
-								<div class="d-flex">
-									<div class="flex-grow-1">
-										<p class="font-size-13 text-danger">Bill Submission</p>
-										<h4 class="mb-0 font-size-30 text-danger">06/ 09/ 2022</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="row mb-2">
+					<div class="row mb-2">
 						<div class="">
-							<button type="button" class="btn btn-light rounded-pill m-1">
-								Invoices <span class="badge badge-soft-dark rounded-circle font-size-9 p-1 ms-2">10</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill m-1">
-								PO <span class="badge badge-soft-dark rounded-circle font-size-9 p-1 ms-2">3</span>
-							</button>
-							<button type="button" class="btn btn-light rounded-pill m-1">
-								NDC <span class="badge badge-soft-dark rounded-circle font-size-9 p-1 ms-2">3</span>
-							</button>
-							<button type="button" class="btn btn-dark rounded-pill m-1">
-								Wage Payment <span class="bg-dark rounded-circle font-size-9 p-1 ms-2">3</span>
+							<button type="button" class="bg-warning bg-soft rounded-pill gray-border p-2">
+								Site : GGN_UNT_000001 <i class="fa fa-times ms-3"></i>
 							</button>
 						</div>
 						
 					</div>
-									
-                    </div>
-					<div class="clearfix"></div>
+					
                         <div class="row">
                             <div class="col-xl-12">								
 									<div class="">
@@ -282,59 +218,112 @@
 										<div class="table-responsive">
                                             <table class="table align-middle table-nowrap mb-0 ">
                                                 <thead class="table-light">
-                                                     <tr>
-                                                        <th class="align-middle">Date</th>
-                                                        <th class="align-middle">Site ID, Site Name</th>
-                                                        <th class="align-middle">Employees paid</th>
-                                                        <th class="align-middle w-50">Status</th>
-                                                        <th class="align-middle"></th>
+                                                    <tr>
+														<th class="align-middle"></th>
+														<th class="align-middle">Name. Registration No.</th>
+                                                        <th class="align-middle">Rank</th>
+                                                        <th class="align-middle">Site</th>
+														<!--<th class="align-middle"><select class="bg-bo"><option>Site</option><option>Site 1</option></select></th>-->
+                                                        <th class="align-middle">Days</th>
+                                                        <th class="align-middle">Hours</th>
+                                                        <th class="align-middle">Wage Status</th>
+                                                        <th class="align-middle">Wage Date</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>DD MM YYYY</td>
-                                                        <td>GGN_UNT_000001<br> Manesar, Gurugram</td>
-														<td>200<br><span class="text-green">80%</span></td>
-                                                        <td class="text-green">Paid On Time</td>
-                                                        <td><a href="wage-payment.html"><i class="fa fa-chevron-right"></i></a></td>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
                                                     </tr>
-													 <tr>
-                                                        <td>DD MM YYYY</td>
-                                                        <td>GGN_UNT_000001<br> Manesar, Gurugram</td>
-														<td>200<br><span class="text-green">80%</span></td>
-                                                        <td class="text-green">Paid On Time</td>
-														<td><a href="wage-payment.html"><i class="fa fa-chevron-right"></i></a></td>
+                                                    <tr>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
                                                     </tr>
-													 <tr>
-                                                        <td>DD MM YYYY</td>
-                                                        <td>GGN_UNT_000001<br> Manesar, Gurugram</td>
-														<td>200<br><span class="text-green">80%</span></td>
-                                                        <td class="text-green">Paid On Time</td>
-														<td><a href="wage-payment.html"><i class="fa fa-chevron-right"></i></a></td>
-                                                    </tr>
-													 <tr>
-                                                        <td>DD MM YYYY</td>
-                                                        <td>GGN_UNT_000001<br> Manesar, Gurugram</td>
-														<td>200<br><span class="text-green">80%</span></td>
-                                                        <td class="text-green">Paid On Time</td>
-														<td><a href="wage-payment.html"><i class="fa fa-chevron-right"></i></a></td>
-                                                    </tr>
-													 <tr>
-                                                        <td>DD MM YYYY</td>
-                                                        <td>GGN_UNT_000001<br> Manesar, Gurugram</td>
-														<td>200<br><span class="text-green">80%</span></td>
-                                                        <td class="text-green">Paid On Time</td>
-														<td><a href="wage-payment.html"><i class="fa fa-chevron-right"></i></a></td>
+                                                    <tr>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
                                                     </tr>
 													<tr>
-                                                        <td>DD MM YYYY</td>
-                                                        <td>GGN_UNT_000001<br> Manesar, Gurugram</td>
-														<td>200<br><span class="text-green">80%</span></td>
-                                                        <td class="text-green">Paid On Time</td>
-														<td><a href="wage-payment.html"><i class="fa fa-chevron-right"></i></a></td>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
                                                     </tr>
+													<tr>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
+                                                    </tr>
+													<tr>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
+                                                    </tr>
+													<tr>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
+                                                    </tr>
+													<tr>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
+                                                    </tr>
+													<tr>
+                                                        <td><img src="assets/images/reward.png" class="rounded-circle avatar-sm"/></td>
+                                                        <td><b>Name Surname</b><br>PAT00000GA1</td>
+                                                        <td>Gaurd</td>
+                                                        <td>GGN_UNT_000001<br>Manesar, Gurugram</td>
+                                                        <td>20</td>
+                                                        <td>15:31</td>
+                                                        <td class="text-green">Paid</td>
+														<td>07-01-2022</td>
+                                                    </tr>													
                                                 </tbody>
                                             </table>
+											
                                         </div>
 									</div>
 								</div>
@@ -354,6 +343,58 @@
 
         </div>
         <!-- END layout-wrapper -->
+ <style>
+		.right-bar {right: -400px;}
+	 </style>
+<div class="right-bar" style="width:400px;">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center px-3 py-4">
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+        <!-- Settings -->
+		<div class="p-4">
+			<img src="assets/images/reward.png" class="rounded-circle avatar-xl ms-7 mb-2"/>
+			<h5 class="mb-5 text-center">Name Surname<br><small>Guard</small></h5>
+			<div class="clearfix"></div>
+			<h6 class="mb-3 ms-2">Registration No.<span class=" float-end me-2"><b>PAT00051A</b></span></h6>
+			<hr>
+			<h6 class="mb-3 ms-2">Age<span class=" float-end me-2">24</span></h6>
+			<hr>
+			<h6 class="mb-3 ms-2">Qualification <span class=" float-end me-2">12th Pass</span></h6>
+			<hr>
+			<h6 class="mb-3 ms-2">Gun License <span class=" float-end me-2">No</span></h6>
+			<hr>
+			<h6 class="mb-3 ms-2">Ex-Army<span class=" float-end me-2">No</span></h6>
+			<hr>
+			<h6 class="mb-3 ms-2">Reward & Recognitions<span class=" float-end me-2 ">4 </span></h6>		
+			<hr>
+			<h6 class="mb-3 ms-2">Mobile Number<span class=" float-end me-2">+91 8965742589</span></h6>
+			<hr>
+			<h6 class="mb-3 ms-2">Address<span class=" float-end me-2 text-end">Door No. 125 Galli No. 16<br>Sikh Vihar Gurgaon<br> Haryana, 110023</span></h6>	
+			<div class="clearfix"></div>
+			<hr>
+			<p>Attendance This Month</p>
+			<div class="row">
+				<div class="col-md-5 card color-box bg-success bg-soft m-2">
+					<p class="text-success mt-2">Presence</p>
+					<h4 class="text-success">28/28</h4>
+				</div>
+				<div class="col-md-5 card color-box bg-danger bg-soft m-2">
+					<p class="text-danger mt-2">Absence</p>
+					<h4 class="text-danger">0</h4>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="card-footer bg-transparent mt-2 mb-2 ">
+				<a href="#" class="text-primary float-end  me-2">View More <span class="mdi mdi-arrow-right-drop-circle text-info float-end ms-2"></span></a>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
 
 
 <!-- Right bar overlay-->
