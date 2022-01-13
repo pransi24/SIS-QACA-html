@@ -338,7 +338,7 @@
 <div class="right-bar" style="background-color: #f5f5f5;">
     <div data-simplebar class="h-100">
         <div class="rightbar-title d-flex align-items-center px-3 py-4">
-            <h5 class="m-0 me-2">GENERATE REPORT</h5><br>
+            <h5 class="m-0 me-2">UPLOAD REPORT</h5><br>
             <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
                 <i class="mdi mdi-close noti-icon"></i>
             </a>
@@ -347,289 +347,50 @@
 		<hr>
         <!-- Settings -->
 		<div class="p-3">
-        <h6 class="mb-2 ms-1">Select Category</h6>
+		<label>Client Name</label>
+		<select class="form-control mb-2">
+			<option>Select Client Name</option>
+			<option>Client Name 1</option>
+			<option>Client Name 3</option>
+		</select>
 		
-		<div class="accordion" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingOne">
-					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						<i class="bx bx-bar-chart me-2"></i> Compliances
-					</button>
-				</h2>
-				<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="form-group mb-3">
-							<ul class="list-unstyled user-list validate" id="taskassignee">
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
-										<label class="form-check-label ms-2" for="member-1">Register and Licenses</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
-										<label class="form-check-label ms-2" for="member-2">Asbtract and Notices</label>	
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Challans and Remittances</label>
-									</div>
-								</li> 
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Register and Records</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Statutory Returns</label>
-									</div>
-								</li> 
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Misc Document</label>
-									</div>
-								</li> 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<label>Sites</label>
+		<select class="form-control mb-2">
+			<option>Select Sites</option>
+			<option>Sites 1</option>
+			<option>Sites 3</option>
+		</select>
 		
+		<label>Category</label>
+		<select class="form-control mb-2">
+			<option>Select Category</option>
+			<option>Category 1</option>
+			<option>Category 3</option>
+		</select>
 		
-		<div class="accordion mt-3" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingtwoe">
-					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoe" aria-expanded="true" aria-controls="collapseTwoe">
-						<i class="bx bx-bar-chart me-2"></i> Wages
-					</button>
-				</h2>
-				<div id="collapseTwoe" class="accordion-collapse collapse" aria-labelledby="headingtwoe" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="form-group mb-3">
-							<ul class="list-unstyled user-list validate" id="taskassignee">
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
-										<label class="form-check-label ms-2" for="member-1">Wages</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
-										<label class="form-check-label ms-2" for="member-2">Social Security</label>	
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Registrations & Licences</label>
-									</div>
-								</li> 
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Chalans & Remittances</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Registers & Records</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Statutory Records</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Industrial Relations</label>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<label>Sub Category</label>
+		<select class="form-control mb-2">
+			<option>Select Sub Category</option>
+			<option>Sub Category 1</option>
+			<option>Sub Category 3</option>
+		</select>
 		
+		<label>Report Name</label>
+		<input class="form-control mb-2">
 		
-		<div class="accordion mt-3" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingthree">
-					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-						<i class="bx bx-bar-chart me-2"></i> All Documents
-					</button>
-				</h2>
-				<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingthree" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="form-group mb-3">
-							<ul class="list-unstyled user-list validate" id="taskassignee">
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
-										<label class="form-check-label ms-2" for="member-1">MamPower</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
-										<label class="form-check-label ms-2" for="member-2">Operations</label>	
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Training</label>
-									</div>
-								</li> 
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Compliance</label>
-									</div>
-								</li> 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		 <h6 class="mb-1 ms-1 mt-3">Select Location</h6>
-		 
-		 <div class="accordion mt-2" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingFour">
-					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-						<i class="fa fa-compass me-2"></i> All States, All Sites
-					</button>
-				</h2>
-				<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="form-group mb-3">
-							<ul class="list-unstyled user-list validate" id="taskassignee">
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
-										<label class="form-check-label ms-2" for="member-1">Maharastra</label>
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-2" name="member[]">
-										<label class="form-check-label ms-2" for="member-2">Pune</label>	
-									</div>
-								</li>
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Gujrat</label>
-									</div>
-								</li> 
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-3" name="member[]">
-										<label class="form-check-label ms-2" for="member-3">Harayana</label>
-									</div>
-								</li> 
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		 
-		<h6 class="mb-2 ms-1 mt-3">Select Durations</h6>
-		 <div class="accordion mt-2" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingFive">
-					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-						<i class="fa fa-calendar me-2"></i> Month to Date
-					</button>
-				</h2>
-				<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="form-group mb-3">
-							<ul class="list-unstyled user-list validate" id="taskassignee">
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
-										<label class="form-check-label ms-2" for="member-1">MamPower</label>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<h6 class="mb-2 ms-1 mt-3">Group By</h6>
-		 <div class="accordion mt-2" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingSix">
-					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-						Monthly Data
-					</button>
-				</h2>
-				<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="form-group mb-3">
-							<ul class="list-unstyled user-list validate" id="taskassignee">
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
-										<label class="form-check-label ms-2" for="member-1">MamPower</label>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<label>Period</label>
+		<input class="form-control mb-2" type="text" placeholder="01-01-2022 to 31-01-2022">
 		
-		<h6 class="mb-2 ms-1 mt-3">Sort By</h6>
-		 <div class="accordion mt-2" id="accordionExample">
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="headingSeven">
-					<button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-						Generated Date
-					</button>
-				</h2>
-				<div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<div class="form-group mb-3">
-							<ul class="list-unstyled user-list validate" id="taskassignee">
-								<li>
-									<div class="form-check form-check-primary mb-2 d-flex align-items-center">
-										<input class="form-check-input" type="checkbox" id="member-1" name="member[]">
-										<label class="form-check-label ms-2" for="member-1">MamPower</label>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<label>Upload File</label>
+		<input class="form-control mb-2" type="file" />
+
 		
 		
 		</div>
-		<hr>
-		<p class="float-end me-2">Add category <i class="fa fa-plus-circle me-4"></i></p>
+
 		<div class="clearfix"></div>
-		<button type="button" class="btn btn-secondary waves-effect waves-light ms-5">Generate Report</button>
+		<span class="text-primary m-2">Cancel</span>
+		<button type="button" class="btn btn-primary float-end">Save</button>
 
     </div> <!-- end slimscroll-menu-->
 </div>
