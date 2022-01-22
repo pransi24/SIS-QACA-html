@@ -34,9 +34,7 @@
 
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
     </head>
 
@@ -249,10 +247,12 @@
 														<div class="d-flex">
 															<div class="avatar-xs align-self-center me-2">
 																<div class="avatar-title rounded bg-transparent text-success font-size-20">
-																	<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+																<a href="#" class="pop">
+																	<img src="https://mtrainer2storage.blob.core.windows.net/mtrainer-image/SIS/Oct-2021/270fd183-11ce-48f6-bc14-bc6df4b19ced" class="rounded-circle avatar-sm" />
+															    </a>
 																</div>
 															</div>
-
+      
 															<div class="overflow-hidden me-auto ms-2 right-bar-toggle">
 																<h5 class="font-size-13 text-truncate mb-1">Name Surname</h5>
 																<p class="text-muted text-truncate mb-0">Employee Code:</p>
@@ -273,7 +273,9 @@
 														<div class="d-flex">
 															<div class="avatar-xs align-self-center me-2">
 																<div class="avatar-title rounded bg-transparent text-success font-size-20">
-																	<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+																<a href="#" class="pop">
+																	<img src="https://mtrainer2storage.blob.core.windows.net/mtrainer-image/SIS/Oct-2021/270fd183-11ce-48f6-bc14-bc6df4b19ced" class="rounded-circle avatar-sm" />
+															    </a>
 																</div>
 															</div>
 
@@ -297,7 +299,9 @@
 														<div class="d-flex">
 															<div class="avatar-xs align-self-center me-2">
 																<div class="avatar-title rounded bg-transparent text-success font-size-20">
-																	<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+																<a href="#" class="pop">
+																	<img src="https://mtrainer2storage.blob.core.windows.net/mtrainer-image/SIS/Oct-2021/270fd183-11ce-48f6-bc14-bc6df4b19ced" class="rounded-circle avatar-sm" />
+															    </a>
 																</div>
 															</div>
 
@@ -321,7 +325,9 @@
 														<div class="d-flex">
 															<div class="avatar-xs align-self-center me-2 ">
 																<div class="avatar-title rounded bg-transparent text-success font-size-20">
-																	<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+																<a href="#" class="pop">
+																	<img src="https://mtrainer2storage.blob.core.windows.net/mtrainer-image/SIS/Oct-2021/270fd183-11ce-48f6-bc14-bc6df4b19ced" class="rounded-circle avatar-sm" />
+															    </a>
 																</div>
 															</div>
 
@@ -345,7 +351,9 @@
 														<div class="d-flex">
 															<div class="avatar-xs align-self-center me-2">
 																<div class="avatar-title rounded bg-transparent text-success font-size-20">
-																	<img src="assets/images/reward.png" class="rounded-circle avatar-sm"/>
+																<a href="#" class="pop">
+																	<img src="assets/images/reward.png" class="rounded-circle avatar-sm" />
+																</a>
 																</div>
 															</div>
 
@@ -385,6 +393,31 @@
 
         </div>
         <!-- END layout-wrapper -->
+	
+
+<!---------------img modal--------------->
+
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">              
+      <div class="modal-body">
+      	 <button type="button" class="close float-end" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <img src="" class="imagepreview" style="width: 100%;" >
+      </div>
+    </div>
+  </div>
+</div>
+<!------------img Modal--------------->	
+<script>
+$(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#imagemodal').modal('show');   
+		});		
+});
+</script>
+		
+		
 <!-- Right Sidebar -->
 	 <style>
 		.right-bar {right: -500px;}
@@ -530,7 +563,6 @@
 <!-- Right bar overlay-->
 <div class="rightbar-overlay"></div>
 
-
         <!-- JAVASCRIPT -->
 <script src="assets/libs/jquery/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -559,16 +591,7 @@
 <script src="assets/js/pages/datatables.init.js"></script>
 <!-- App js -->
 <script src="assets/js/app.js"></script>
-
-
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
-
-  <script type="text/javascript" src="assets/js/d3.geo.min.js"></script>
-<!--<script type="text/javascript" src="assets/js/d3.min.js"></script>
-<script type="text/javascript" src="assets/js/states.json"></script>-->
   
-
 
     </body>
 </html>
