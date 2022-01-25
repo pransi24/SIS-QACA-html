@@ -5,7 +5,7 @@
 }
 @media screen and (max-width:1366px) {
  :root {
-	 --bs-body-font-size: 0.7525rem !important;
+	 --bs-body-font-size: 0.8525rem !important;
  }
 *,
 ::after,
@@ -95,10 +95,7 @@
     margin-left: 20rem!important;
 	}
 	.car-login{width:350px;}
-	
-	
-	
-	
+		
 }
 
 /* width */
@@ -119,4 +116,13 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+@media (min-width:1900px) {
+	:root {
+	 --bs-body-font-size: 0.9525rem !important;
+	}
+	body {
+		font-size: var(--bs-body-font-size) !important;
+   }
+	
 }

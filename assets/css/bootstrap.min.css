@@ -8419,8 +8419,33 @@ ul.breadcrumb li {
 .border-5 {
 	border-width: 5px!important
 }
+.w-1 {
+	width: 1%!important
+}
+
+.w-2 {
+	width: 2%!important
+}
+.w-3 {
+	width: 3%!important
+}
+.w-4 {
+	width: 4%!important
+}
 .w-5 {
 	width: 5%!important
+}
+.w-6 {
+	width: 6%!important
+}
+.w-7 {
+	width: 7%!important
+}
+.w-8 {
+	width: 8%!important
+}
+.w-9 {
+	width: 9%!important
 }
 .w-10 {
 	width: 10%!important
@@ -9692,6 +9717,16 @@ ul.breadcrumb li {
 .pe-auto {
 	pointer-events: auto!important
 }
+
+.f-10{font-weight: 100 !important}
+.f-20{font-weight: 200 !important}
+.f-30{font-weight: 300 !important}
+.f-40{font-weight: 400 !important}
+.f-50{font-weight: 500 !important}
+.f-60{font-weight: 600 !important}
+.f-70{font-weight: 700 !important}
+.f-80{font-weight: 800 !important}
+.f-90{font-weight: 900 !important}
 
 .rounded {
 	border-radius: 1.25rem!important
