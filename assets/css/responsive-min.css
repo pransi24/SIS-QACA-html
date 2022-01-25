@@ -71,6 +71,13 @@
 		h5 {
 			font-size: 1.01563rem
 		}
+		hr {
+		   margin: 0.66rem 0 !important;
+		   }
+		.h6,
+		h6 {
+			font-size: .8125rem !important
+		}
 
 @media (min-width:1200px) {
 			.h5,
@@ -81,7 +88,7 @@
 
 		.h6,
 		h6 {
-			font-size: .7125rem !important
+			font-size: .8125rem !important
 		}
 
 		p {
@@ -95,6 +102,9 @@
     margin-left: 20rem!important;
 	}
 	.car-login{width:350px;}
+	hr {
+	   margin: 0.66rem 0 !important;
+	   }
 		
 }
 
@@ -124,5 +134,17 @@
 	body {
 		font-size: var(--bs-body-font-size) !important;
    }
+   hr {
+   margin: 0.66rem 0 !important;
+   }
+   .h6,
+		h6 {
+			font-size: .8125rem !important
+		}
+	.scroller-left {
+		float: left;
+		left: 585px !important;
+		z-index: 999;
+	}
 	
 }
