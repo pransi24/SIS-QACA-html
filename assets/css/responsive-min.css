@@ -48,7 +48,7 @@
 	
 	.dd_max {
     /* width: max-content; */
-    width: 123px;
+    width: 171px;
 	}
 	.dd_nav {
     padding: 9px 1px !important;
@@ -60,7 +60,6 @@
 		h3 {
 				font-size: 1.42188rem
 			}
-		}
 
 		.h4,
 		h4 {
@@ -78,6 +77,12 @@
 		h6 {
 			font-size: .8125rem !important
 		}
+		
+		.activ-feed{object-fit: cover;
+			object-position: 50% 2%;
+			width: 225px;
+			height: 150px;}
+	}
 
 @media (min-width:1200px) {
 			.h5,
@@ -105,6 +110,10 @@
 	hr {
 	   margin: 0.66rem 0 !important;
 	   }
+	.activ-feed{object-fit: cover;
+		object-position: 50% 2%;
+		width: 170px;
+		height: 150px;}
 		
 }
 
@@ -146,5 +155,9 @@
 		left: 585px !important;
 		z-index: 999;
 	}
+	.activ-feed{object-fit: cover;
+			object-position: 50% 2%;
+			width: 225px;
+			height: 150px;}
 	
 }

@@ -14216,7 +14216,10 @@ ul.tree li.open > a:not(:last-child):before {
     height: 3.5rem;
     width: 3.5rem;
 }
-
+.activ-feed{object-fit: cover;
+		object-position: 50% 2%;
+		width: 170px;
+		height: 150px;}
 
 /*
 #calendar{
