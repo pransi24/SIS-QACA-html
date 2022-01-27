@@ -88,6 +88,9 @@
 			object-position: 50% 2%;
 			width: 225px !important;
 			height: 150px;}
+		
+		.carousel-cell{width: 22% !important;}
+		
 	}
 
 @media (min-width:1200px) {
