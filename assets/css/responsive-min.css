@@ -90,6 +90,9 @@
 			height: 150px;}
 		
 		.carousel-cell{width: 22% !important;}
+		.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+			width: 110% !important;
+		}
 		
 	}
 
