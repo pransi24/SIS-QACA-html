@@ -96,12 +96,11 @@
 		
 	}
 
-@media (min-width:1200px) {
-			.h5,
+@media (min-width:1086px) {
+		.h5,
 			h5 {
 				font-size: 0.9rem !important
 			}
-		}
 
 		.h6,
 		h6 {
@@ -150,7 +149,7 @@
 }
 @media (min-width:1900px) {
 	:root {
-	 --bs-body-font-size: 0.9525rem !important;
+	 --bs-body-font-size: 1rem !important;
 	}
 	body {
 		font-size: var(--bs-body-font-size) !important;
@@ -158,9 +157,13 @@
    hr {
    margin: 0.66rem 0 !important;
    }
+   .h5,
+		h5 {
+			font-size: 1rem !important
+		}
    .h6,
 		h6 {
-			font-size: .8125rem !important
+			font-size: 1rem !important
 		}
 	.scroller-left {
 		float: left;
@@ -173,4 +176,14 @@
 			height: 150px;}
 	
 	.carousel-cell{width:17% !important;}
+	.dd_max {
+		width: 200px !important;
+	}
+	.dd_nav {
+		padding: 7px 9px !important;
+	}
+	#list{min-width: 1337px !important;}
+	.avatar-ss {	height: 1.2rem;
+		width: 1.2rem;
+	}
 }
