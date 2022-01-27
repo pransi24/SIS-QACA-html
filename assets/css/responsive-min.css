@@ -3,6 +3,12 @@
 		scroll-behavior: smooth
 	}
 }
+@media screen and (min-width:1366px) {
+	.activ-feed{object-fit: cover;
+			object-position: 50% 2%;
+			width: 170px !important;
+			height: 150px;}
+}
 @media screen and (max-width:1366px) {
  :root {
 	 --bs-body-font-size: 0.7525rem !important;
@@ -80,7 +86,7 @@
 		
 		.activ-feed{object-fit: cover;
 			object-position: 50% 2%;
-			width: 225px;
+			width: 225px !important;
 			height: 150px;}
 	}
 
@@ -112,7 +118,7 @@
 	   }
 	.activ-feed{object-fit: cover;
 		object-position: 50% 2%;
-		width: 170px;
+		width: 170px !important;
 		height: 150px;}
 		
 }
@@ -157,7 +163,7 @@
 	}
 	.activ-feed{object-fit: cover;
 			object-position: 50% 2%;
-			width: 225px;
+			width: 225px !important;
 			height: 150px;}
 	
 }
