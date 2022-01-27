@@ -126,7 +126,7 @@
 		object-position: 50% 2%;
 		width: 170px !important;
 		height: 150px;}
-		
+	.carousel-cell{width: 22% !important;}	
 }
 
 /* width */
@@ -172,4 +172,5 @@
 			width: 225px !important;
 			height: 150px;}
 	
+	.carousel-cell{width:17% !important;}
 }
