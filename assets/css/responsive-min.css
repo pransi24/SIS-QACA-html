@@ -86,7 +86,7 @@
 		
 		.activ-feed{object-fit: cover;
 			object-position: 50% 2%;
-			width: 225px !important;
+			width: 175px !important;
 			height: 150px;}
 		
 		.carousel-cell{width: 22% !important;}
@@ -123,7 +123,7 @@
 	   }
 	.activ-feed{object-fit: cover;
 		object-position: 50% 2%;
-		width: 170px !important;
+		width: 175px !important;
 		height: 150px;}
 	.carousel-cell{width: 22% !important;}	
 }
@@ -147,6 +147,47 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+@media (min-width:1680px) {
+	:root {
+	 --bs-body-font-size: 1rem !important;
+	}
+	body {
+		font-size: var(--bs-body-font-size) !important;
+   }
+   hr {
+   margin: 0.66rem 0 !important;
+   }
+   .h5,
+		h5 {
+			font-size: 1rem !important
+		}
+   .h6,
+		h6 {
+			font-size: 1rem !important
+		}
+	.scroller-left {
+		float: left;
+		left: 445px !important;
+		z-index: 999;
+	}
+	.activ-feed{object-fit: cover;
+			object-position: 50% 2%;
+			width: 175px !important;
+			height: 150px;}
+	
+	.carousel-cell{width:17% !important;}
+	.dd_max {
+		width: 200px !important;
+	}
+	.dd_nav {
+		padding: 7px 9px !important;
+	}
+	#list{min-width: 1337px !important;}
+	.avatar-ss {	height: 1.2rem;
+		width: 1.2rem;
+	}
+}
+
 @media (min-width:1900px) {
 	:root {
 	 --bs-body-font-size: 1rem !important;
@@ -167,12 +208,12 @@
 		}
 	.scroller-left {
 		float: left;
-		left: 585px !important;
+		left: 535px !important;
 		z-index: 999;
 	}
 	.activ-feed{object-fit: cover;
 			object-position: 50% 2%;
-			width: 225px !important;
+			width: 205px !important;
 			height: 150px;}
 	
 	.carousel-cell{width:17% !important;}
