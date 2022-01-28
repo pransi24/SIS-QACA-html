@@ -14079,6 +14079,8 @@ svg {
 
 .manpower-cc{background:#F5F8FD !important;
 			border-radius: 10px;
+			height: 120px;
+			min-height: 120px;
 	}
 .border-bottom-none{border-bottom: none;}
 .border-top-four{border-top:4px solid #dde;}
