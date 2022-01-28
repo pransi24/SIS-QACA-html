@@ -23,12 +23,9 @@
 <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 <!-- App Css-->
 <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<link href="assets/css/responsive-min.css" id="app-style" rel="stylesheet" type="text/css" />
+	<link href='assets/css/slide-man.css' rel='stylesheet'>
+	<script type='text/javascript' src='assets/js/slide-man.js'></script>
 	
     </head>
 
@@ -157,22 +154,22 @@
 					</span>
 					
 			</ul>
-			<div class="bg-danger text-white-50 side-box-danger mb-3">
-				<div class="card-body row">
-				<div class="col-md-7">
-				<small class="font-size-9">For any quires contact</small>
-					<h5 class="mt-0 mb-1 text-white">Priyanka K</h5>
-					<p class="card-text">Service Executive</p>
-				</div>
-				<div class="col-md-5">
-					<img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
-				</div>
-				<div class="col-md-12">
-					<button type="button" class="btn btn-email btn-sm waves-effect waves-light pull-left"><i class="fas fa-envelope me-2"></i>Email</button>
-					<span class="font-size-13 text-white">Escalate Issue <i class="fa fa-angle-right"></i></span>
-				</div>
-				</div>
-			</div>
+			<div class="bg-danger text-white-50 side-box-danger" style="position:fixed;bottom:0px;width:280px;">
+                <div class="card-body row">
+                    <div class="col-md-7">
+                        <small class="font-size-9">For any quires contact</small>
+                        <h5 class="mt-0 mb-1 text-white">Priyanka K</h5>
+                        <p class="card-text">Service Executive</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle img-thumbnail">
+                    </div>
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-email btn-sm waves-effect waves-light pull-left"><i class="fas fa-envelope me-2"></i>Email</button>
+                        <span class="font-size-13 text-white">Escalate Issue <i class="fa fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
 
             
         </div>
@@ -195,16 +192,25 @@
 							</div>
 							<div class="float-end mb-2">
 								<div class="calendar-prev scroll-man">
-									<a href="#"><i class="fa fa-chevron-left ms-2" id="left"></i> </a>
-									<a href="#"><i class="fa fa-chevron-right ms-2" id="right"></i> </a>
+									<a href="#carouselExampleIndicators2" role="button" data-slide="prev"><i class="fa fa-chevron-left ms-2" id="left"></i> </a>
+									<a href="#carouselExampleIndicators2" role="button" data-slide="next"><i class="fa fa-chevron-right ms-2" id="right"></i> </a>
 								</div>
 							</div>
 						</div>
 						
 					</div>
+					
+					
+					<div class="row">
+           
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
 			
 					 <div class="row">
-						<div class="col-md-2 wd-260">
+						<div class="col-md-2">
 							<div class="card mini-stats-wid p-3 manpower-cc">
 								<div class="d-flex">
 									<div class="flex-grow-1">
@@ -214,7 +220,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 wd-260">
+						<div class="col-md-2">
 							<div class="card mini-stats-wid p-3 manpower-cc">
 								<div class="d-flex">
 									<div class="flex-grow-1">
@@ -224,7 +230,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 wd-260">
+						<div class="col-md-2">
 							<div class="card mini-stats-wid p-3 manpower-cc">
 								<div class="d-flex">
 									<div class="flex-grow-1">
@@ -234,7 +240,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 wd-260">
+						<div class="col-md-2">
 							<div class="card mini-stats-wid p-3 manpower-cc">
 								<div class="d-flex">
 									<div class="flex-grow-1">
@@ -244,7 +250,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 wd-260">
+						<div class="col-md-3">
 							<div class="card mini-stats-wid p-3 bg-danger bg-soft">
 								<div class="d-flex">
 									<div class="flex-grow-1">
@@ -253,6 +259,67 @@
 									</div>
 								</div>
 							</div>
+						</div>
+						</div>
+						</div>
+						<div class="carousel-item">
+						 <div class="row">
+						<div class="col-md-2">
+							<div class="card mini-stats-wid p-3 manpower-cc">
+								<div class="d-flex">
+									<div class="flex-grow-1">
+										<p class="text-muted fw-medium font-size-13">Outstanding 1</p>
+										<h4 class="mb-0 font-size-30">3.2 CR</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="card mini-stats-wid p-3 manpower-cc">
+								<div class="d-flex">
+									<div class="flex-grow-1">
+										<p class="text-muted font-size-13">Current Invoice 1</p>
+										<h4 class="mb-0 font-size-30">1.4 CR</span></h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="card mini-stats-wid p-3 manpower-cc">
+								<div class="d-flex">
+									<div class="flex-grow-1">
+										<p class="text-muted font-size-13">Under DSO</p>
+										<h4 class="mb-0 font-size-30">0.2 CR</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="card mini-stats-wid p-3 manpower-cc">
+								<div class="d-flex">
+									<div class="flex-grow-1">
+										<p class="text-muted font-size-13">> DSO (90 Days)</p>
+										<h4 class="mb-0 font-size-30">1.4 CR</span></h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card mini-stats-wid p-3 bg-danger bg-soft">
+								<div class="d-flex">
+									<div class="flex-grow-1">
+										<p class="font-size-13 text-danger">Bill Submission</p>
+										<h4 class="mb-0 font-size-30 text-danger">06/ 09/ 2022</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						</div>
+						
+						</div>
+						</div>
+						</div>
 						</div>
 
 						<div class="row mb-2">
