@@ -93,6 +93,7 @@
 		.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
 			width: 110% !important;
 		}
+		.ms-30 {margin-left: 32rem !important;}
 		
 	}
 
@@ -186,6 +187,7 @@
 	.avatar-ss {	height: 1.2rem;
 		width: 1.2rem;
 	}
+	.ms-30 {margin-left: 40rem !important;}
 }
 
 @media (min-width:1900px) {
@@ -227,4 +229,5 @@
 	.avatar-ss {	height: 1.2rem;
 		width: 1.2rem;
 	}
+	.ms-30 {margin-left: 45rem !important;}
 }
